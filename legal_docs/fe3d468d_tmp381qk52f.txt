@@ -1,0 +1,559 @@
+Acórdãos TRE
+Acórdão do Tribunal da Relação de
+Évora
+Processo:
+285/24.7T8BJA.E1
+Relator:
+PAULA DO PAÇO
+Descritores:
+IRREDUTIBILIDADE DA RETRIBUIÇÃO
+RESOLUÇÃO DO CONTRATO DE TRABALHO
+JUSTA CAUSA
+IMPUGNAÇÃO DA DECISÃO DE FACTO
+ÓNUS DO RECORRENTE
+Data do Acordão:
+10-12-2025
+Votação:
+UNANIMIDADE
+Texto Integral:
+S
+Meio Processual:
+APELAÇÃO
+Decisão:
+CONFIRMADA A DECISÃO RECORRIDA
+Área Temática:
+SOCIAL
+Sumário:
+Sumário elaborado pela relatora:
+I- Para cumprimento do ónus de especificação previsto no n.º 1 do artigo 640.º do Código de Processo Civil, devem ser indicados, nas conclusões do recurso, os concretos pontos de facto que são impugnados, podendo a especificação dos meios probatórios e a indicação da decisão alternativa constar do corpo das alegações.
+II- Interpretar as afirmações feitas pelo tribunal
+a quo
+, na motivação da convicção, acerca dos depoimentos testemunhais prestados, como faz a recorrente, constitui uma manifestação de inconformismo com o decidido, mas não satisfaz o ónus previsto no artigo 640.º, n.º 1, alínea b), que deve ser conjugado com o n.º 2, alínea a) do artigo.
+III- O princípio da irredutibilidade não impede que sendo a retribuição do trabalhador composta por várias parcelas ou elementos, o empregador altere o quantitativo de algumas ou até as suprima, desde que o quantitativo da retribuição global não seja alterado.
+IV- Verifica- se a violação do princípio da irredutibilidade da retribuição se a decisão assumida pelo empregador de alterar os critérios de pagamento das comissões de vendas e de extinguir o pagamento do subsídio de prevenção de máquinas, sem que qualquer modificação tivesse ocorrido na prestação do trabalho, originaram uma diminuição da remuneração auferida pelo trabalhador superior a €500/mês.
+V- A justa causa subjetiva para a resolução do contrato pelo trabalhador, exige a verificação dos seguintes requisitos: (i) um requisito objetivo, traduzido num comportamento do empregador violador dos direitos ou garantias do trabalhador; (ii) um requisito subjetivo, consistente na atribuição de culpa ao empregador; (iii) um requisito causal, no sentido de que esse comportamento, pela sua gravidade e consequências, torne imediata e praticamente impossível a subsistência da relação de trabalho.
+VI- Configura justa causa de resolução do contrato de trabalho pelo trabalhador a redução ilícita da sua remuneração mensal, em valor superior a € 500, arbitrariamente decidida pelo empregador.
+Decisão Texto Integral:
+P. 285/24.7T8BJA.E1
+Acordam na Secção Social do Tribunal da Relação de Évora
+1
+I. Relatório
+1.
+Na presente ação declarativa emergente de contrato individual de trabalho que
+AA
+move contra
+Tabacaria BB, Lda.
+, foi proferida sentença contendo o seguinte dispositivo:
+«Em face de tudo quanto se deixou exposto:
+1. Julgo parcialmente procedente a ação intentada por AA contra TABACARIA BB, LDA e, em consequência;
+A) Condeno a Ré a pagar ao Autor:
+a. As diferenças salariais resultantes da redução ilícita da retribuição, no período de 01/10/2022 a 19/12/2023, no montante global de € 11.190,12 (onze mil, cento e noventa euros e doze cêntimos);
+b. A quantia de 3.867,27€ (três mil, oitocentos e sessenta e sete euros e vinte e sete cêntimos), a título de remuneração de férias não gozadas, nos anos de 2022 (22 dias) e 2023 (11 dias), e proporcionais de férias do ano da cessação (21 dias);
+c. Proporcional do subsídio de férias pela cessação do contrato, no valor de 765,42€ (setecentos e sessenta e cinco euros e quarenta e dois cêntimos);
+d. Diferenças remuneratórias nos subsídios de férias, no período de 2013 a 2023, no valor de 825,00€ (oitocentos e vinte e cinco euros);
+i. 120 (cento e vinte) horas de formação profissional não concedidas, no valor de € 1.200,00 (mil e duzentos euros);
+B) Julgo procedente a rescisão com justa causa do contrato de trabalho por parte do autor e, consequentemente, condeno a ré a pagar ao autor, a quantia de 27.018,00€ (vinte e sete mil e dezoito euros), a título de indemnização.
+C) Absolvo a ré do demais peticionado.
+2. Julgo improcedente o pedido reconvencional deduzido pela ré TABACARIA BB, LDA, contra o autor AA.
+3. Decido não condenar o autor como litigante de má-fé.
+*
+Custas a cargo de autor e ré, na proporção do decaimento, que se fixa em metade para cada um (artigo 527.º, n.º 1, do Código de Processo Civil).
+O valor da ação foi fixado no despacho saneador.
+Registe e notifique.»
+2.
+A Ré interpôs recurso da sentença, extraindo das suas alegações as seguintes conclusões:
+«A. O recorrido intentou contra a recorrente a presente ação, pedindo que a recorrente fosse condenada a pagar-lhe diversos créditos laborais.
+B. A recorrente contestou e, em reconvenção, pediu que o recorrido fosse condenado a restituir-lhe a quantia de € 25.000,00, que recebeu da recorrente a título de compensação por antiguidade para o eventual cenário de caducidade do contrato nos termos dos artigos 346.º ou 347.º do Código do Trabalho ou despedimento coletivo ou por extinção do posto de trabalho; ou, na eventualidade de se entender que o recorrido é titular de algum crédito laboral, fosse reconhecido o crédito da recorrente no montante de € 25.000,00e efetuada a compensação deste crédito com o eventual crédito laboral do recorrido que viesse ser reconhecido na presente ação.
+C. O presente recurso de apelação tem como objeto a sentença proferida pelo tribunal recorrido, na parte em que considerou que houve uma redução ilícita da retribuição do recorrido e, com base nisso, julgou lícita a resolução do contrato de trabalho comunicada pelo recorrido.
+D. Assim como na parte em que julgou improcedente o pedido reconvencional deduzido pela recorrente, dessa forma não reconhecendo o crédito da recorrente sobre o recorrido, no valor de € 25.000,00.
+E. Entende a recorrente que o tribunal recorrido, quanto às questões que são objeto do presente recurso, não fez uma correta apreciação da prova produzida e carreada para os autos, tendo analisado aquelas mesmas questões de forma manifestamente simplista, desajustada e formalista.
+F. Por outro lado, entende a recorrente que da conjugação da prova documental carreada para os autos, da prova produzida em sede de audiência final e dos factos dados como provados na sentença recorrida, outra deveria ter sido a decisão do tribunal recorrido quanto aos pontos 29) dos factos provados e L) dos factos não provados.
+***
+G. O recorrido alegou que a recorrente diminuiu unilateralmente a sua retribuição variável a partir de outubro de 2022 até à data da cessação do contrato em dezembro de 2023, utilizando tal redução como justa causa para a resolução contratual que comunicou à recorrente e pedindo a condenação da recorrente pagar-lhe a quantia de € 11.190,12, correspondente às diferenças salariais resultantes daquela alegada redução ilícita da sua retribuição.
+H. In casu, resulta provado que o recorrido recebia uma remuneração variável constituída por comissões de vendas, as quais, até setembro de 2022 correspondiam a 0,15% do total das vendas realizadas pelos quatro vendedores ao serviço da recorrente, onde se inclui o recorrido.
+I. E que, a partir de outubro de 2022, após a transmissão das quotas para os atuais sócios da recorrente, foi alterado o modo de apuramento daquelas comissões, tendo a percentagem de 0,15% passado a incidir sobre o valor das vendas individualmente realizadas por cada vendedor – como não poderia deixar de ser - e não sobre o valor total das vendas concretizadas pelos quatro vendedores.
+J. Foi quanto bastou para que o tribunal recorrido acolhesse a tese do recorrido, no sentido de que a recorrente diminuiu ilicitamente a sua retribuição e violou o princípio da irredutibilidade da retribuição.
+K. No entanto, considera a recorrente que só com muito esforço se poderá afirmar que a recorrente reduziu ilicitamente a retribuição do recorrido.
+L. Não se concebe como é que o tribunal recorrido pôde retirar quaisquer consequências da redução da retribuição do recorrido operada pela recorrente, uma vez que, conforme aliás reconhece o tribunal recorrido, a recorrente se limitou apenas a pôr fim a um artifício dos seus vendedores (onde se inclui o recorrido), que lograram ludibriar o anterior sócio da recorrente de modo a que as comissões de vendas, que deveriam corresponder a 0,15% das vendas de cada vendedor, acabassem por incidir sobre a totalidade das vendas dos quatro vendedores, acabando assim cada vendedor por receber 0,60% ao invés dos 0,15%.
+M. Artifício esse que apenas foi detetado já pela nova gerência da recorrente, uma vez que o anterior sócio nunca se deu conta do mesmo “por não estar muito dentro da atividade” da recorrente.
+N. In casu, como resulta da própria motivação da sentença recorrida, mais concretamente através do que se encontra plasmado acerca da testemunha CC (cfr. páginas 15 e 16 da sentença recorrida), nunca ficou estabelecido – nem faria qualquer sentido - que as comissões de venda correspondessem a uma percentagem das vendas realizadas pela globalidade dos quatro vendedores ao serviço da recorrente.
+O. Por outro lado, certo é que a redução de comissões de vendas alegada pelo recorrido se deveu a circunstâncias que lhe são exclusivamente imputáveis, designadamente ao facto de ter ludibriado o anterior sócio e gerente da recorrente de modo que as comissões fossem apuradas tendo como referência as vendas de todos os vendedores.
+P. Por estes motivos, é completamente despropositado que o recorrido venha reclamar o pagamento de diferenças salariais resultantes da redução das suas comissões de vendas e ainda utilizar tal redução como justa causa para a resolução do contrato.
+Q. Ademais, não se entende como é que o tribunal recorrido afirma que os depoimentos prestados não convenceram quanto ao facto de a referida alteração ter merecido o acordo do recorrido.
+R. Isto porque é o próprio tribunal recorrido que afirma que a testemunha DD, atual sócio da recorrente, afirmou que os trabalhadores “acordaram que as comissões de venda (de 0,15%) passariam a incidir sobre as vendas de cada um e não sobre a globalidade das vendas da empresa” (cfr. página 12 da sentença recorrida)
+S. E que a testemunha EE aludiu aos acordos celebrados com os trabalhadores aquando da transmissão das quota da recorrente para os atuais sócios, “sendo os principais problemas o cumprimento do horário de trabalho afixado em mapa (porquanto eles gostavam de começar o trabalho mais cedo para acabar mais cedo) e o modo de apuramento das comissões (que deixaria de se reportar ao valor global das vendas para passar a reportar ao valor das vendas de cada vendedor), tendo os trabalhadores aceitado as novas condições de trabalho” (cfr. página 13 da sentença recorrida).
+T. Ademais, a própria postura do recorrido evidencia o acordo do mesmo quanto à “correção” das suas comissões de vendas e “eliminação” do subsídio de prevenção de máquinas, uma vez que, durante mais de 1 ano, nunca reclamou junto da ré qualquer diferenças salariais ou sequer demonstrou qualquer tipo de descontentamento.
+U. Na verdade, caso a correção das comissões de vendas não tivesse merecido o acordo do recorrido, certamente que o mesmo teria reclamado o pagamento das alegadas diferenças salariais junto da recorrente durante o período que esteve vinculado à mesma ou resolvido o seu contrato em outubro de 2022, à semelhança da testemunha CC, colega do recorrido, que “saiu da empresa quando houve a transmissão de quotas dos anteriores sócios para os atuais, por não concordar com a adenda ao contrato e alteração da componente remuneratória”.
+V. O que manifestamente não o fez, pois bem sabia que não era titular de quaisquer créditos laborais sobre a recorrente e que a referida correção mereceu o seu acordo.
+W. Destarte, entende a recorrente que o ponto 29 dos factos provados foi incorretamente julgado pelo tribunal recorrido, devendo o mesmo ser alterado nos seguintes termos:
+“29) Aquando da transmissão das participações sociais em agosto de 2022, a ré e o autor acordaram que a comissão de vendas que cada vendedor auferia, correspondente a 0,15% do valor global das vendas, como até então vinha a ser pago indevidamente, passaria a ser efetuado com referência ao valor de vendas realizado por cada trabalhador individualmente a partir de outubro de 2022, tendo ainda acordado na eliminação do pagamento do subsídio mensal de prevenção de máquinas.”
+X. Aqui chegados, resta concluir que a recorrente nunca reduziu a retribuição do recorrido de forma unilateral e sem qualquer motivo justificativo, contrariamente ao que este pretende fazer crer.
+Y. Por conseguinte, não houve qualquer redução ilícita da retribuição do recorrido e, como tal, o mesmo não tem direito ao montante correspondente às alegadas diferenças salariais referentes ao período compreendido entre outubro de 2022 e dezembro de 2023, no valor de € 11.190,12.
+Z. Quanto ao subsídio de prevenção de máquinas, que deixou de ser pago ao recorrido a partir de outubro de 2022, o mesmo corresponde à quantia monetária paga pela entidade patronal ao trabalhador, como compensação por este se manter, em local definido por aquela ou não, em estado de prontidão (mediante a realização de chamada) para, caso se revele necessário, prestar trabalho fora do horário de trabalho.
+AA. In casu, como é bom de ver através da simples análise dos factos provados, o pagamento de tal subsídio não tinha qualquer razão de ser, uma vez que o recorrido não tinha qualquer constrangimento decorrente de ter que estar disponível no seu domicílio para eventual execução de serviços para a recorrente (o que aliás não logrou provar).
+BB. Motivo pelo qual também não se compreende como pôde o tribunal recorrido considerar que o facto de este subsídio ter deixado de ser pago ao recorrido consubstancia uma violação do princípio da irredutibilidade da retribuição.
+***
+CC. Demonstrada que está a legalidade da redução da retribuição variável do recorrido, forçoso se torna concluir que tal redução não pode constituir justa causa para a resolução do contrato
+DD. Como tal, não houve a violação de qualquer dever profissional que revista gravidade suficiente de modo a constituir justa causa de resolução por parte do recorrido.
+EE. E isto porque, como resulta da simples conjugação dos pedidos formulados pelo recorrido com o dispositivo da sentença recorrida, a recorrente foi absolvida de todos os outros pedidos que poderiam, a par da redução da retribuição (caso esta fosse ilegal, o que não é o caso), subsumir-se a comportamentos suscetíveis de constituir justa causa de resolução nos termos do artigo 394.º do Código do Trabalho (nomeadamente “b. Diferenças no pagamento do subsídio de férias de 2013 a 2023, no montante de € 11.133.98”, “c. Diferenças no pagamento do Subsídio de Natal, de 2013 a 2023, no total de: € 10.834.38”, “d. Retribuição por isenção de horário de trabalho, de 2013 a 2023, no total de: € 47.509.68” “e. Compensação em triplo por violação do direito a férias em 2022 no valor de: € 5.481.30”)
+FF. Quanto aos outros pedidos formulados pelo recorrido e que foram julgados procedentes pelo tribunal recorrido sob as alíneas b., primeira parte, d. e i. do dispositivo da sentença recorrida (remuneração de férias não gozadas nos anos de 2022 e 2023; diferenças remuneratórias nos subsídios de férias, no período de 2013 a 2023, no valor de € 825,00 e 120 horas de formação profissional não concedidas, no valor de € 1.200,00), os mesmos nunca seriam suscetíveis de configurar uma situação de justa causa subjetiva para a resolução do contrato, uma vez que, pela sua gravidade e consequências, não tornam imediata e praticamente impossível a subsistência da relação laboral.
+GG. Ao que acresce que, de acordo com o disposto no artigo 398.º, n.º 3 do Código do Trabalho, tais factos nem sequer poderiam ser atendidos para efeitos de apreciação judicial da licitude da resolução, uma vez que, conforme resulta da simples leitura da comunicação de resolução do contrato efetuada pelo, tais factos não foram invocados para justificar a resolução.
+HH. O mesmo sucedendo quanto aos proporcionais de férias e subsídio de férias do ano da cessação (alíneas b., parte final, e c. do dispositivo), os quais nem sequer são suscetíveis de constituir fundamento de resolução do contrato com justa causa, por se tratarem de créditos que apenas surgem após a cessação do contrato de trabalho e, como tal, insuscetíveis de serem invocados na comunicação a que alude o artigo 395.º, n.º 1 do Código do Trabalho.
+***
+II. Subsidiariamente, caso se entenda que a redução da retribuição do recorrido constitui justa causa de resolução do contrato, sempre se dirá que, tendo em conta o circunstancialismo em que tal redução foi operada, mal se compreende como é que o tribunal recorrido pôde fixar a indemnização prevista no artigo 396.º do Código do Trabalho em € 27.018,00, ou seja, com base em 30 dias de retribuição base por ano de antiguidade.
+JJ. Entende a recorrente que ainda que a redução da retribuição do recorrido fosse ilícita, tendo em conta os termos em que a mesma foi operada (com o acordo do recorrido e como forma de corrigir a forma de cálculo que os vendedores da recorrente indevidamente lograram impor na empresa, ludibriando o anterior sócio e gerente da recorrente que nunca se percebeu de que as comissões de venda estavam a incidir sobre as vendas de todos os vendedores), a mesma nunca revestiria um grau de ilicitude de tal forma elevado que justificasse uma indemnização determinada com base em 30 dias de retribuição, mas no máximo 15 dias.
+KK. Por outro lado, contrariamente ao que o tribunal recorrido afirma na página 50 da sentença recorrida, no sentido de que “concorre a violação de mais do que um dever por parte da empregadora”, os demais deveres a que se refere a sentença recorrida (remuneração de férias não gozadas nos anos de 2022 e 2023; diferenças remuneratórias nos subsídios de férias referentes ao período de 2013 a 2023 no valor total de apenas € 825,00 e 120 horas de formação profissional não concedidas no valor de € 1.200,00) também eles não revestem uma grau de ilicitude que justifique a fixação da indemnização com base em 30 dias de retribuição por cada ano de antiguidade.
+LL. Aliás, tais violações não poderão também sequer ser atendidas para efeitos de fixação do montante da indemnização prevista no artigo 396.º do Código do Trabalho, pois que não foram sequer invocadas pelo recorrido na sua comunicação de resolução do contrato.
+MM. O mesmo se diga em relação aos proporcionais de férias e subsídio de férias do ano da cessação (alíneas b., parte final, e c. do dispositivo), os quais não foram – nem poderiam ser – invocados pelo recorrido na sua comunicação de resolução do contrato, por se tratarem de créditos que apenas surgem após a cessação da relação laboral e, como tal, insuscetíveis de constituírem justa causa de resolução.
+NN. Por tudo quanto fica dito, entende a recorrente que, caso se entenda que a resolução do contrato é lícita – o que não se concede -, deverá a respetiva indemnização ser fixada tendo por base 15 dias de retribuição por cada ano de antiguidade, ou seja, na quantia de € 13.509,00.
+OO. Ao ter julgado lícita a resolução do contrato e fixado a respetiva indemnização tendo por base 30 dias de retribuição por cada ano de antiguidade, o tribunal recorrido violou as normas jurídicas constantes dos artigos 394.º, n.ºs 1, 2 e 4, 396.º, n.º 1, e 398.º, n.º 3, todos do Código do Trabalho.
+***
+PP. O tribunal recorrido deu como não provado que “A ré pagou 25.000,00€ ao autor no pressuposto de que qualquer eventual cessação do contrato de trabalho do autor fosse devida à caducidade do mesmo ou a um despedimento coletivo ou por extinção do posto de trabalho." (cfr. ponto L) dos factos não provados) e, por conseguinte, julgou improcedente o pedido reconvencional.
+QQ. Conforme resulta da motivação da sentença recorrida, o tribunal recorrido deu como não provado tal facto por entender “que os termos em que se mostra previsto o pagamento da compensação na adenda ao contrato de trabalho, não permite concluir, sem duvidas, que esta compensação visava ressarcir o trabalhador de eventuais créditos existentes à data, ou que visava compensar o trabalhador pelo pacto de fidelização de um ano, como alegado pelo autor, ou se assumia essa natureza mista, ou, ainda, se visava compensar o trabalhador - como também alegado pela ré -, em face de uma eventual cessação da relação laboral por caducidade, extinção do posto de trabalho ou despedimento coletivo. Certo é que, prevendo-se na referida adenda ao contrato de trabalho, a manutenção da relação laboral com os trabalhadores da ré, após a transmissão de quotas, com salvaguarda dos direitos dos trabalhadores e, consequentemente, sem perda de antiguidade, mal se compreende que conste do mesmo documento que a ré paga ao trabalhador 25.000,00 a título de compensação por antiguidade (à data do acordo), não tendo o depoimento da ré e das testemunhas contribuindo para o esclarecimento da questão.”.
+RR. Ao ter decidido dar como não provada tal factualidade, o tribunal recorrido desconsiderou por completo o aditamento ao contrato de trabalho celebrado pela recorrente e recorrido em 27.07.2022, aquando da transmissão da titularidade das participações sociais para os atuais sócios da recorrente (cfr. documento n.º 1 da contestação/reconvenção).
+SS. Não se concebe como é que o tribunal recorrido pode afirmar que a recorrente não logrou provar que o recorrido recebeu da recorrente os ditos € 25.000,00 para acautelar um eventual cenário de caducidade, extinção do posto de trabalho ou despedimento coletivo, quando resulta do próprio aditamento (cfr. ponto 4.º), assinado por ambas as partes, que estas “estabelecem já uma compensação por antiguidade (até à data do acordo), no valor de € 25.000,00 (vinte e cinco mil euros)”
+TT. Tal meio probatório, por si só, impunha decisão sobre o ponto L) dos factos não provados diversa da dada pelo tribunal recorrido, tendo o mesmo sido incorretamente julgado pelo tribunal recorrido.
+UU. Ademais, não faz qualquer espécie de sentido e causa o maior espanto o entendimento consignado na sentença recorrida, quando aí se afirma que “prevendo-se na referida adenda ao contrato de trabalho, a manutenção da relação laboral com os trabalhadores da ré, após a transmissão de quotas, com salvaguarda dos direitos dos trabalhadores e, consequentemente, sem perda de antiguidade, mal se compreende que conste do mesmo documento que a ré paga ao trabalhador 25.000,00 a título de compensação por antiguidade (à data do acordo),”
+VV. Desse excerto da sentença recorrida, aquilo que se extrai é que o tribunal recorrido entendeu, incompreensivelmente, que, estando previsto no ponto 3.º do aditamento que a transmissão de quotas para os atuais sócios “não implicará a perda de quaisquer direitos dos trabalhadores”, o recorrido manteria a antiguidade adquirida até à data do aditamento, pelo não faria sentido que o pagamento dos € 25.000,00 fosse a título de compensação por antiguidade.
+WW. Todavia, afigura-se-nos por demais evidente – até pelo uso da expressão “até à data do acordo” - que tal quantia apenas foi paga ao recorrido de modo a garantir o pagamento uma eventual indemnização/compensação devida pela cessação do contrato de trabalho sob a alçada dos novos corpos sociais da recorrente (atenta a significativa antiguidade do recorrido) e, com isso, permitir que o recorrido não sentisse qualquer tipo de receio de permanecer na empresa com os novos sócios e não sentisse qualquer necessidade de exercer o direito de oposição previsto no artigo 286.º-A do Código do Trabalho.
+XX. O erro de interpretação do tribunal recorrido reside no facto de este ter entendido erroneamente que os € 25.000,00 visavam ressarcir uma perda da antiguidade do recorrido por força da celebração do aditamento, quando na verdade tal quantia se destinava única e exclusivamente a acautelar uma eventual cessação do contrato e assegurar o pagamento da inerente compensação pela antiguidade acumulada pelo recorrido até à data do aditamento, ou seja durante o período em que exerceu funções para os anteriores sócios e gerentes da recorrida.
+YY. Pelo que, deverá ser dado como provado que “A ré pagou 25.000,00€ ao autor no pressuposto de que qualquer eventual cessação do contrato de trabalho do autor fosse devida à caducidade do mesmo ou a um despedimento coletivo ou por extinção do posto de trabalho.", dando-se assim como provado o ponto L) da matéria de facto dada como não provada.
+ZZ. E, por via disso, ser julgado procedente o pedido reconvencional deduzido pela recorrente, cuja causa de pedir consiste no instituto do enriquecimento sem causa, na modalidade de “causa finita”.
+Nestes termos e nos demais de direito que V. Exas., Venerandos Desembargadores, doutamente suprirão, deverá ser dado provimento ao presente recurso de apelação e, em consequência:
+a) Ser revogada a sentença recorrida na parte em que condenou a recorrente a pagar ao recorrido as diferenças salariais resultantes da redução da sua retribuição, referentes ao período de 01.10.2022 a 19.12.2023, no montante de €11.190,12 (cfr. alínea a. do dispositivo), e na parte em que julgando procedente a resolução com justa causa do contrato de trabalho por parte do recorrido, condenou a recorrente a pagar ao recorrido uma indemnização no montante de €27.018,00 (cfr. alínea B) do dispositivo), absolvendo-se a recorrente desses pedidos,
+b) Ser revogada a sentença recorrida na parte em que julgou improcedente o pedido reconvencional deduzido pela recorrente, julgando-se procedente o pedido reconvencional e efetuando-se a compensação do crédito da recorrente, no valor de €25.000,00, com os créditos do recorrido reconhecidos na sentença recorrida e que não são objeto do presente recurso, no valor total de € 6.657,69 (cfr. alíneas b., c., d. e i. do dispositivo).
+Ou, subsidiariamente, caso se entenda que a resolução do contrato é lícita:
+c) Ser a respetiva indemnização fixada na quantia de €13.509,00 [(380€x35a)+(380€:12mx6m)+(380€:12m:30dx18d)], correspondente a 15 dias de retribuição por cada ano de antiguidade;
+d) Ser revogada a sentença recorrida na parte em que julgou improcedente o pedido reconvencional deduzido pela recorrente, julgando-se procedente o pedido reconvencional e efetuando-se a compensação do crédito da recorrente, no valor de €25.000,00, com os créditos do recorrido reconhecidos na sentença recorrida e que não são objeto do presente recurso, no valor total de €6.657,69 (cfr. alíneas b., c., d. e i. do dispositivo), e com a indemnização prevista em c), no valor de €13.509,00.»
+3.
+Não foram oferecidas contra-alegações.
+4.
+A 1.ª instância admitiu o recurso como de apelação, com subida imediata, nos próprios autos e com efeito meramente devolutivo.
+5.
+Tendo o processo subido à Relação, o Ministério Público emitiu parecer, propugnando pela improcedência do recurso.
+Não foi oferecida resposta.
+6.
+O recurso foi mantido e, depois de elaborado o projeto de acórdão, foram colhidos os vistos legais.
+Cumpre, em conferência, apreciar e decidir.
+*
+II. Objeto do Recurso
+É consabido que o objeto do recurso é delimitado pelas conclusões da alegação da recorrente, com a ressalva da matéria de conhecimento oficioso (artigos 635.º, n.º 4, e 639.º, n.º 1, do Código de Processo Civil, aplicáveis
+ex vi
+do artigo 87.º, n.º 1, do Código de Processo do Trabalho).
+Em função destas premissas, as questões a dilucidar e resolver são as seguintes:
+1.
+Impugnação da decisão de facto.
+2.
+Saber se se verificou, ou não, redução ilícita da retribuição.
+3.
+Apreciar a alegada inexistência de justa causa de resolução.
+4.
+Analisar a medida da indemnização fixada.
+5.
+Apurar se há fundamento para a procedência do pedido reconvencional.
+*
+III. Matéria de Facto
+O tribunal de 1.ª instância julgou provados os seguintes factos:
+1.	O A. foi admitido ao serviço da R. em 01/07/2013, para trabalhar sob a sua autoridade e direção;
+2.	Antes trabalhou para Cabeça de Casal da herança de FF, de 01/01/2012 a 30.06.2013, e antes ainda, para FF, de 01/06/1988 a 31/12/2011;
+3.	O local de trabalho, equipamentos de trabalho e funções foram as mesmas desde a 1.ª admissão, em 01/06/1988;
+4.	Foi acordado que o A. seria classificado com a categoria-profissional de “Distribuidor Comercial” para,
+a. Vender por grosso e distribuir tabacos e afins nos diversos clientes;
+b. Subsidiariamente, vender tabaco e seus derivados ao balcão na sede da R.;
+c. Carregar diariamente o veículo que usava na distribuição com os diversos produtos que vendia e distribuía;
+d. Efetuar reposições de tabacos nas máquinas automáticas de venda ao público colocadas nos estabelecimentos dos clientes.
+e. Proceder à assistência e reparação das máquinas automáticas de venda de tabaco.
+5.	A R. entregou ao A. um veículo que este utilizou para fazer as vendas, distribuições, assistências e reparações.
+6.	Acordaram o horário de Trabalho das 09.00 às 19.00, com intervalo de descanso das 13.00 às 15.00 h, de 2.ª a 6.ª feira, num total de 8h por dia e 40h por semana;
+7.	Porém, desde o início da execução do contrato que o A., por escolha e decisão suas, a que não se opunha a ré, efetuava o horário que queria e não observava as horas de entrada e saída acordadas.
+8.	Acordaram também que a atividade seria prestada no estabelecimento da R., em Vila 1(sede), e em todos os concelhos do Baixo Alentejo;
+9.	Acordaram as partes na seguinte contrapartida pela prestação da aludida atividade:
+i. Vencimento base igual ao valor dos sucessivos Salários Mínimos Nacionais/rmmg;
+ii. Subsídio de Prevenção de Máquinas;
+iii. Percentagem da venda de café;
+iv. Percentagem da venda de tabaco;
+10.	No exercício da sua atividade o autor auferiu as seguintes quantias ilíquidas de 2013 a 2021, incluindo-se na componente da retribuição variável, as comissões de vendas e o subsídio de prevenção de máquinas:
+11.	Em 2022 e 2023, o autor auferiu as seguintes quantias ilíquidas mensais:
+i.	2022
+a.	Janeiro 1.648,12€ [705,00 €+75,00 €+868,12€ (comissões)]
+b.	Fevereiro 1.591,63€ [705,00 €+75,00 €+811,63€ (comissões)]
+c.	Março 1.702,98€ [705,00 €+75,00 €+922,98€ (comissões)]
+d.	Abril 1.748,21€ [705,00 €+146,42€(feriados) +75,00 €+821,79€ (comissões)]
+e.	Maio 1.746,33€ [705,00 €+75,00 €+966,33€ (comissões)]
+f.	Junho 2.599,54€ [705,00 €+219,63€(feriados) +75,00 €+894,81€ (comissões)+705€ (subsídio de férias)]
+g.	Julho 1.690,52€ [705,00 €+75,00 €+910,52€ (comissões)]
+h.	Agosto 1.777,36€ [705,00 €+75,00 €+997,36€ (comissões)]
+i.	Setembro 1.666,98€ [705,00 €+75,00 €+886,98€ (comissões)]
+j.	Outubro 896,77€ [705,00 €+191.77€ (comissões)]
+k.	Novembro 924,62€ [705,00€+219.62€ (comissões)]
+l.	Dezembro 1.089,37€ [705,00€+384.37€ (comissões e prémio)]
+ii.	2023
+a.	Janeiro 889,29€ [760,00€+129.29€(comissões)]
+b.	Fevereiro 953,58€ [760,00€+193.58€(comissões)]
+c.	Março 983,59€ [760,00€+223.59€(comissões)]
+d.	Abril 972,64€ [760,00€+212.64€(comissões)]
+e.	Maio 1.037,08€ [760,00€+277.08€(comissões)]
+f.	Junho 1.028,45 [760,00€+268.45€(comissões)]
+g.	Julho 973,79€ [760,00€+213.79€(comissões)]
+h.	Agosto 1.011,49€ [760,00€+251.49€(comissões)]
+i.	Setembro 1.010,01€ [760,00€+250.01€(comissões)]
+j.	Outubro 1.009,68€ [760,00€+249.68€(comissões)]
+k.	Novembro 1.009,36€ [760,00€+249,36€(comissões)]
+l.	Dezembro 518,43€ [760,00€+87,76 €(comissões)-329,33€(desc.faltas)]
+12.	Nesses mesmos anos e até setembro de 2022, o autor recebia mensalmente “subsídio de Prevenção de Máquinas” no valor de 75.00 (setenta e cinco euros) mensais, o qual era pago 12 vezes ao ano.
+13.	Ao longo dos anos e desde 2013, o autor auferiu sempre o subsídio de férias e de natal pelo valor da retribuição base fixa, equivalente à rmmg em vigor.
+14.	Em 2022 o autor recebeu o valor de 352.50€ a título de subsídio de férias.
+15.	Assim, em 28/07/2022 foi emitido ao A. pela R. um recibo onde consta:
+a.	Férias N Goz - 2021 - 6 meses - 352.50;
+b.	Sub Natal – 6/12 duodécimos 2022 - 352.50;
+c.	Sub férias – 6/12 duodécimos 2022 - 352.50;
+d.	Férias N Gozadas – 6 meses - 352.50.
+16.	O A. não gozou férias durante o ano de 2022, o que lhe provocou cansaço.
+17.	O A. enviou carta à R., recebida em 16/11/2022, com o seguinte teor:
+18.	Apesar do exposto a ré não marcou as aludidas férias.
+19.	Durante o ano de 2023 o A. gozou 11 dias de férias.
+20.	O autor remeteu carta à ré, em 19/12/2023, com o seguinte teor:
+21.	Após outubro de 2022, o autor queixava-se, perante os colegas, que não conseguia fazer face às despesas com o seu agregado familiar.
+22.	A ré não pagou ao autor proporcionais de férias e subsídio de férias do ano de 2023.
+23.	Após 19/12/2023 a R. pagou ao A., a título de subsídio de Natal, a quantia de 760.00.
+24.	A titularidade das quotas da ré foi transmitida aos seus atuais sócios pelos seus anteriores sócios CC e GG em agosto de 2022.
+25.	Com data de 27.07.2022 autor e ré subscreveram documento intitulado “aditamento ao contrato de trabalho”, com o seguinte teor:
+26.	Na sequência do referido acordo a ré pagou ao autor a quantia de 25.000,00€, em duas prestações iguais, em 15.02.2023 e 23.10.2023.
+27.	Os atuais sócios da ré não teriam adquirido as participações sociais que constituem o capital social da ré caso soubessem que esta era devedora de quaisquer valores aos seus trabalhadores.
+28.	Ademais os novos sócios e gerentes temiam que os seus trabalhadores, nomeadamente os Distribuidores Comerciais, denunciassem os seus contratos de trabalho, arrastando consigo os seus clientes.
+29.	Aquando da transmissão das participações sociais em agosto de 2022, a ré decidiu que a comissão de vendas que cada vendedor auferia, correspondente a 0,15% do valor global das vendas, como até então vinha a ser pago, passaria a ser efetuado com referência ao valor de vendas realizado por cada trabalhador individualmente, o que implementou em outubro de 2022, juntamente com a eliminação do pagamento do subsidio mensal de prevenção de máquinas.
+-
+E julgou não provados os seguintes factos:
+A.	O A. não observava as horas de entrada e saída acordadas por ordem e no interesse da R.
+B.	O A., no período de 14/11/2022 a 17/02/2023, prestou, pelo menos, 108:48 horas de trabalho para além do horário de trabalho, no interesse e sem oposição da R., nos dias e horas que constam no documento n.º 35 à petição inicial.
+C.	O A. nunca recebeu retribuição por trabalho suplementar.
+D.	Em 2022 o autor teve as suas férias marcadas, por acordo com a R., em maio e junho de 2022, porém, a R. não permitiu o seu gozo.
+E.	A R. impediu o A. de gozar as férias vencidas em 01/01/2022, o que lhe provocou dificuldades de concentração.
+F.	Durante todo o ano de 2022 a R. não concedeu o direito ao gozo de férias a nenhum dos seus quatro trabalhadores com a categoria-profissional do A. e às duas trabalhadoras administrativas ao serviço concedeu apenas o gozo de 11 dias úteis de férias a cada uma delas.
+G.	O autor acordou com a ré que as férias de 2022 não seriam gozadas, mas sim pagas, o que sucedeu em julho de 202
+H.	A R., perante o A., não se opôs à invocação de justa causa;
+I.	A então futura gerência da R., em reunião com os trabalhadores, fez depender a compra das posições sociais do firmar dos pactos de permanência e exclusividade, mediante o pagamento de, em relação aos distribuidores comerciais, de € 25.000.00;
+J.	Simultaneamente o gerente cessante, Eng. CC, interessado na transmissão, participou nessas reuniões e teve encontros com o A. no sentido de ele garantir a sua permanência pelo menos por um ano e concordar com o que chamaram de pacto de exclusividade, mediante o pagamento dos referidos € 25.000.00;
+K.	O A. assinou o aditamento ao contrato para não impedir a transmissão das quotas e cedendo a grandes pressões por parte do anterior e do atual principal gerente, Sr. DD, e numa tentativa frustrada de manter o seu contrato de trabalho.
+L.	A ré pagou 25.000,00€ ao autor no pressuposto de que qualquer eventual cessação do contrato de trabalho do autor fosse devida à caducidade do mesmo ou a um despedimento coletivo ou por extinção do posto de trabalho.
+M.	A R., pelo menos até 2022, foi sócia da Associação Comercial do Distrito de Beja.
+N.	Após outubro de 2022, com as alterações na sua retribuição, o autor não conseguia fazer face às despesas com o seu agregado familiar.
+*
+IV. Impugnação da decisão de facto
+A recorrente impugna a decisão sobre a matéria de facto.
+Especificamente, impugna:
+- o ponto 29 dos factos assentes;
+- a alínea L) dos factos não provados.
+Apreciemos.
+É consabido que a impugnação da decisão da matéria de facto constitui uma prerrogativa do recorrente.
+Todavia, o legislador civil (e o legislador laboral, por subsidiariedade de aplicação do regime), sujeitou-a a determinadas condições.
+O artigo 640.º do Código de Processo Civil, sob a epígrafe
+“Ónus a cargo do recorrente que impugne a decisão relativa à matéria de facto”
+, prescreve o seguinte:
+1 - Quando seja impugnada a decisão sobre a matéria de facto, deve o recorrente obrigatoriamente especificar, sob pena de rejeição:
+a.
+Os concretos pontos de facto que considera incorretamente julgados;
+b.
+Os concretos meios probatórios, constantes do processo ou de registo ou gravação nele realizada, que impunham decisão sobre os pontos da matéria de facto impugnados diversa da recorrida;
+c.
+A decisão que, no seu entender, deve ser proferida sobre as questões de facto impugnadas.
+2- No caso previsto na alínea b) do número anterior, observa-se o seguinte:
+a.
+Quando os meios probatórios invocados como fundamento do erro na apreciação das provas tenham sido gravados, incumbe ao recorrente, sob pena de imediata rejeição do recurso na respetiva parte, indicar com exatidão as passagens da gravação em que se funda o seu recurso, sem prejuízo de poder proceder à transcrição dos excertos que considere relevantes;
+b.
+Independentemente dos poderes de investigação oficiosa do tribunal, incumbe ao recorrido designar os meios de prova que infirmem as conclusões do recorrente e, se os depoimentos tiverem sido gravados, indicar com exatidão as passagens da gravação em que se funda e proceder, querendo, à transcrição dos excertos que considere importantes.
+3 - O disposto nos n.ºs 1 e 2 é aplicável ao caso de o recorrido pretender alargar o âmbito do recurso, nos termos do n.º 2 do artigo 636.º.
+Sobre as exigências/condições impostas por esta norma, refere António Abrantes Geraldes, em
+Recursos no Novo Código de Processo Civil
+, Almedina, 2013, pág. 129:
+«Importa observar ainda que as referidas exigências devem ser apreciadas à luz de um critério de rigor.
+Trata-se, afinal, de uma decorrência do princípio da autorresponsabilidade das partes, impedindo que a impugnação da decisão da matéria de facto se transforme numa mera manifestação de inconsequente inconformismo.»
+.
+Quanto à consequência prevista para o desrespeito do ónus de impugnação, resulta do citado artigo que é a rejeição do recurso.
+Seguindo a jurisprudência do Supremo Tribunal de Justiça, esta Secção Social entende que para cumprimento do ónus de especificação imposto pelo n.º 1 do citado artigo, devem ser indicados nas conclusões do recurso, que delimitam o objeto do recurso, os concretos pontos de facto que são impugnados, podendo a especificação dos meios probatórios e a indicação da decisão alternativa constar do corpo das alegações – cf. Acórdãos do Supremo Tribunal de Justiça de 27-02-2024 (Proc. n.º 2351/21.1T8PDL.L1.S1) e de 12-05-2016 (Proc. n.º 324/10.9TTALM.L1.S1), acessíveis em
+www.dgsi.pt
+.
+Posto isto, apreciemos o caso concreto.
+Constata-se que, nas conclusões do recurso, estão devidamente especificados os concretos pontos de facto impugnados, tendo a recorrente, inclusivamente, indicado qual a decisão que, em seu entender, deverá ser proferida.
+Relativamente aos meios probatórios, depreende-se das alegações do recurso (e também das conclusões) que a discordância com o decidido quanto à alínea L) dos factos não provados se funda em prova documental, designadamente no documento n.º 1 junto com a contestação/reconvenção.
+Todavia, no que se refere ao ponto 29 dos factos assentes, constata-se que a recorrente não indica os meios probatórios constantes do processo ou do registo ou gravação que impõem a decisão propugnada.
+Interpretar as afirmações feitas pelo tribunal
+a quo
+, na motivação da convicção, acerca dos depoimentos testemunhais prestados, como faz a recorrente, constitui uma manifestação de inconformismo com o decidido, mas não satisfaz o ónus previsto no artigo 640.º, n.º 1, alínea b), que deve ser conjugado com o n.º 2, alínea a).
+Face ao exposto, rejeita-se a impugnação quanto ao ponto 29 do elenco dos factos provados e admite-se, apenas, a impugnação respeitante à alínea L) dos factos não provados.
+A alínea L) dos factos não provados tem o seguinte teor:
+-
+A ré pagou 25.000,00€ ao autor no pressuposto de que qualquer eventual cessação do contrato de trabalho do autor fosse devida à caducidade do mesmo ou a um despedimento coletivo ou por extinção do posto de trabalho.
+No entendimento da recorrente, esta factualidade deverá passar a constar do elenco dos factos provados, porquanto se encontra demonstrada pelo documento n.º 1 que acompanha a contestação/reconvenção.
+Analisemos.
+O documento n.º 1 consubstancia o
+“Aditamento ao contrato de trabalho”
+, que se encontra reproduzido no ponto 25 dos factos provados.
+Trata-se de um acordo escrito celebrado pelas partes processuais, com data de 27-07-2022, ou seja, poucos dias antes da titularidade das quotas da recorrente ter sido transmitida para os atuais sócios (ponto 24).
+Resultou igualmente provado que, na sequência deste acordo, a recorrente pagou ao recorrido a quantia de € 25.000,00, em duas prestações iguais, em 15-02-2023 e 23-10-2023 (ponto 26).
+Importa, então, verificar se, a partir do documento convocado, é possível concluir, com o elevado grau de verosimilhança que se impõe, que o valor indicado foi pago, exclusivamente, no pressuposto de qualquer eventual cessação do contrato de trabalho, fosse ela devida à caducidade do mesmo ou a despedimento coletivo ou a extinção do posto de trabalho.
+Adianta-se que a demonstração dessa factualidade não resulta do documento.
+Da cláusula 3.ª do acordo não se infere qualquer cessação do contrato de trabalho. Bem pelo contrário, aí vem expressamente prevista a manutenção da relação laboral.
+Por seu turno, ficou estipulado na cláusula 4.ª do acordo:
+«Os outorgantes acordam que no momento da transmissão das quotas que constituem o capital social da primeira outorgante, todos os créditos laborais decorrentes do referido contrato de trabalho se mostram liquidados, incluindo salários, qualquer retribuição/remuneração, designadamente horas extraordinárias, subsídios de férias e/ou de natal, diuturnidades, formação, entre quaisquer outras quantias, e estabelecem já uma compensação por antiguidade (até à data do acordo), no valor de € 25.000,00 (vinte e cinco mil euros), quantia que será paga em duas prestações iguais, a primeira que se vence no prazo de 6 (seis) meses após a assinatura do presente aditamento e outra até ao final dos seis meses subsequentes.»
+Acresce mencionar que na cláusula 5.ª do acordo consagrou-se o seguinte:
+«Através do presente aditamento, acordam ainda o primeiro e segundo outorgantes no seguinte:
+a. pacto de permanência – o segundo outorgante compromete-se a manter a relação laboral em vigor por um período não inferior a 1 ano a contar da data da assinatura do presente aditamento; e
+b. pacto de exclusividade – o segundo outorgante compromete-se, em caso de eventual resolução contratual, a não praticar a mesma atividade na mesma área geográfica ao serviço de terceiros por um período de 3 anos a contar da eventual resolução contratual.»
+Na motivação da sua convicção, escreveu o tribunal
+a quo
+:
+«os termos em que se mostra previsto o pagamento da compensação na adenda ao contrato de trabalho, não permite concluir, sem duvidas, que esta compensação visava ressarcir o trabalhador de eventuais créditos existentes à data, ou que visava compensar o trabalhador pelo pacto de fidelização de um ano, como alegado pelo autor, ou se assumia essa natureza mista, ou, ainda, se visava compensar o trabalhador - como também alegado pela ré -, em face de uma eventual cessação da relação laboral por caducidade, extinção do posto de trabalho ou despedimento coletivo. Certo é que, prevendo-se na referida adenda ao contrato de trabalho, a manutenção da relação laboral com os trabalhadores da ré, após a transmissão de quotas, com salvaguarda dos direitos dos trabalhadores e, consequentemente, sem perda de antiguidade, mal se compreende que conste do mesmo documento que a ré paga ao trabalhador 25.000,00 a título de compensação por antiguidade (à data do acordo), não tendo o depoimento da ré e das testemunhas contribuindo para o esclarecimento da questão.»
+Ora, a interpretação dos negócios jurídicos e das declarações negociais que o enformam rege-se pelo disposto nos artigos 236.º a 238.º, ambos do Código Civil.
+Dispõem estes artigos:
+Artigo 236.º:
+1. A declaração negocial vale com o sentido que um declaratário normal, colocado na posição do real declaratário, possa deduzir do comportamento do declarante, salvo se este não puder razoavelmente contar com ele.
+2. Sempre que o declaratário conheça a vontade real do declarante, é de acordo com ela que vale a declaração emitida.
+Artigo 237.º:
+Em caso de dúvida sobre o sentido da declaração, prevalece, nos negócios gratuitos, o menos gravoso para o disponente e, nos onerosos, o que conduzir ao maior equilíbrio das prestações.
+Artigo 238.º:
+1. Nos negócios formais não pode a declaração valer com um sentido que não tenha um mínimo de correspondência no texto do respetivo documento, ainda que imperfeitamente expresso.
+2. Esse sentido pode, todavia, valer, se corresponder à vontade real das partes e as razões determinantes da forma do negócio se não opuserem a essa validade.
+Tendo em conta este quadro legal, o que se extrai do acordo é que o mesmo foi uma espécie de acerto de contas até aquele momento, introduzindo-se, ainda, duas novas obrigações futuras: um pacto de permanência e um pacto de exclusividade.
+Contudo, não se estabelece qualquer ligação entre o montante de € 25.000,00, acordado na cláusula 4.ª, e qualquer uma destas novas obrigações contratuais, pelo que não se nos afigura que, tendo em consideração o texto do documento, se possa equacionar tal relação.
+Da parte inicial da cláusula 4.ª retira-se a emissão de uma declaração de quitação relativa aos créditos laborais decorrentes do contrato de trabalho até esse momento, incluindo salários, horas extraordinárias, subsídios de férias e/ou de Natal, diuturnidades e formação, entre quaisquer outras quantias.
+2
+Por outro lado, na segunda parte da cláusula, estipula-se que o valor da compensação por antiguidade devido até ao momento da outorga do acordo ascende ao montante de € 25.000. É o que se deduz da frase:
+«
+e estabelecem já uma compensação por antiguidade (até à data do acordo), no valor de € 25.000,00
+(vinte e cinco mil euros), quantia que será paga em duas prestações iguais, a primeira que se vence no prazo de 6 (seis) meses após a assinatura do presente aditamento e outra até ao final dos seis meses subsequentes.»
+3
+Todavia, não se retira do texto da cláusula que este valor é pago como antecipação de qualquer eventual futura cessação do contrato de trabalho, por caducidade, despedimento coletivo ou extinção do posto de trabalho.
+Não existe, assim, texto escrito que apoie a pretensão da recorrente.
+Destarte, exclusivamente com base no documento convocado não é possível considerar demonstrada a factualidade descrita na alínea L).
+Consequentemente, improcede a impugnação.
+*
+V. Redução ilícita da retribuição
+Na sentença recorrida, foi a ora recorrente condenada a pagar ao recorrido a quantia de € 11.190,12, respeitante a diferenças salariais resultantes da ilícita redução da retribuição ocorrida no período de 01-10-2022 a 19-12-2023.
+No recurso, impugna-se esta decisão.
+Cumpre apreciar.
+O valor fixado (€ 11.190,12) resulta da soma dos seguintes valores parciais:
+- € 1.125,00 (€75 x 15 meses), respeitante ao subsídio de prevenção de máquinas que deixou de ser pago;
+- € 10.065,12 [(€ 897,84 x 15 meses) - € 3.402,48], relativo às comissões de vendas que deixaram de ser pagas.
+A recorrente não coloca em causa a natureza retributiva destas prestações.
+Como é sabido, a retribuição do trabalho é um dos elementos essenciais caracterizadores do contrato de trabalho.
+O pagamento da retribuição é a principal obrigação do empregador e constitui a contrapartida pelo trabalho realizado pelo trabalhador.
+O artigo 127.º, n.º 1, alínea b), do Código do Trabalho, dispõe expressamente que um dos deveres do empregador é o de pagar pontualmente a retribuição ao trabalhador.
+Por sua vez, o artigo 129.º, n.º 1, alínea d), do mesmo compêndio legal, estatui que é proibido ao empregador diminuir a retribuição do trabalhador, salvo nos casos previstos neste código ou em instrumento de regulamentação coletiva de trabalho.
+Consagra-se neste artigo a garantia da irredutibilidade da retribuição auferida pelo trabalhador.
+Sobre o tema, escreveu-se no acórdão desta Secção Social de 10-10-2019 (Proc. n.º 1841/18.8T8EVR.E1), acessível em www.dgsi.pt:
+«(…) observar-se-á que o princípio da irredutibilidade da retribuição constitui uma das garantias do trabalhador no contexto da relação laboral, dele decorrendo a impossibilidade de redução da retribuição auferida, ressalvando-se apenas os casos previstos no Código ou em instrumento de regulamentação coletiva de trabalho.
+O Código prevê alguns casos de diminuição da retribuição: redução do tempo de trabalho ou da suspensão do contrato de trabalho em situação de crise da empresa – art. 305.º n.º 1 al. a) – passagem do trabalhador do regime de trabalho a tempo integral para o regime do trabalho a tempo parcial – art. 154.º n.º 3 – ou a descida de categoria, nos casos em que é admitida e com autorização dos serviços inspetivos do ministério responsável pela área laboral – art. 119.º.
+Fora destas situações, a diminuição da retribuição, nomeadamente por mero acordo com o trabalhador, não é admitida por lei e constitui, de resto, contraordenação muito grave – art. 129.º n.º 2 do Código do Trabalho.»
+.
+4
+No vertente caso, não foi invocada a verificação de qualquer uma das situações em que, à luz da lei vigente, é lícita a redução da retribuição.
+Quanto ao princípio da irredutibilidade da retribuição, tem-se entendido que o mesmo não é extensivo a toda e qualquer prestação que tenha natureza retributiva, pois os complementos salariais que sejam devidos enquanto contrapartida do modo específico do trabalho, não se encontram sujeitos a tal princípio, uma vez que apenas são devidos enquanto perdure a situação em que assenta o seu fundamento – cf. Acórdão do Supremo Tribunal de Justiça de 19-02-2014 (Proc. n.º 4272/08.4TTLSB.L1.S1) e Acórdão do Tribunal da Relação do Porto de 10-10-2016 (Proc. n.º 25236/15.6T8PRT.P1).
+5
+Por outro lado, o princípio da irredutibilidade não impede que sendo a retribuição do trabalhador composta por várias parcelas ou elementos, o empregador altere o quantitativo de algumas ou até as suprima, desde que o quantitativo da retribuição global não seja alterado – cf. Acórdão do Supremo Tribunal de Justiça de 01-04-2009 (Proc. n.º 08S3051), Acórdão da Relação do Porto de 07-12-2018 (Proc. n.º 1938/17.1T8VLG.P1) e Acórdão da Relação de Évora de 09-05-2024 (Proc. n.º 68/21.6T8STR.E1).
+6
+Posto isto, foquemo-nos no caso dos autos.
+Resulta do circunstancialismo fáctico assente que, até setembro de 2022, o ora recorrido recebeu um
+“subsídio de prevenção de máquinas”
+, no valor mensal de € 75, pago 12 vezes ao ano (pontos 9, 10 e 12).
+Nada indica que este subsídio constituísse uma contrapartida pecuniária pelo específico modo em que o trabalho era realizado e/ou que tenha ocorrido qualquer alteração nas condições da prestação da atividade do trabalhador.
+Desde outubro de 2022, este subsídio deixou de ser pago (ponto 29).
+Mostra-se igualmente apurado que a partir, também, de outubro de 2022, a recorrente alterou, unilateralmente, os critérios subjacentes ao pagamento das comissões de vendas, que constituíam uma componente variável da retribuição do trabalhador.
+Até então, tais comissões correspondiam a 0, 15% do valor global das vendas. A partir daí, a dita percentagem passou a ser aplicada ao valor das vendas individualmente realizadas por cada vendedor (ponto 29).
+Ora, dando por adquirido, como referimos anteriormente, que o empregador podia alterar a estrutura da retribuição, apenas há que analisar se as concretas alterações implicaram uma diminuição do
+“quantum”
+global mensal da retribuição do trabalhador.
+Essa tarefa foi criteriosamente levada a cabo na sentença recorrida. Aí se escreveu:
+«Vejamos, então, se tais factos resultaram numa perda efetiva de retribuição do autor.
+Para o efeito cumpre chamar à colação a matéria de facto com relevo para a causa:
+•
+No exercício da sua atividade o autor auferiu as seguintes quantias ilíquidas de 2013 a 2021:
+•
+Em 2022 e 2023, o autor auferiu as seguintes quantias ilíquidas mensais:
+i.
+2022
+a.
+Janeiro 1.648,12€ [705,00 €+75,00 €+868,12€ (comissões)]
+b.
+Fevereiro 1.591,63€ [705,00 €+75,00 €+811,63€ (comissões)]
+c.
+Março 1.702,98€ [705,00 €+75,00 €+922,98€ (comissões)]
+d.
+Abril 1.748,21€ [705,00 €+146,42€(feriados) +75,00 €+821,79€ (comissões)]
+e.
+Maio 1.746,33€ [705,00 €+75,00 €+966,33€ (comissões)]
+f.
+Junho 2.599,54€ [705,00 €+219,63€(feriados) +75,00 €+894,81€ (comissões)+705€ (subsídio de férias)]
+g.
+Julho 1.690,52€ [705,00 €+75,00 €+910,52€ (comissões)]
+h.
+Agosto 1.777,36€ [705,00 €+75,00 €+997,36€ (comissões)]
+i.
+Setembro 1.666,98€ [705,00 €+75,00 €+886,98€ (comissões)]
+j.
+Outubro 896,77€ [705,00 €+191.77€ (comissões)]
+k.
+Novembro 924,62€ [705,00€+219.62€ (comissões)]
+l.
+Dezembro 1.089,37€ [705,00€+384.37€ (comissões e prémio)]
+ii.
+2023
+a.
+Janeiro 889,29€ [760,00€+129.29€(comissões)]
+b.
+Fevereiro 953,58€ [760,00€+193.58€(comissões)]
+c.
+Março 983,59€ [760,00€+223.59€(comissões)]
+d.
+Abril 972,64€ [760,00€+212.64€(comissões)]
+e.
+Maio 1.037,08€ [760,00€+277.08€(comissões)]
+f.
+Junho 1.028,45 [760,00€+268.45€(comissões)]
+g.
+Julho 973,79€ [760,00€+213.79€(comissões)]
+h.
+Agosto 1.011,49€ [760,00€+251.49€(comissões)]
+i.
+Setembro 1.010,01€ [760,00€+250.01€(comissões)]
+j.
+Outubro 1.009,68€ [760,00€+249.68€(comissões)]
+k.
+Novembro 1.009,36€ [760,00€+249,36€(comissões)]
+l.
+Dezembro 518,43€ [760,00€+87,76 €(comissões)-329,33€(desc.faltas)]
+Em face da aludida matéria é por demais evidente que, a partir de outubro de 2022, a remuneração global do autor sofreu uma diminuição considerável de mais de 500€/mês.»
+Efetivamente, ao compararmos as retribuições mensais auferidas pelo recorrido entre 2013 e dezembro de 2023, constatamos que, a partir de outubro de 2022, há uma real e substancial - mais de € 500/mês - diminuição do quantitativo da retribuição global auferida.
+Assim sendo, é cristalino que as alterações ocorridas na retribuição violaram, manifestamente, o princípio da irredutibilidade da retribuição.
+Por fim, resta referir que, ao contrário do sustentado no recurso, os factos não permitem concluir que o trabalhador concordou com as alterações remuneratórias, designadamente por não ter dirigido à recorrente, durante mais de um ano, qualquer reclamação.
+Recordemos que os créditos laborais decorrentes da execução do contrato de trabalho são irrenunciáveis durante a vigência do contrato e que o trabalhador pode reclamar esses créditos até um ano contado desde o dia seguinte ao da cessação da relação laboral- artigo 337.º do Código do Trabalho.
+Deste modo, se o que a recorrente pretendia ao invocar má-fé do trabalhador era suscitar a questão do abuso de direito, na modalidade de
+venire contra factum proprium
+, é manifesto que tal questão improcede.
+Concluindo, a decisão que julgou violado o princípio da irredutibilidade da remuneração e condenou, consequentemente, a recorrente a pagar ao recorrido a quantia de € 11.190,12, respeitante a diferenças salariais no período de 01-10-2022 a 19-12-2023, não merece censura.
+Destarte, improcede, também nesta parte, o recurso.
+*
+VI. Da alegada inexistência de justa causa de resolução contratual
+Defende a recorrente que o tribunal
+a quo
+errou ao reconhecer a existência de justa causa para a resolução do contrato de trabalho, pelo trabalhador.
+Cumpre apreciar.
+Prescreve o artigo 394.º do Código do Trabalho:
+1 - Ocorrendo justa causa, o trabalhador pode fazer cessar imediatamente o contrato.
+2 - Constituem justa causa de resolução do contrato pelo trabalhador, nomeadamente, os seguintes comportamentos do empregador:
+a) Falta culposa de pagamento pontual da retribuição;
+b) Violação culposa de garantias legais ou convencionais do trabalhador, designadamente a prática de assédio praticada pela entidade empregadora ou por outros trabalhadores;
+c) Aplicação de sanção abusiva;
+d) Falta culposa de condições de segurança e saúde no trabalho;
+e) Lesão culposa de interesses patrimoniais sérios do trabalhador;
+f) Ofensa à integridade física ou moral, liberdade, honra ou dignidade do trabalhador, punível por lei, incluindo a prática de assédio denunciada ao serviço com competência inspetiva na área laboral, praticada pelo empregador ou seu representante.
+3 - Constituem ainda justa causa de resolução do contrato pelo trabalhador:
+a) Necessidade de cumprimento de obrigação legal incompatível com a continuação do contrato;
+b) Alteração substancial e duradoura das condições de trabalho no exercício lícito de poderes do empregador;
+c) Falta não culposa de pagamento pontual da retribuição.
+d) Transmissão para o adquirente da posição do empregador no respetivo contrato de trabalho, em consequência da transmissão da empresa, nos termos dos n.os 1 ou 2 do artigo 285.º, com o fundamento previsto no n.º 1 do artigo 286.º-A.
+4 - A justa causa é apreciada nos termos do n.º 3 do artigo 351.º, com as necessárias adaptações.
+5 - Considera-se culposa a falta de pagamento pontual da retribuição que se prolongue por período de 60 dias, ou quando o empregador, a pedido do trabalhador, declare por escrito a previsão de não pagamento da retribuição em falta, até ao termo daquele prazo.
+De harmonia com o normativo citado, o trabalhador pode fazer cessar o contrato de trabalho, devido à existência de justa causa.
+A justa causa pode ser objetiva (não culposa) ou subjetiva (culposa).
+A primeira, prevista no n.º 3 da norma, resulta de circunstâncias objetivas, relacionadas com o trabalhador ou com a prática de atos lícitos pelo empregador.
+A segunda, tem na base um comportamento ilícito do empregador e a ela se reporta o n.º 2 do artigo supracitado (embora, a título meramente exemplificativo).
+A distinção entre as duas formas de justa causa mostra-se relevante, devido às consequências legalmente previstas, pois o artigo 396.º, n.º 1, do Código do Trabalho estipula que no caso de resolução do contrato de trabalho com fundamento em facto previsto no n.º 2 do artigo 394.º, o trabalhador tem direito a indemnização, a determinar entre 15 e 45 dias de retribuição base e diuturnidades por cada ano completo de antiguidade, atendendo ao valor da retribuição e ao grau de ilicitude do comportamento do empregador, não podendo ser inferior a três meses de retribuição base e diuturnidades.
+E, conforme foi sumariado no Acórdão da Relação de Évora de 01-02-2011 (Proc. n.º 51/10.7TTEVR.E1):
+7
+«A resolução do contrato de trabalho, tal como se encontra configurada nos artigos 394º a 399º do Código do Trabalho e para que o trabalhador tenha direito, por via judicial, à indemnização prevista no artigo 396º do referido diploma, pressupõe que o trabalhador faça prova dos factos constitutivos do direito alegado, ou seja, a existência de justa causa»
+.
+A jurisprudência
+8
+vem afirmando que a justa causa subjetiva para a resolução do contrato pelo trabalhador, exige a verificação dos seguintes requisitos: (i) um requisito objetivo, traduzido num comportamento do empregador violador dos direitos ou garantias do trabalhador; (ii) um requisito subjetivo, consistente na atribuição de culpa ao empregador; (iii) um requisito causal, no sentido de que esse comportamento, pela sua gravidade e consequências, torne imediata e praticamente impossível a subsistência da relação de trabalho.
+Apresentadas estas prévias considerações genéricas, foquemo-nos agora no caso concreto.
+Infere-se da factualidade assente que o recorrido remeteu à recorrente, em 19-12-2023, um carta através da qual manifestou a sua vontade de resolver imediatamente o contrato de trabalho, por verificação de justa causa nos termos previstos pelas alíneas a), b) e e) do n.º 1 do artigo 394.º do Código do Trabalho.
+Os fundamentos apresentados foram, em síntese, os seguintes:
+a) Falta culposa do pagamento pontual das seguintes retribuições:
+•	Retribuição pela isenção do horário de trabalho (IHT);
+•	Falta de pagamento parcial dos subsídios de férias e de Natal, desde a admissão, por ter sido pagos os valores respeitantes a prémios e à parte variável da retribuição;
+•	Redução da retribuição desde 1 de outubro de 2022, sendo os atuais rendimentos de trabalho insuficientes para satisfação das despesas correntes pessoais e do agregado familiar.
+b) Violação culposa do direito ao gozo efetivo das férias vencidas a 01-01-2022 e 01-01-2023 (neste caso, relativamente a 11 dias).
+Ora, como analisámos
+supra
+, resultou demonstrada a invocada redução ilícita da remuneração do trabalhador, desde outubro de 2022.
+Também resultou provado que, desde 2013, os subsídios de férias e de Natal foram sempre pagos pelo valor da retribuição base fixa. Porém, como foi decidido na sentença recorrida, e não é colocado em crise no recurso, só ficou reconhecido como sendo devido o valor de € 75 relativo ao
+“subsídio de prevenção de máquinas”
+em cada um dos subsídios de férias vencidos entre 2013 e 2023.
+Não resultou demonstrado que a recorrente tivesse impedido, culposamente, o gozo das férias vencidas em 1 de janeiro dos anos de 2022 e 2023, nem que houvesse lugar ao pagamento de retribuições por IHT.
+9
+Em suma, os fundamentos da justa causa invocados resultaram parcialmente demonstrados.
+Os concretos incumprimentos do contrato de trabalho verificados preenchem o
+requisito objetivo
+necessário à resolução: falta do pagamento pontal da retribuição.
+A culpa da empregadora (
+requisito subjetivo
+) presume-se nos termos previstos pelo n.º 5 do artigo 394.º do Código do Trabalho, relativamente às retribuições em dívida vencidas há 60 dias ou mais (presunção inilidível), e nos termos previstos pelo artigo 799.º do Código de Processo Civil, relativamente àquelas em que a data de vencimento não atingiu os 60 dias (presunção ilidível), sendo certo que a Ré não conseguiu afastar esta última presunção, alegando e provando os elementos factuais suficientes para habilitar o tribunal a formular um juízo de não censurabilidade da sua conduta.
+No que concerne ao requisito causal, importa referir que a redução ilícita do salário do recorrido atingiu valores consideráveis, pois este deixou de auferir mais do que € 500 /mês. E, no total, deixou de receber € 11.190,12.
+Quanto às diferenças salariais respeitantes aos subsídios de férias, deixou de receber o valor € 825 (€ 75 x 11 anos).
+Ora, perante este contexto, especialmente no que concerne à redução da retribuição mensal, arbitrariamente decidida pela entidade empregadora, torna-se compreensível que, para o trabalhador, a manutenção do vínculo laboral se revele insustentável.
+Durante mais de um ano, o empregador manifestou um absoluto desrespeito pelo direito à retribuição do trabalhador ao seu serviço, embora continuasse a beneficiar plenamente da atividade que este desempenhava.
+Por conseguinte, também consideramos verificado o
+requisito causal
+, pois o comportamento da recorrente, pela sua gravidade e consequências, tornou impossível a sobrevivência da relação laboral.
+Não era exigível e constituiria uma insuportável e injusta imposição a manutenção do contrato de trabalho para o trabalhador.
+Por isso, acompanhamos a decisão recorrida quando sentenciou que, tendo em conta o comportamento analisado, o recorrido tinha justa causa para resolver o contrato de trabalho.
+Consequentemente, soçobra o fundamento do recurso analisado.
+*
+VII. Valor da indemnização
+Em consequência da justa causa (subjetiva) de resolução contratual, o tribunal arbitrou uma indemnização no valor € 27.018, ao abrigo do artigo 396.º do Código do Trabalho.
+A fixação de tal valor foi assim explicada:
+«Em face da duração do contrato (35 anos, 6 meses, e 18 dias), a remuneração mensal do trabalhador (1.732,84€) e a gravidade dos factos (para o que concorre a violação de mais do que um dever por parte da empregadora), decido fixar em 30 dias de retribuição base (760€) por ano de antiguidade ou fração, a indemnização a receber pelo autor, no valor global ilíquido de 27.018,00€ [(760€x35a)+(760€:12mx6m)+(760€:12m:30dx18d)].»
+A recorrente acha excessivo o valor arbitrado, pugnando para que a indemnização seja calculada tendo por base 15 dias de retribuição.
+Ora, no nosso entender, a 1.ª instância sopesou com grande lucidez as circunstâncias do caso concreto e, ao fixar a base da indemnização em 30 dias, decidiu com equilíbrio e justiça.
+Ainda que o recorrido auferisse uma retribuição acima da média, tendo em consideração o salário médio mensal em Portugal à data dos factos
+10
+, não podemos olvidar que o trabalhador, durante mais de um ano, teve de viver com um salário significativamente diminuído por ato ilícito do empregador, e que o empregador incumpriu, arbitrariamente, a sua principal obrigação contratual.
+É intenso o grau de ilicitude do facto!
+Destarte, a decisão proferida e os seus fundamentos merecem a nossa inteira concordância quanto à fixação da base da indemnização em 30 dias.
+*
+VIII. Do pedido reconvencional
+Alega a recorrente que o pedido reconvencional que formulou deveria ter sido julgado procedente.
+A questão suscitada estava totalmente dependente da procedência da impugnação quanto à alínea L) dos factos não provados, que não se verificou.
+Deste modo, mais não resta do que confirmar a sentença recorrida quanto à improcedência do pedido reconvencional, uma vez que a recorrente não logrou demonstrar, como lhe competia, que a quantia de € 25.000 paga ao recorrido tinha a natureza de compensação antecipada por qualquer cessação do contrato de trabalho que conferisse ao trabalhador o direito a uma compensação/indemnização.
+Pelo exposto, improcede, igualmente nesta parte, o recurso.
+-
+Concluindo, o recurso improcede na totalidade.
+As custas do recurso serão suportadas pela recorrente, nos termos previstos pelo artigo 527.º do Código de Processo Civil.
+*
+IX. Decisão
+Nestes termos, acordam os juízes da Secção Social do Tribunal da Relação de Évora em julgar o recurso improcedente, e, em consequência, confirmam a decisão recorrida.
+Custas a cargo da recorrente.
+Notifique.
+-------------------------------------------------------------------------------
+Évora, 10 de dezembro de 2025
+Paula do Paço
+Luís Jardim
+Mário Branco Coelho
+____________________________________________
+1.	Relatora: Paula do Paço; 1.º Adjunto: Luís Jardim; 2.º Adjunto: Mário Branco Coelho
+↩︎
+2.	Em sede de recurso, não está em causa a apreciação da validade ou invalidade desta cláusula.
+↩︎
+3.	Sublinhado da nossa responsabilidade.
+↩︎
+4.	Esclarece-se que a referência ao n.º 2 do artigo 129.º, reporta-se à redação do artigo antes das alterações introduzidas pela Lei n.º 13/2023, de 3 de abril. Atualmente, o anterior n.º 2 corresponde ao n.º 3 da norma.
+↩︎
+5.	Acessíveis em www.dgsi.pt.
+↩︎
+6.
+Idem
+.
+↩︎
+7.	Publicado em www.dgsi.pt.
+↩︎
+8.	De que é paradigmático o Acórdão do Supremo Tribunal de Justiça de 01-10-2015 (Proc. n.º 736/12.3TTVFR.P1.S1), consultável em
+www.dgsi.pt
+.
+↩︎
+9.	Cf. Acórdãos desta Secção Social de 28-09-2017 (Proc. n.º 326/16.1T8STC.E1) e de 11-11-2021(Proc. n.º 1169/20.3T8FAR.E1), disponíveis em www.dgsi.pt.
+↩︎
+10.	Em 2022 era de € 1365 e em 2023 no valor de € 1463 – cf.
+https://www.portugal.gov.pt/pt/gc23/comunicacao/noticia?i=salario-medio-declarado-a-seguranca-social-sobe-72-para-1463
+.
+↩︎

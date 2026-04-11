@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIAA — Módulos RAG Pipeline</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:       #0d0f14;
+    --surface:  #141720;
+    --border:   #232840;
+    --accent:   #4f8ef7;
+    --accent2:  #a78bfa;
+    --green:    #34d399;
+    --orange:   #fb923c;
+    --text:     #e2e8f0;
+    --muted:    #64748b;
+    --mono:     'IBM Plex Mono', monospace;
+    --sans:     'IBM Plex Sans', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 40px 32px;
+    min-height: 100vh;
+  }
+
+  /* ── Header ── */
+  header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .project-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .12em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  h1 {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: -.02em;
+  }
+  h1 span { color: var(--accent); }
+  .badge {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--muted);
+  }
+  .badge.phase { border-color: var(--accent); color: var(--accent); }
+
+  /* ── Section titles ── */
+  .section-title {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  /* ── Architecture diagram ── */
+  .arch {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 40px;
+    overflow-x: auto;
+  }
+
+  .arch-layer {
+    flex: 1;
+    min-width: 160px;
+    border: 1px solid var(--border);
+    border-right: none;
+    padding: 20px 16px;
+    position: relative;
+    animation: fadeIn .4s ease both;
+  }
+  .arch-layer:first-child { border-radius: 8px 0 0 8px; }
+  .arch-layer:last-child  { border-radius: 0 8px 8px 0; border-right: 1px solid var(--border); }
+
+  .arch-layer::after {
+    content: '→';
+    position: absolute;
+    right: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    color: var(--muted);
+    z-index: 2;
+    background: var(--bg);
+    padding: 2px 0;
+  }
+  .arch-layer:last-child::after { display: none; }
+
+  .layer-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .layer-label.blue  { color: var(--accent); }
+  .layer-label.purple{ color: var(--accent2); }
+  .layer-label.green { color: var(--green); }
+
+  .layer-name {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .layer-sub {
+    font-size: 11px;
+    color: var(--muted);
+    font-family: var(--mono);
+  }
+
+  /* ── Module grid ── */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .module {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    animation: fadeIn .4s ease both;
+    transition: border-color .2s;
+  }
+  .module:hover { border-color: var(--accent); }
+
+  .module-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+  .module-name {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+  }
+  .module-file {
+    font-family: var(--mono);
+    font-size: 10px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .tag {
+    font-family: var(--mono);
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .tag.abc     { background: #1e2a4a; color: var(--accent); border: 1px solid #2d3f6e; }
+  .tag.impl    { background: #1a2e22; color: var(--green);  border: 1px solid #2a4a35; }
+  .tag.eval    { background: #2a1f10; color: var(--orange); border: 1px solid #4a3520; }
+  .tag.glue    { background: #241a3a; color: var(--accent2);border: 1px solid #3d2e5e; }
+
+  .module-desc {
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 14px;
+    line-height: 1.5;
+  }
+
+  /* methods list */
+  .methods {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .method {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    font-family: var(--mono);
+    font-size: 11px;
+  }
+  .method-name { color: var(--accent2); }
+  .method-sig  { color: var(--muted); font-size: 10px; }
+
+  /* dependency line */
+  .deps {
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+  }
+  .deps-label {
+    font-family: var(--mono);
+    font-size: 9px;
+    color: var(--muted);
+    letter-spacing: .08em;
+  }
+  .dep-chip {
+    font-family: var(--mono);
+    font-size: 10px;
+    padding: 1px 7px;
+    border-radius: 3px;
+    background: #1a1e2e;
+    border: 1px solid var(--border);
+    color: #94a3b8;
+  }
+
+  /* ── Swap table ── */
+  .swap-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 40px;
+    font-size: 12px;
+  }
+  .swap-table th {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: left;
+    padding: 8px 14px;
+    border-bottom: 1px solid var(--border);
+  }
+  .swap-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .swap-table tr:last-child td { border-bottom: none; }
+  .swap-table tr:hover td { background: var(--surface); }
+  .now  { color: var(--green);  font-family: var(--mono); font-size: 11px; }
+  .next { color: var(--orange); font-family: var(--mono); font-size: 11px; }
+  code {
+    font-family: var(--mono);
+    font-size: 11px;
+    background: #1a1e2e;
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: var(--accent2);
+  }
+
+  /* ── Install block ── */
+  .install {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 8px 8px 0;
+    padding: 16px 20px;
+    font-family: var(--mono);
+    font-size: 12px;
+    color: #94a3b8;
+    margin-bottom: 40px;
+  }
+  .install .comment { color: var(--muted); }
+  .install .cmd     { color: var(--green); }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="project-label">PRJ #06 · LEIM 2025/2026 · ISEL</div>
+    <h1>AIAA — <span>RAG Pipeline</span> Modules</h1>
+  </div>
+  <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end">
+    <span class="badge phase">Fase 1 — Protótipo</span>
+    <span class="badge">16 módulos</span>
+  </div>
+</header>
+
+<!-- Architecture flow -->
+<div class="section-title">Fluxo de Indexação</div>
+<div class="arch">
+  <div class="arch-layer" style="animation-delay:.05s">
+    <div class="layer-label blue">1 · Input</div>
+    <div class="layer-name">PDFLoader (ABC)</div>
+    <div class="layer-sub">TextLoader →</div>
+    <div class="layer-sub">PlumberLoader</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.08s">
+    <div class="layer-label purple">2 · Chunking</div>
+    <div class="layer-name">Chunker (ABC)</div>
+    <div class="layer-sub">FixedChunker →</div>
+    <div class="layer-sub">StructureAware</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.11s">
+    <div class="layer-label purple">3 · Embedding</div>
+    <div class="layer-name">Embedder (ABC)</div>
+    <div class="layer-sub">SentenceTransformer →</div>
+    <div class="layer-sub">OllamaEmbedder</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.14s">
+    <div class="layer-label blue">4 · Storage</div>
+    <div class="layer-name">VectorStore (ABC)</div>
+    <div class="layer-sub">ChromaStore →</div>
+    <div class="layer-sub">PostgresStore</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.17s">
+    <div class="layer-label green">5 · Evaluation</div>
+    <div class="layer-name">eval_rag.py</div>
+    <div class="layer-sub">Hit Rate · MRR</div>
+  </div>
+</div>
+
+<div class="section-title">Fluxo de Interrogação</div>
+<div class="arch">
+  <div class="arch-layer" style="animation-delay:.05s">
+    <div class="layer-label blue">1 · Pergunta</div>
+    <div class="layer-name">Utilizador</div>
+    <div class="layer-sub">linguagem natural</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.08s">
+    <div class="layer-label purple">2 · Embedding</div>
+    <div class="layer-name">Embedder (ABC)</div>
+    <div class="layer-sub">mesmo modelo</div>
+    <div class="layer-sub">da indexação</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.11s">
+    <div class="layer-label blue">3 · Pesquisa</div>
+    <div class="layer-name">VectorStore (ABC)</div>
+    <div class="layer-sub">top-N chunks</div>
+    <div class="layer-sub">por similaridade</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.14s">
+    <div class="layer-label purple">4 · Prompt</div>
+    <div class="layer-name">PromptBuilder (ABC)</div>
+    <div class="layer-sub">Basic →</div>
+    <div class="layer-sub">LegalPrompt</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.17s">
+    <div class="layer-label purple">5 · Geração</div>
+    <div class="layer-name">LLM (ABC)</div>
+    <div class="layer-sub">OllamaLLM →</div>
+    <div class="layer-sub">EchoLLM</div>
+  </div>
+  <div class="arch-layer" style="animation-delay:.20s">
+    <div class="layer-label green">6 · Resultado</div>
+    <div class="layer-name">RetrievalResult</div>
+    <div class="layer-sub">answer · sources</div>
+    <div class="layer-sub">· prompt</div>
+  </div>
+</div>
+
+<!-- Modules -->
+<div class="section-title">Módulos</div>
+<div class="grid">
+
+  <!-- vector_store.py -->
+  <div class="module" style="animation-delay:.05s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">VectorStore</div>
+        <div class="module-file">vector_store.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Contrato abstracto para todos os stores vectoriais. Define a interface que
+      tanto o ChromaStore como o PostgresStore são obrigados a implementar.
+      Garante que a troca entre backends é uma alteração de uma linha.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">add</span><span class="method-sig">(text, metadata) → str</span></div>
+      <div class="method"><span class="method-name">search</span><span class="method-sig">(query, filters, n) → list[dict]</span></div>
+      <div class="method"><span class="method-name">remove</span><span class="method-sig">(doc_id) → None</span></div>
+      <div class="method"><span class="method-name">count</span><span class="method-sig">() → int</span></div>
+    </div>
+  </div>
+
+  <!-- chroma_store.py -->
+  <div class="module" style="animation-delay:.1s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">ChromaStore</div>
+        <div class="module-file">chroma_store.py</div>
+      </div>
+      <span class="tag impl">IMPL · agora</span>
+    </div>
+    <div class="module-desc">
+      Implementação de VectorStore usando ChromaDB. Ranking automático por
+      similaridade cosine, metadados nativos, zero configuração de infraestrutura.
+      Ponto de partida recomendado.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">score</span><span class="method-sig">= 1 − cosine_distance  (0→1)</span></div>
+      <div class="method"><span class="method-name">filtros</span><span class="method-sig">where={"type": "ruling"}</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">chromadb</span>
+      <span class="dep-chip">sentence-transformers</span>
+    </div>
+  </div>
+
+  <!-- postgres_store.py -->
+  <div class="module" style="animation-delay:.15s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">PostgresStore</div>
+        <div class="module-file">postgres_store.py</div>
+      </div>
+      <span class="tag eval">IMPL · futuro</span>
+    </div>
+    <div class="module-desc">
+      Implementação de VectorStore usando PostgreSQL + pgvector. Mesma interface
+      que o ChromaStore. Cria automaticamente a tabela e o índice ivfflat na
+      primeira execução. Migração = trocar uma linha de código.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">operador</span><span class="method-sig">&lt;=&gt; cosine (pgvector)</span></div>
+      <div class="method"><span class="method-name">índice</span><span class="method-sig">ivfflat auto-criado</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">psycopg2</span>
+      <span class="dep-chip">pgvector</span>
+      <span class="dep-chip">sentence-transformers</span>
+    </div>
+  </div>
+
+  <!-- chunker.py -->
+  <div class="module" style="animation-delay:.2s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">Chunker</div>
+        <div class="module-file">chunker.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Contrato abstracto para estratégias de divisão de texto. Todas as
+      implementações devolvem a mesma estrutura de dicionário, tornando a
+      troca de estratégia transparente para o resto do pipeline.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">split</span><span class="method-sig">(text) → list[dict]</span></div>
+      <div class="method"><span class="method-name">garante</span><span class="method-sig">text · chunk_index · chunk_total</span></div>
+    </div>
+  </div>
+
+  <!-- fixed_chunker.py -->
+  <div class="module" style="animation-delay:.25s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">FixedChunker</div>
+        <div class="module-file">fixed_chunker.py</div>
+      </div>
+      <span class="tag impl">IMPL · agora</span>
+    </div>
+    <div class="module-desc">
+      Divide texto em chunks de tamanho fixo (caracteres) com sobreposição
+      configurável. Sem dependências externas. Ponto de partida — usar
+      eval_rag.py para encontrar os melhores valores de chunk_size e overlap.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">chunk_size</span><span class="method-sig">default 1000 chars</span></div>
+      <div class="method"><span class="method-name">overlap</span><span class="method-sig">default 200 chars (20%)</span></div>
+      <div class="method"><span class="method-name">step</span><span class="method-sig">= chunk_size − overlap</span></div>
+    </div>
+  </div>
+
+  <!-- structure_aware_chunker.py -->
+  <div class="module" style="animation-delay:.3s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">StructureAwareChunker</div>
+        <div class="module-file">structure_aware_chunker.py</div>
+      </div>
+      <span class="tag eval">IMPL · futuro</span>
+    </div>
+    <div class="module-desc">
+      Detecta secções do PDF a partir de propriedades tipográficas (tamanho
+      de fonte, boldness) — independente do texto. Subdivide secções longas
+      com FixedChunker internamente. Metadados ricos: section, level, page.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">extra</span><span class="method-sig">section · section_level · page_start</span></div>
+      <div class="method"><span class="method-name">fallback</span><span class="method-sig">texto simples → FixedChunker</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">pdfplumber</span>
+      <span class="dep-chip">FixedChunker</span>
+    </div>
+  </div>
+
+  <!-- eval_rag.py -->
+  <div class="module" style="animation-delay:.35s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">eval_rag</div>
+        <div class="module-file">eval_rag.py</div>
+      </div>
+      <span class="tag eval">AVALIAÇÃO</span>
+    </div>
+    <div class="module-desc">
+      Avalia combinações de (chunk_size, overlap) contra um conjunto de
+      perguntas com resposta conhecida. Produz Hit Rate e MRR para cada
+      configuração e identifica a melhor automaticamente.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">Hit Rate</span><span class="method-sig">chunk certo nos top-N?  (0→1)</span></div>
+      <div class="method"><span class="method-name">MRR</span><span class="method-sig">Mean Reciprocal Rank  (1st &gt; 5th)</span></div>
+      <div class="method"><span class="method-name">configs</span><span class="method-sig">7 combinações testadas por omissão</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">ChromaStore</span>
+      <span class="dep-chip">FixedChunker</span>
+    </div>
+  </div>
+
+  <!-- embedder.py -->
+  <div class="module" style="animation-delay:.02s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">Embedder</div>
+        <div class="module-file">embedder.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Contrato abstracto para modelos de embedding. Converte texto em vectores
+      densos. Desacoplado do VectorStore — podes trocar o modelo de embedding
+      sem tocar no store, e vice-versa.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">embed</span><span class="method-sig">(text) → list[float]</span></div>
+      <div class="method"><span class="method-name">dimension</span><span class="method-sig">→ int &nbsp; tamanho fixo do vector</span></div>
+      <div class="method"><span class="method-name">model_name</span><span class="method-sig">→ str &nbsp; identificador do modelo</span></div>
+    </div>
+  </div>
+
+  <!-- sentence_transformer_embedder.py -->
+  <div class="module" style="animation-delay:.04s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">SentenceTransformerEmbedder</div>
+        <div class="module-file">sentence_transformer_embedder.py</div>
+      </div>
+      <span class="tag impl">IMPL · agora</span>
+    </div>
+    <div class="module-desc">
+      Modelo local via sentence-transformers. Download automático na primeira
+      execução, depois funciona offline. Modelo recomendado para o AIAA:
+      paraphrase-multilingual-MiniLM-L12-v2 (384-dim, suporta português).
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">default</span><span class="method-sig">paraphrase-multilingual-MiniLM-L12-v2</span></div>
+      <div class="method"><span class="method-name">dim</span><span class="method-sig">384 &nbsp;(ou conforme o modelo escolhido)</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">sentence-transformers</span>
+    </div>
+  </div>
+
+  <!-- ollama_embedder.py -->
+  <div class="module" style="animation-delay:.06s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">OllamaEmbedder</div>
+        <div class="module-file">ollama_embedder.py</div>
+      </div>
+      <span class="tag eval">IMPL · futuro</span>
+    </div>
+    <div class="module-desc">
+      Modelo open-source servido localmente pelo Ollama. Sem API keys, sem
+      custos, sem internet. Alinha com o requisito da proposta de usar LLMs
+      open-source. Dimensão resolvida automaticamente na primeira chamada.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">default</span><span class="method-sig">nomic-embed-text (768-dim)</span></div>
+      <div class="method"><span class="method-name">alternativa</span><span class="method-sig">mxbai-embed-large (1024-dim)</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">Ollama (serviço local)</span>
+    </div>
+  </div>
+
+  <!-- pdf_loader.py -->
+  <div class="module" style="animation-delay:.375s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">PDFLoader</div>
+        <div class="module-file">pdf_loader.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Entrada do pipeline. Lê um PDF e produz texto pronto a passar a qualquer
+      Chunker. Duas implementações: TextLoader para texto simples (usa com
+      FixedChunker) e PlumberLoader para inspecção tipográfica (usa com
+      StructureAwareChunker).
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">load</span><span class="method-sig">() → str &nbsp; texto completo do PDF</span></div>
+      <div class="method"><span class="method-name">metadata</span><span class="method-sig">() → dict &nbsp; filename · pages · source</span></div>
+      <div class="method"><span class="method-name">font_sizes</span><span class="method-sig">() → dict &nbsp; frequência por tamanho (PlumberLoader)</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">impls</span>
+      <span class="dep-chip">TextLoader</span>
+      <span class="dep-chip">PlumberLoader</span>
+      <span class="deps-label" style="margin-left:6px">deps</span>
+      <span class="dep-chip">pdfplumber</span>
+    </div>
+  </div>
+
+  <!-- example_usage.py -->
+  <div class="module" style="animation-delay:.4s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">example_usage</div>
+        <div class="module-file">example_usage.py</div>
+      </div>
+      <span class="tag glue">GLUE</span>
+    </div>
+    <div class="module-desc">
+      Script de demonstração do pipeline completo. Mostra como indexar
+      documentos e pesquisar. Serve também como template para o código
+      de aplicação real que virá a seguir.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">index_document</span><span class="method-sig">(text, metadata, store, chunker)</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">ChromaStore</span>
+      <span class="dep-chip">FixedChunker</span>
+      <span class="dep-chip">StructureAwareChunker</span>
+    </div>
+  </div>
+
+  <!-- llm.py -->
+  <div class="module" style="animation-delay:.42s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">LLM</div>
+        <div class="module-file">llm.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Contrato abstracto para modelos de linguagem. Recebe um prompt
+      completo e devolve texto gerado. Desacoplado do PromptBuilder —
+      a construção do prompt e a geração são responsabilidades separadas.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">generate</span><span class="method-sig">(prompt) → str</span></div>
+      <div class="method"><span class="method-name">model_name</span><span class="method-sig">→ str</span></div>
+    </div>
+  </div>
+
+  <!-- ollama_llm.py -->
+  <div class="module" style="animation-delay:.44s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">OllamaLLM</div>
+        <div class="module-file">ollama_llm.py</div>
+      </div>
+      <span class="tag eval">IMPL · produção</span>
+    </div>
+    <div class="module-desc">
+      LLM open-source servido localmente pelo Ollama. Sem API keys, sem
+      custos, dados nunca saem da máquina. Modelos recomendados para
+      português jurídico: mistral, llama3, qwen2.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">temperature</span><span class="method-sig">0.0 recomendado (respostas deterministas)</span></div>
+      <div class="method"><span class="method-name">default</span><span class="method-sig">mistral · timeout=120s</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">deps</span>
+      <span class="dep-chip">Ollama (serviço local)</span>
+    </div>
+  </div>
+
+  <!-- echo_llm.py -->
+  <div class="module" style="animation-delay:.46s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">EchoLLM</div>
+        <div class="module-file">echo_llm.py</div>
+      </div>
+      <span class="tag impl">IMPL · testes</span>
+    </div>
+    <div class="module-desc">
+      Stub de testes que devolve o prompt sem gerar texto. Permite testar
+      o Retriever e o PromptBuilder sem Ollama ou GPU. Output prefixado
+      com [ECHO] para ser óbvio nos logs.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">generate</span><span class="method-sig">(prompt) → "[ECHO]\n" + prompt</span></div>
+    </div>
+  </div>
+
+  <!-- prompt_builder.py -->
+  <div class="module" style="animation-delay:.48s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">PromptBuilder</div>
+        <div class="module-file">prompt_builder.py</div>
+      </div>
+      <span class="tag abc">ABC</span>
+    </div>
+    <div class="module-desc">
+      Contrato abstracto para construção de prompts. Recebe a pergunta e
+      os chunks recuperados e devolve um prompt completo. Separado do
+      Retriever porque o formato do prompt tem impacto directo na qualidade
+      e requer iteração frequente.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">build</span><span class="method-sig">(question, chunks) → str</span></div>
+    </div>
+  </div>
+
+  <!-- basic_prompt_builder.py -->
+  <div class="module" style="animation-delay:.50s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">BasicPromptBuilder</div>
+        <div class="module-file">basic_prompt_builder.py</div>
+      </div>
+      <span class="tag impl">IMPL · baseline</span>
+    </div>
+    <div class="module-desc">
+      Template simples e agnóstico à língua. Numera os chunks como contexto
+      e adiciona a pergunta. Usar como baseline para comparar com o
+      LegalPromptBuilder na avaliação de qualidade.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">max_chunks</span><span class="method-sig">default 5</span></div>
+    </div>
+  </div>
+
+  <!-- legal_prompt_builder.py -->
+  <div class="module" style="animation-delay:.52s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">LegalPromptBuilder</div>
+        <div class="module-file">legal_prompt_builder.py</div>
+      </div>
+      <span class="tag eval">IMPL · produção</span>
+    </div>
+    <div class="module-desc">
+      Template especializado para contexto jurídico português. Instrui o LLM
+      a responder em português formal, citar fontes por índice, e declarar
+      explicitamente quando o contexto é insuficiente. Nunca inventar
+      referências ou artigos de lei.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">min_score</span><span class="method-sig">0.3 — filtra chunks pouco relevantes</span></div>
+      <div class="method"><span class="method-name">max_chunks</span><span class="method-sig">default 5</span></div>
+    </div>
+  </div>
+
+  <!-- retriever.py -->
+  <div class="module" style="animation-delay:.54s">
+    <div class="module-header">
+      <div>
+        <div class="module-name">Retriever</div>
+        <div class="module-file">retriever.py</div>
+      </div>
+      <span class="tag glue">ORQUESTRADOR</span>
+    </div>
+    <div class="module-desc">
+      Orquestra o fluxo completo de interrogação. Recebe os quatro
+      componentes injectados e expõe um único método ask() que devolve
+      resposta + fontes usadas + prompt enviado ao LLM.
+    </div>
+    <div class="methods">
+      <div class="method"><span class="method-name">ask</span><span class="method-sig">(question) → RetrievalResult</span></div>
+      <div class="method"><span class="method-name">RetrievalResult</span><span class="method-sig">answer · sources · prompt</span></div>
+    </div>
+    <div class="deps">
+      <span class="deps-label">injected</span>
+      <span class="dep-chip">Embedder</span>
+      <span class="dep-chip">VectorStore</span>
+      <span class="dep-chip">PromptBuilder</span>
+      <span class="dep-chip">LLM</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Migration table -->
+<div class="section-title">Plano de Migração</div>
+<table class="swap-table">
+  <thead>
+    <tr>
+      <th>Dimensão</th>
+      <th>Agora (Fase 1)</th>
+      <th>Futuro (Fase 2)</th>
+      <th>Como migrar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Embedder</td>
+      <td><span class="now">SentenceTransformerEmbedder</span></td>
+      <td><span class="next">OllamaEmbedder</span></td>
+      <td>Trocar <code>embedder = SentenceTransformerEmbedder()</code> por <code>embedder = OllamaEmbedder(...)</code></td>
+    </tr>
+    <tr>
+      <td>Vector Store</td>
+      <td><span class="now">ChromaStore</span></td>
+      <td><span class="next">PostgresStore</span></td>
+      <td>Trocar <code>store = ChromaStore()</code> por <code>store = PostgresStore(dsn=...)</code></td>
+    </tr>
+    <tr>
+      <td>Chunking</td>
+      <td><span class="now">FixedChunker</span></td>
+      <td><span class="next">StructureAwareChunker</span></td>
+      <td>Trocar <code>chunker = FixedChunker(...)</code> por <code>chunker = StructureAwareChunker(...)</code></td>
+    </tr>
+    <tr>
+      <td>Decisão de migrar</td>
+      <td colspan="2" style="color:#94a3b8">Baseada nos resultados de <code>eval_rag.py</code> — Hit Rate e MRR</td>
+      <td>Correr eval com dados reais e comparar</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Install -->
+<div class="section-title">Instalação</div>
+<div class="install">
+  <div class="comment"># Fase 1 — tudo o que precisas para começar</div>
+  <div class="cmd">pip install chromadb sentence-transformers pdfplumber</div>
+  <br>
+  <div class="comment"># Fase 2 — quando migrares para PostgreSQL</div>
+  <div class="cmd">pip install psycopg2-binary</div>
+  <div class="comment"># + instalar PostgreSQL e activar extensão pgvector</div>
+</div>
+
+</body>
+</html>

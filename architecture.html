@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIAA — Arquitectura de Módulos</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Syne:wght@400;600;700;800&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #0d0f14;
+    --surface:   #13161e;
+    --border:    #1e2330;
+    --accent:    #4f8ef7;
+    --accent2:   #7c3aed;
+    --accent3:   #10b981;
+    --accent4:   #f59e0b;
+    --text:      #e2e8f0;
+    --muted:     #64748b;
+    --danger:    #ef4444;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    min-height: 100vh;
+    padding: 2rem;
+    overflow-x: hidden;
+  }
+
+  /* noise overlay */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 0;
+  }
+
+  .wrapper { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; }
+
+  /* HEADER */
+  header { margin-bottom: 3rem; }
+  .tag {
+    display: inline-block;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem; font-weight: 600;
+    letter-spacing: .15em; text-transform: uppercase;
+    color: var(--accent); background: rgba(79,142,247,.1);
+    border: 1px solid rgba(79,142,247,.25);
+    padding: .25rem .7rem; border-radius: 999px;
+    margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 800; letter-spacing: -.02em;
+    line-height: 1.1;
+  }
+  h1 span { color: var(--accent); }
+  .subtitle { color: var(--muted); margin-top: .5rem; font-size: .9rem; }
+
+  /* PIPELINE FLOW */
+  .pipeline {
+    display: flex; align-items: center; gap: 0;
+    margin-bottom: 3rem; flex-wrap: wrap; gap: .5rem;
+  }
+  .pipe-step {
+    display: flex; align-items: center; gap: .5rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 8px; padding: .5rem 1rem;
+    font-family: 'JetBrains Mono', monospace; font-size: .75rem;
+    color: var(--muted); transition: all .2s;
+  }
+  .pipe-step:hover { border-color: var(--accent); color: var(--text); }
+  .pipe-step .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .pipe-arrow { color: var(--border); font-size: 1.2rem; padding: 0 .25rem; }
+
+  /* LAYER SECTIONS */
+  .layer { margin-bottom: 2.5rem; }
+  .layer-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .65rem; font-weight: 700;
+    letter-spacing: .2em; text-transform: uppercase;
+    color: var(--muted); margin-bottom: 1rem;
+    display: flex; align-items: center; gap: .75rem;
+  }
+  .layer-label::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 1rem;
+  }
+
+  /* MODULE CARD */
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem 1.4rem;
+    cursor: pointer;
+    transition: transform .2s, border-color .2s, box-shadow .2s;
+    position: relative; overflow: hidden;
+  }
+  .card::before {
+    content: ''; position: absolute;
+    top: 0; left: 0; right: 0; height: 2px;
+    background: var(--card-color, var(--accent));
+    opacity: 0; transition: opacity .2s;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,.4); }
+  .card:hover { border-color: var(--card-color, var(--accent)); }
+  .card:hover::before { opacity: 1; }
+  .card.active { border-color: var(--card-color, var(--accent)); }
+  .card.active::before { opacity: 1; }
+
+  .card-head {
+    display: flex; align-items: flex-start;
+    justify-content: space-between; gap: 1rem; margin-bottom: .75rem;
+  }
+  .card-icon {
+    width: 36px; height: 36px; border-radius: 8px; flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    background: color-mix(in srgb, var(--card-color, var(--accent)) 15%, transparent);
+    border: 1px solid color-mix(in srgb, var(--card-color, var(--accent)) 30%, transparent);
+  }
+  .card-filename {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .7rem; color: var(--card-color, var(--accent));
+    background: color-mix(in srgb, var(--card-color, var(--accent)) 10%, transparent);
+    border: 1px solid color-mix(in srgb, var(--card-color, var(--accent)) 20%, transparent);
+    padding: .2rem .6rem; border-radius: 999px;
+    white-space: nowrap;
+  }
+  .card-title {
+    font-size: 1rem; font-weight: 700; margin-bottom: .3rem;
+  }
+  .card-desc {
+    font-size: .8rem; color: var(--muted); line-height: 1.5;
+  }
+
+  /* DETAIL PANEL */
+  .detail {
+    margin-top: .75rem; padding-top: .75rem;
+    border-top: 1px solid var(--border);
+    display: none;
+  }
+  .card.active .detail { display: block; }
+
+  .detail-section { margin-bottom: .75rem; }
+  .detail-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: .6rem; font-weight: 700; letter-spacing: .15em;
+    text-transform: uppercase; color: var(--muted); margin-bottom: .4rem;
+  }
+
+  .badge-list { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .badge {
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem;
+    padding: .2rem .55rem; border-radius: 4px;
+    background: rgba(255,255,255,.05); border: 1px solid var(--border);
+    color: var(--text);
+  }
+  .badge.abc { background: rgba(124,58,237,.15); border-color: rgba(124,58,237,.3); color: #a78bfa; }
+  .badge.impl { background: rgba(79,142,247,.1); border-color: rgba(79,142,247,.25); color: var(--accent); }
+  .badge.util { background: rgba(16,185,129,.1); border-color: rgba(16,185,129,.25); color: var(--accent3); }
+  .badge.data { background: rgba(245,158,11,.1); border-color: rgba(245,158,11,.25); color: var(--accent4); }
+
+  .method-list { display: flex; flex-direction: column; gap: .3rem; }
+  .method {
+    font-family: 'JetBrains Mono', monospace; font-size: .7rem;
+    display: flex; align-items: baseline; gap: .5rem;
+  }
+  .method-name { color: var(--accent3); }
+  .method-sig { color: var(--muted); font-size: .65rem; }
+
+  .deps-list { display: flex; flex-wrap: wrap; gap: .35rem; }
+  .dep {
+    font-family: 'JetBrains Mono', monospace; font-size: .65rem;
+    padding: .2rem .55rem; border-radius: 4px;
+    background: rgba(239,68,68,.08); border: 1px solid rgba(239,68,68,.2);
+    color: #fca5a5;
+  }
+
+  /* STATUS */
+  .status-row {
+    display: flex; align-items: center; gap: .5rem;
+    font-size: .75rem; color: var(--muted); margin-top: .5rem;
+  }
+  .status-dot { width: 6px; height: 6px; border-radius: 50%; }
+  .status-dot.ready { background: var(--accent3); box-shadow: 0 0 6px var(--accent3); }
+  .status-dot.phase2 { background: var(--accent4); box-shadow: 0 0 6px var(--accent4); }
+
+  /* SUMMARY BAR */
+  .summary {
+    margin-top: 2.5rem;
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 1.25rem 1.5rem;
+    display: flex; gap: 2rem; flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; gap: .2rem; }
+  .stat-n {
+    font-size: 1.8rem; font-weight: 800; line-height: 1;
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .stat-label { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+  .hint {
+    font-size: .72rem; color: var(--muted); margin-top: 1.5rem;
+    font-family: 'JetBrains Mono', monospace;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="tag">AIAA · RAG Pipeline · Estado actual</div>
+    <h1>Arquitectura de <span>Módulos</span></h1>
+    <p class="subtitle">Clica em qualquer módulo para ver os detalhes</p>
+  </header>
+
+  <!-- PIPELINE FLOW -->
+  <div class="pipeline">
+    <div class="pipe-step"><span class="dot" style="background:#f59e0b"></span>PDF</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><span class="dot" style="background:#4f8ef7"></span>PDFLoader</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><span class="dot" style="background:#10b981"></span>Chunker</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><span class="dot" style="background:#7c3aed"></span>VectorStore</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><span class="dot" style="background:#ec4899"></span>search(query)</div>
+    <div class="pipe-arrow">→</div>
+    <div class="pipe-step"><span class="dot" style="background:#f59e0b"></span>LLM</div>
+  </div>
+
+  <!-- LAYER 1: ABSTRACTIONS -->
+  <div class="layer">
+    <div class="layer-label">Camada de Abstracção (ABC)</div>
+    <div class="modules-grid">
+
+      <div class="card" style="--card-color:#7c3aed" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">🗂</div>
+          <span class="card-filename">vector_store.py</span>
+        </div>
+        <div class="card-title">VectorStore</div>
+        <div class="card-desc">Contrato abstracto para armazenamento e pesquisa vetorial. Define a interface que ChromaStore e PostgresStore são obrigados a implementar.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge abc">ABC</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Métodos abstractos</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">add</span><span class="method-sig">(text, metadata) → str</span></div>
+              <div class="method"><span class="method-name">search</span><span class="method-sig">(query, filters, n) → list[dict]</span></div>
+              <div class="method"><span class="method-name">remove</span><span class="method-sig">(doc_id) → None</span></div>
+              <div class="method"><span class="method-name">count</span><span class="method-sig">() → int</span></div>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#7c3aed" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">✂️</div>
+          <span class="card-filename">chunker.py</span>
+        </div>
+        <div class="card-title">Chunker</div>
+        <div class="card-desc">Contrato abstracto para estratégias de divisão de texto. Garante que qualquer chunker devolve sempre a mesma estrutura de dados.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge abc">ABC</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Métodos abstractos</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">split</span><span class="method-sig">(text) → list[dict]</span></div>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Campos garantidos em cada chunk</div>
+            <div class="badge-list">
+              <span class="badge">text</span>
+              <span class="badge">chunk_index</span>
+              <span class="badge">chunk_total</span>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#7c3aed" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">📄</div>
+          <span class="card-filename">pdf_loader.py</span>
+        </div>
+        <div class="card-title">PDFLoader</div>
+        <div class="card-desc">Contrato abstracto para leitura de ficheiros PDF. Garante que qualquer loader expõe load() e metadata().</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge abc">ABC</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Métodos abstractos</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">load</span><span class="method-sig">() → str</span></div>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Métodos concretos (herdados)</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">metadata</span><span class="method-sig">() → dict</span></div>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LAYER 2: IMPLEMENTATIONS -->
+  <div class="layer">
+    <div class="layer-label">Implementações</div>
+    <div class="modules-grid">
+
+      <div class="card" style="--card-color:#4f8ef7" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">🟢</div>
+          <span class="card-filename">chroma_store.py</span>
+        </div>
+        <div class="card-title">ChromaStore</div>
+        <div class="card-desc">Implementação de VectorStore com ChromaDB. Ranking automático, filtros por metadados, zero configuração de infraestrutura.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge impl">VectorStore</span><span class="badge util">Fase 1</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Dependências externas</div>
+            <div class="deps-list">
+              <span class="dep">chromadb</span>
+              <span class="dep">sentence-transformers</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Score devolvido</div>
+            <div class="badge-list"><span class="badge">cosine similarity (0–1)</span></div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto — usar agora</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#64748b" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">🐘</div>
+          <span class="card-filename">postgres_store.py</span>
+        </div>
+        <div class="card-title">PostgresStore</div>
+        <div class="card-desc">Implementação de VectorStore com PostgreSQL + pgvector. Mesma interface que ChromaStore — a migração é uma linha de código.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge impl">VectorStore</span><span class="badge data">Fase 2</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Dependências externas</div>
+            <div class="deps-list">
+              <span class="dep">psycopg2</span>
+              <span class="dep">sentence-transformers</span>
+              <span class="dep">PostgreSQL + pgvector</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Cria automaticamente</div>
+            <div class="badge-list">
+              <span class="badge">tabela legal_docs</span>
+              <span class="badge">índice ivfflat</span>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot phase2"></span>Implementado — migrar quando necessário</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#10b981" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">✂️</div>
+          <span class="card-filename">fixed_chunker.py</span>
+        </div>
+        <div class="card-title">FixedChunker</div>
+        <div class="card-desc">Implementação de Chunker por número fixo de caracteres com overlap configurável. Ponto de partida recomendado.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge impl">Chunker</span><span class="badge util">Fase 1</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Parâmetros</div>
+            <div class="badge-list">
+              <span class="badge">chunk_size=1000</span>
+              <span class="badge">overlap=200</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Campos extra no chunk</div>
+            <div class="badge-list"><span class="badge">— (apenas os base)</span></div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto — usar agora</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#64748b" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">🏛</div>
+          <span class="card-filename">structure_aware_chunker.py</span>
+        </div>
+        <div class="card-title">StructureAwareChunker</div>
+        <div class="card-desc">Implementação de Chunker que detecta secções a partir das propriedades tipográficas do PDF (tamanho e fonte). Independente do conteúdo textual.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge impl">Chunker</span><span class="badge data">Fase 2</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Parâmetros</div>
+            <div class="badge-list">
+              <span class="badge">max_section_chars=1500</span>
+              <span class="badge">overlap=200</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Campos extra no chunk</div>
+            <div class="badge-list">
+              <span class="badge">section</span>
+              <span class="badge">section_level</span>
+              <span class="badge">page_start</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Dependências externas</div>
+            <div class="deps-list"><span class="dep">pdfplumber</span></div>
+          </div>
+          <div class="status-row"><span class="status-dot phase2"></span>Implementado — migrar após avaliação</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#4f8ef7" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">📖</div>
+          <span class="card-filename">pdf_loader.py</span>
+        </div>
+        <div class="card-title">TextLoader / PlumberLoader</div>
+        <div class="card-desc">Duas implementações de PDFLoader. TextLoader extrai texto simples. PlumberLoader preserva metadados tipográficos e expõe font_sizes().</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge impl">PDFLoader ×2</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Usa com</div>
+            <div class="badge-list">
+              <span class="badge">TextLoader → FixedChunker</span>
+              <span class="badge">PlumberLoader → StructureAwareChunker</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">metadata() devolve sempre</div>
+            <div class="badge-list">
+              <span class="badge">filename</span>
+              <span class="badge">filepath</span>
+              <span class="badge">num_pages</span>
+              <span class="badge">source</span>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto — usar agora</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- LAYER 3: UTILITIES -->
+  <div class="layer">
+    <div class="layer-label">Utilitários</div>
+    <div class="modules-grid">
+
+      <div class="card" style="--card-color:#f59e0b" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">📊</div>
+          <span class="card-filename">eval_rag.py</span>
+        </div>
+        <div class="card-title">Avaliador RAG</div>
+        <div class="card-desc">Compara configurações de chunking (chunk_size × overlap) e calcula Hit Rate e MRR para determinar a configuração óptima.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge util">Script de avaliação</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Métricas calculadas</div>
+            <div class="badge-list">
+              <span class="badge">Hit Rate @ top-N</span>
+              <span class="badge">MRR @ top-N</span>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Output</div>
+            <div class="badge-list"><span class="badge">ranking de configurações + config recomendada</span></div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto — alimentar com documentos reais</div>
+        </div>
+      </div>
+
+      <div class="card" style="--card-color:#f59e0b" onclick="toggle(this)">
+        <div class="card-head">
+          <div class="card-icon">▶️</div>
+          <span class="card-filename">example_usage.py</span>
+        </div>
+        <div class="card-title">Exemplo de Uso</div>
+        <div class="card-desc">Script de demonstração do pipeline completo. Mostra como indexar documentos e fazer pesquisa, e onde fazer as trocas de implementação.</div>
+        <div class="detail">
+          <div class="detail-section">
+            <div class="detail-label">Tipo</div>
+            <div class="badge-list"><span class="badge util">Script de exemplo</span></div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Linha de troca do Chunker</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">chunker</span><span class="method-sig">= FixedChunker(...)  # ou StructureAwareChunker</span></div>
+            </div>
+          </div>
+          <div class="detail-section">
+            <div class="detail-label">Linha de troca do Store</div>
+            <div class="method-list">
+              <div class="method"><span class="method-name">store</span><span class="method-sig">= ChromaStore()  # ou PostgresStore(...)</span></div>
+            </div>
+          </div>
+          <div class="status-row"><span class="status-dot ready"></span>Pronto</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <div class="stat">
+      <span class="stat-n" style="color:#7c3aed">3</span>
+      <span class="stat-label">Classes ABC</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n" style="color:#4f8ef7">5</span>
+      <span class="stat-label">Implementações</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n" style="color:#10b981">3</span>
+      <span class="stat-label">Prontos (Fase 1)</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n" style="color:#f59e0b">2</span>
+      <span class="stat-label">Aguardam migração (Fase 2)</span>
+    </div>
+    <div class="stat">
+      <span class="stat-n" style="color:#e2e8f0">9</span>
+      <span class="stat-label">Ficheiros .py</span>
+    </div>
+  </div>
+
+  <p class="hint">// próximo passo → ligar PDFLoader + FixedChunker + ChromaStore e fazer a primeira pesquisa real</p>
+
+</div>
+
+<script>
+  function toggle(card) {
+    const wasActive = card.classList.contains('active');
+    document.querySelectorAll('.card').forEach(c => c.classList.remove('active'));
+    if (!wasActive) card.classList.add('active');
+  }
+</script>
+</body>
+</html>
