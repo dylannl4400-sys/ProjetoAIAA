@@ -20,11 +20,22 @@
 #         raw = resp.content[i:i+2].hex()
 #         print(f"  char='{char}' ord={ord(char)} raw_bytes={raw}")
 
-import requests
-session = requests.Session()
-session.headers.update({"User-Agent": "Mozilla/5.0"})
-post_url = "https://www.dgsi.pt/jtre.nsf/b8f3314245b23f0780256879006d6593?CreateDocument"
-resp = session.post(post_url, data={"Query": "DESPEDIMENTO"}, timeout=15)
-resp.encoding = "iso-8859-1"
-print(f"Status: {resp.status_code}, tamanho: {len(resp.text)}")
-print(resp.text[:1000])
+# import requests
+# session = requests.Session()
+# session.headers.update({"User-Agent": "Mozilla/5.0"})
+# post_url = "https://www.dgsi.pt/jtre.nsf/b8f3314245b23f0780256879006d6593?CreateDocument"
+# resp = session.post(post_url, data={"Query": "DESPEDIMENTO"}, timeout=15)
+# resp.encoding = "iso-8859-1"
+# print(f"Status: {resp.status_code}, tamanho: {len(resp.text)}")
+# print(resp.text[:1000])
+
+from config import load_config, build_embedder, build_store
+
+cfg      = load_config()
+embedder = build_embedder(cfg.embedder)
+store    = build_store(cfg.vector_store, embedder)
+
+# Ver metadados de um chunk qualquer
+r = store.search("despedimento", n=1)
+print(r[0]["metadata"].keys())
+print("sumario:", r[0]["metadata"].get("sumario", "NÃO EXISTE"))
