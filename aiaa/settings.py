@@ -116,39 +116,146 @@
 
 # STATIC_URL = 'static/'
 
+# from pathlib import Path
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+
+# SECRET_KEY = "django-insecure-aiaa-dev-key-change-in-production"
+
+# DEBUG = True
+
+# ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+
+# INSTALLED_APPS = [
+#     "django.contrib.staticfiles",
+#     "assistente",
+# ]
+
+# MIDDLEWARE = [
+#     "django.middleware.common.CommonMiddleware",
+# ]
+
+# ROOT_URLCONF = "aiaa.urls"
+
+# TEMPLATES = [
+#     {
+#         "BACKEND": "django.template.backends.django.DjangoTemplates",
+#         "DIRS":    [BASE_DIR / "templates"],
+#         "APP_DIRS": True,
+#         "OPTIONS": {
+#             "context_processors": [
+#                 "django.template.context_processors.request",
+#             ],
+#         },
+#     },
+# ]
+
+# STATIC_URL = "/static/"
+# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# """
+# aiaa/settings.py
+# """
+# from pathlib import Path
+# import sys
+   
+
+# BASE_DIR = Path(__file__).resolve().parent.parent
+# sys.path.insert(0, BASE_DIR / "pipeline")
+# SECRET_KEY = "django-insecure-change-this-in-production"
+# DEBUG      = True
+# ALLOWED_HOSTS = ["*"]
+
+# INSTALLED_APPS = [
+#     "django.contrib.contenttypes",
+#     "django.contrib.staticfiles",
+#     "django.contrib.auth",        # necessário para contenttypes
+#     "django.contrib.sessions",    # necessário para middleware
+#     # Apps AIAA
+#     "ingestao",
+#     "recuperacao",
+#     "geracao",
+# ]
+
+# MIDDLEWARE = [
+#     "django.middleware.security.SecurityMiddleware",
+#     "django.middleware.common.CommonMiddleware",
+#     "django.contrib.sessions.middleware.SessionMiddleware",  # adicionar
+# ]
+
+# ROOT_URLCONF = "aiaa.urls"
+
+# TEMPLATES = [{
+#     "BACKEND": "django.template.backends.django.DjangoTemplates",
+#     "DIRS":    [BASE_DIR / "templates"],
+#     "APP_DIRS": True,
+#     "OPTIONS": {"context_processors": [
+#         "django.template.context_processors.request",
+#     ]},
+# }]
+
+# WSGI_APPLICATION = "aiaa.wsgi.application"
+
+# # Base de dados SQLite (migrar para PostgreSQL na Fase 2)
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME":   BASE_DIR / "db.sqlite3",
+#     }
+# }
+
+# STATIC_URL = "/static/"
+# DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+"""
+aiaa/settings.py
+"""
 from pathlib import Path
+import sys
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = "django-insecure-aiaa-dev-key-change-in-production"
+# Pipeline modules
+sys.path.insert(0, str(BASE_DIR / "pipeline"))
 
-DEBUG = True
-
-ALLOWED_HOSTS = ["localhost", "127.0.0.1"]
+SECRET_KEY = "django-insecure-change-this-in-production"
+DEBUG      = True
+ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
+    "django.contrib.contenttypes",
     "django.contrib.staticfiles",
-    "assistente",
+    # Apps AIAA
+    "ingestao",
+    "recuperacao",
+    "geracao",
 ]
 
 MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
     "django.middleware.common.CommonMiddleware",
 ]
 
 ROOT_URLCONF = "aiaa.urls"
 
-TEMPLATES = [
-    {
-        "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS":    [BASE_DIR / "templates"],
-        "APP_DIRS": True,
-        "OPTIONS": {
-            "context_processors": [
-                "django.template.context_processors.request",
-            ],
-        },
-    },
-]
+TEMPLATES = [{
+    "BACKEND": "django.template.backends.django.DjangoTemplates",
+    "DIRS":    [BASE_DIR / "templates"],
+    "APP_DIRS": True,
+    "OPTIONS": {"context_processors": [
+        "django.template.context_processors.request",
+    ]},
+}]
+
+WSGI_APPLICATION = "aiaa.wsgi.application"
+
+# Base de dados SQLite (migrar para PostgreSQL na Fase 2)
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.sqlite3",
+        "NAME":   BASE_DIR / "db.sqlite3",
+    }
+}
 
 STATIC_URL = "/static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

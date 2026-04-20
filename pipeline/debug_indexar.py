@@ -55,38 +55,38 @@
 
 # # os.unlink(tmp_path)
 
-# # from html_cleaner import limpar_acordao, metadados_para_texto
-# # from llm_chunker import LLMChunker
-# # import requests
+# from html_cleaner import limpar_acordao, metadados_para_texto
+# from llm_chunker import LLMChunker
+# import requests
 
-# # url = "https://www.dgsi.pt/jtre.nsf/134973db04f39bf2802579bf005f080b/3731e3e4b692fdd980258db20051e5a7?OpenDocument"
-# # resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
-# # resp.encoding = "iso-8859-1"
+# url = "https://www.dgsi.pt/jtre.nsf/134973db04f39bf2802579bf005f080b/3731e3e4b692fdd980258db20051e5a7?OpenDocument"
+# resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+# resp.encoding = "iso-8859-1"
 
-# # # Limpar
-# # resultado = limpar_acordao(resp.text)
-# # print("=== Metadados ===")
-# # for k, v in resultado["metadados"].items():
-# #     print(f"  {k}: {v[:60]}")
+# # Limpar
+# resultado = limpar_acordao(resp.text)
+# print("=== Metadados ===")
+# for k, v in resultado["metadados"].items():
+#     print(f"  {k}: {v[:60]}")
 
-# # print(f"\n=== Sumário ({len(resultado['sumario'])} chars) ===")
-# # print(resultado["sumario"][:200])
+# print(f"\n=== Sumário ({len(resultado['sumario'])} chars) ===")
+# print(resultado["sumario"][:200])
 
-# # print(f"\n=== Corpo ({len(resultado['corpo'])} chars) ===")
-# # print(resultado["corpo"][:300])
+# print(f"\n=== Corpo ({len(resultado['corpo'])} chars) ===")
+# print(resultado["corpo"][:300])
 
-# # # Classificar com LLM
-# # chunker = LLMChunker(base_url="https://roselike-angelita-causational.ngrok-free.dev", model="qwen2.5:14b")
-# # chunks  = chunker.chunks_para_indexar(
-# #     texto    =resultado["corpo"],
-# #     metadados=metadados_para_texto(resultado["metadados"]),
-# #     sumario  =resultado["sumario"],
-# # )
+# # Classificar com LLM
+# chunker = LLMChunker(base_url="https://roselike-angelita-causational.ngrok-free.dev", model="qwen2.5:14b")
+# chunks  = chunker.chunks_para_indexar(
+#     texto    =resultado["corpo"],
+#     metadados=metadados_para_texto(resultado["metadados"]),
+#     sumario  =resultado["sumario"],
+# )
 
-# # print(f"\n=== Chunks gerados: {len(chunks)} ===")
-# # from collections import Counter
-# # for seccao, n in Counter(c["section"] for c in chunks).items():
-# #     print(f"  {seccao}: {n} chunks")
+# print(f"\n=== Chunks gerados: {len(chunks)} ===")
+# from collections import Counter
+# for seccao, n in Counter(c["section"] for c in chunks).items():
+#     print(f"  {seccao}: {n} chunks")
 
 # import os
 
@@ -207,18 +207,58 @@
 #     print(c["text"])
 #     print("...")
     
-from html_cleaner import limpar_acordao
-import requests
+# from html_cleaner import limpar_acordao
+# import requests
 
-url = "https://www.dgsi.pt/jtre.nsf/134973db04f39bf2802579bf005f080b/cbc726b370d4306a80258dcb002e7fd6?OpenDocument"
-resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
-resp.encoding = "iso-8859-1"
+# url = "https://www.dgsi.pt/jtre.nsf/134973db04f39bf2802579bf005f080b/cbc726b370d4306a80258dcb002e7fd6?OpenDocument"
+# resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+# resp.encoding = "iso-8859-1"
 
-from html_cleaner import _extrair_campos
-from bs4 import BeautifulSoup
-soup = BeautifulSoup(resp.text, "html.parser")
-campos = _extrair_campos(soup)
-print("Campos encontrados:")
-for k, v in campos.items():
-    print(f"  [{k}] {len(v)} chars")
+# from html_cleaner import _extrair_campos
+# from bs4 import BeautifulSoup
+# soup = BeautifulSoup(resp.text, "html.parser")
+# campos = _extrair_campos(soup)
+# print("Campos encontrados:")
+# for k, v in campos.items():
+#     print(f"  [{k}] {len(v)} chars")
+
+# from html_cleaner import limpar_acordao
+# import requests
+
+# url = "https://www.dgsi.pt/jtre.nsf/134973db04f39bf2802579bf005f080b/cbc726b370d4306a80258dcb002e7fd6?OpenDocument"
+# resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+# resp.encoding = "iso-8859-1"
+
+# resultado = limpar_acordao(resp.text)
+# print(f"corpo: {len(resultado['corpo'])} chars")
+# print(f"sumario: {len(resultado['sumario'])} chars")
+# print(f"primeiros 200 chars do corpo:")
+# print(resultado['corpo'])
     
+    
+# from html_cleaner import limpar_acordao, _extrair_campos_tabela
+# from bs4 import BeautifulSoup
+# import requests
+
+# url = "https://www.dgsi.pt/jtcn.nsf/89d1c0288c2dd49c802575c8003279c7/112aff71323d5eff80258dc4004ea1ac?OpenDocument"
+# resp = requests.get(url, timeout=30, headers={"User-Agent": "Mozilla/5.0"})
+# resp.encoding = "iso-8859-1"
+# soup = BeautifulSoup(resp.text, "html.parser")
+
+# meta, sumario, corpo = _extrair_campos_tabela(soup)
+# print(f"Metadados: {list(meta.keys())}")
+# print(f"Sumário: {len(sumario)} chars")
+# print(f"Corpo: {len(corpo)} chars")
+
+# if not corpo:
+#     print("\nCAMPOS ENCONTRADOS NA TABELA:")
+#     tabela = soup.find("table")
+#     for tr in tabela.find_all("tr"):
+#         tds = tr.find_all("td", recursive=False)
+#         if len(tds) >= 2:
+#             label = tds[0].get_text(strip=True)
+#             valor = tds[1].get_text(strip=True)
+#             print(f"  [{label}] {len(valor)} chars — {valor[:60]}")
+
+from html_cleaner import _normalizar_label
+print(repr(_normalizar_label("Sumário:")))

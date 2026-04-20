@@ -21,8 +21,19 @@ Including another URLconf
 #     path('admin/', admin.site.urls),
 # ]
 
-from django.urls import path, include
+# from django.urls import path, include
 
+# urlpatterns = [
+#     path("", include("assistente.urls")),
+# ]
+
+"""
+aiaa/urls.py  —  rotas raiz do projecto
+"""
+from django.urls import path, include
+ 
 urlpatterns = [
-    path("", include("assistente.urls")),
+    path("",          include("recuperacao.urls")),   # / → pesquisa jurídica
+    path("ingestao/", include("ingestao.urls")),
+    path("geracao/",  include("geracao.urls")),
 ]

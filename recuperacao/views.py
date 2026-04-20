@@ -1,0 +1,177 @@
+"""
+recuperacao/views.py
+
+Responsabilidade: RAG — receber questão, recuperar chunks, gerar resposta.
+Também gere o histórico de conversas.
+"""
+import json
+
+from django.http  import JsonResponse
+from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
+
+from recuperacao.models import Conversa, Mensagem
+from aiaa_init import get_cfg, get_store, get_retriever, ITIJ_TRIBUNAIS
+
+
+# ---------------------------------------------------------------------------
+# Interface principal
+# ---------------------------------------------------------------------------
+
+def index(request):
+    """GET / — interface principal com todos os separadores."""
+    conversas = Conversa.objects.all()[:50]
+    return render(request, "recuperacao/index.html", {
+        "modelo":    get_cfg().llm.model_name,
+        "embedder":  get_cfg().embedder.model_name,
+        "n_docs":    get_store().count(),
+        "conversas": conversas,
+    })
+
+
+# ---------------------------------------------------------------------------
+# RAG — questão jurídica
+# ---------------------------------------------------------------------------
+
+@csrf_exempt
+def pergunta(request):
+    """
+    POST /api/pergunta/
+    Body: { "pergunta": str, "conversa_id": int | null }
+    """
+    if request.method != "POST":
+        return JsonResponse({"erro": "POST obrigatório."}, status=405)
+
+    try:
+        body = json.loads(request.body)
+    except json.JSONDecodeError:
+        return JsonResponse({"erro": "JSON inválido."}, status=400)
+
+    q           = body.get("pergunta", "").strip()
+    conversa_id = body.get("conversa_id")
+
+    if not q:
+        return JsonResponse({"erro": "Pergunta vazia."}, status=400)
+
+    if get_store().count() == 0:
+        return JsonResponse(
+            {"erro": "Nenhum documento indexado. Indexa primeiro acórdãos no separador ITIJ."},
+            status=503,
+        )
+
+    # Obter ou criar conversa
+    if conversa_id:
+        conversa, _ = Conversa.objects.get_or_create(
+            id=conversa_id, defaults={"titulo": "Nova conversa"}
+        )
+    else:
+        conversa = Conversa.objects.create(titulo="Nova conversa")
+
+    Mensagem.objects.create(conversa=conversa, papel="user", texto=q)
+
+    # RAG
+    result = get_retriever().ask(q)
+
+    # Enriquecer fontes com sumário (de chunks já indexados)
+    sumarios_cache = {}
+    for s in result.sources:
+        h = s["metadata"].get("hash_documento", "")
+        if h and not s["metadata"].get("sumario", ""):
+            if h not in sumarios_cache:
+                try:
+                    from ingestao.models import AcordaoIndexado
+                    registo = AcordaoIndexado.objects.filter(hash_documento__startswith=h[:8]).first()
+                    sumarios_cache[h] = registo.sumario[:500] if registo else ""
+                except Exception:
+                    sumarios_cache[h] = ""
+
+    fontes = [
+        {
+            "score":    round(s["score"], 2),
+            "ficheiro": s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename", "desconhecido"),
+            "tipo":     s["metadata"].get("type", ""),
+            "ano":      s["metadata"].get("year", ""),
+            "seccao":   s["metadata"].get("section", ""),
+            "processo": s["metadata"].get("processo", ""),
+            "relator":  s["metadata"].get("relator", ""),
+            "tribunal": s["metadata"].get("court", ""),
+            "sumario":  s["metadata"].get("sumario", "") or sumarios_cache.get(s["metadata"].get("hash_documento", ""), ""),
+            "url":      s["metadata"].get("url", ""),
+        }
+        for s in result.sources
+    ]
+
+    Mensagem.objects.create(
+        conversa=conversa, papel="assistant", texto=result.answer, fontes=fontes
+    )
+
+    # Título automático com a primeira pergunta
+    if conversa.mensagens.filter(papel="user").count() == 1:
+        conversa.titulo = q[:80] + ("…" if len(q) > 80 else "")
+        conversa.save()
+
+    return JsonResponse({
+        "resposta":         result.answer,
+        "fontes":           fontes,
+        "conversa_id":      conversa.id,
+        "conversa_titulo":  conversa.titulo,
+    })
+
+
+# ---------------------------------------------------------------------------
+# Conversas
+# ---------------------------------------------------------------------------
+
+@csrf_exempt
+def conversas_listar(request):
+    """GET /api/conversas/"""
+    conversas = Conversa.objects.all()[:50]
+    return JsonResponse({
+        "conversas": [
+            {
+                "id":          c.id,
+                "titulo":      c.titulo,
+                "alterada_em": c.alterada_em.strftime("%d/%m/%Y %H:%M"),
+            }
+            for c in conversas
+        ]
+    })
+
+
+@csrf_exempt
+def conversa_detalhe(request, conversa_id):
+    """GET /api/conversas/<id>/"""
+    try:
+        conversa = Conversa.objects.get(id=conversa_id)
+    except Conversa.DoesNotExist:
+        return JsonResponse({"erro": "Não encontrada."}, status=404)
+    return JsonResponse({
+        "id":     conversa.id,
+        "titulo": conversa.titulo,
+        "mensagens": [
+            {
+                "papel":     m.papel,
+                "texto":     m.texto,
+                "fontes":    m.fontes,
+                "criada_em": m.criada_em.strftime("%H:%M"),
+            }
+            for m in conversa.mensagens.all()
+        ]
+    })
+
+
+@csrf_exempt
+def conversa_nova(request):
+    """POST /api/conversas/nova/"""
+    c = Conversa.objects.create(titulo="Nova conversa")
+    return JsonResponse({"id": c.id, "titulo": c.titulo})
+
+
+@csrf_exempt
+def conversa_apagar(request, conversa_id):
+    """DELETE /api/conversas/<id>/apagar/"""
+    try:
+        Conversa.objects.get(id=conversa_id).delete()
+        return JsonResponse({"ok": True})
+    except Conversa.DoesNotExist:
+        return JsonResponse({"erro": "Não encontrada."}, status=404)
