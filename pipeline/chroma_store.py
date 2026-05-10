@@ -415,6 +415,7 @@ import chromadb
 from embedder import Embedder
 from sentence_transformer_embedder import SentenceTransformerEmbedder
 from vector_store import VectorStore
+import os
 
 
 class ChromaStore(VectorStore):
@@ -452,6 +453,10 @@ class ChromaStore(VectorStore):
         if ephemeral:
             self._client = chromadb.EphemeralClient()
         else:
+            # self._client = chromadb.PersistentClient(path=persist_directory)
+            # linha ~454, antes de PersistentClient
+            
+            os.makedirs(persist_directory, exist_ok=True)
             self._client = chromadb.PersistentClient(path=persist_directory)
 
         self._collection = self._client.get_or_create_collection(

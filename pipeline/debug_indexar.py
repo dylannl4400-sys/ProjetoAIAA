@@ -260,5 +260,18 @@
 #             valor = tds[1].get_text(strip=True)
 #             print(f"  [{label}] {len(valor)} chars — {valor[:60]}")
 
-from html_cleaner import _normalizar_label
-print(repr(_normalizar_label("Sumário:")))
+# from html_cleaner import _normalizar_label
+# print(repr(_normalizar_label("Sumário:")))
+
+from docx import Document
+
+for nome, path in [
+    ("Contestação",  r"pipeline\legal_docs\contestacao.docx"),
+    ("Petição",      r"pipeline\legal_docs\peticao.docx"),
+    ("Requerimento", r"pipeline\legal_docs\requerimento.docx"),
+]:
+    print(f"\n=== {nome} ===")
+    doc = Document(path)
+    for i, para in enumerate(doc.paragraphs):
+        if para.text.strip():
+            print(f"  [{i}] {para.text[:1200]}")

@@ -1,18 +1,15 @@
-
 {
   "embedder": {
     "provider": "ollama",
     "model_name": "nomic-embed-text",
-    "base_url": "http://localhost:11434"
+    "base_url": "https://roselike-angelita-causational.ngrok-free.dev"
   },
-
   "chunker": {
     "strategy": "structure_aware",
     "chunk_size": 1000,
     "overlap": 200,
     "max_section_chars": 1500
   },
-
   "vector_store": {
     "provider": "chroma",
     "collection_name": "legal_docs",
@@ -20,36 +17,53 @@
     "dsn": "postgresql://localhost/aiaa",
     "table_name": "legal_docs"
   },
-
   "retriever": {
     "n_results": 5,
     "filters": null
   },
-
   "prompt_builder": {
     "strategy": "legal",
     "max_chunks": 5,
     "min_score": 0.3
   },
-
   "llm": {
     "provider": "ollama",
-    "model_name": "qwen2.5:14b",
+    "model_name": "gemma4:e4b",
     "base_url": "https://roselike-angelita-causational.ngrok-free.dev",
     "temperature": 0.0,
     "timeout": 3000
   },
-
   "eval": {
     "top_n": 5,
     "chunk_configs": [
-      [300,   30],
-      [500,   50],
-      [500,  100],
-      [1000, 100],
-      [1000, 200],
-      [1500, 200],
-      [1500, 300]
+      [
+        300,
+        30
+      ],
+      [
+        500,
+        50
+      ],
+      [
+        500,
+        100
+      ],
+      [
+        1000,
+        100
+      ],
+      [
+        1000,
+        200
+      ],
+      [
+        1500,
+        200
+      ],
+      [
+        1500,
+        300
+      ]
     ],
     "embedder_models": [
       "paraphrase-multilingual-MiniLM-L12-v2",

@@ -1,0 +1,815 @@
+SUMARIO:
+1. Nos termos do artigo 277.º do CIRE - relações laborais -
+os efeitos da declaração de insolvência relativamente a contratos de trabalho e à relação laboral regem-se exclusivamente pela lei aplicável ao contrato de trabalho,
+ou seja, no caso dos autos, o que estabelece o art.º 347º do Código do Trabalho;
+
+2. Não nos diz a lei - a cessação de contratos de trabalho decorrente do encerramento do estabelecimento ou realizada nos termos do n.º 2 deve ser antecedida de procedimento previsto nos artigos 360.º e seguintes,
+com as necessárias adaptações -
+que adaptações deverão/poderão ser feitas, nem tão pouco quais as consequências para a sua inobservância, sendo que o legislador do CIRE excluiu expressamente das suas normas genéticas a regulação sobre os efeitos da insolvência do empregador relativamente aos contratos de trabalho em curso à data da insolvência;
+
+3. Entendemos que quanto ao pré-aviso haverá que observá-lo, desde logo porque o pré-aviso tem em vista assegurar interesses muito relevantes para o trabalhador (que o legislador protege de forma especial configurando a sua violação como contraordenação grave), permitindo, desde logo, a tomada de medidas que possam minorar os graves danos que resultam para os trabalhadores da perda do seu emprego, concedendo-lhe um tempo para se reorganizarem do ponto de vista laboral.
+
+4.O legislador do CIRE, tentando adequar as especificidades do processo de insolvência - toda a dinâmica e interesses que o processo de insolvência visa proteger - aos princípios subjacentes às leis laborais, colocou à disposição do juiz das insolvências a norma do n.º 3 do artigo 347.º - A cessação de contratos de trabalho decorrente do encerramento do estabelecimento ou realizada nos termos do n.º 2 deve ser antecedida de procedimento previsto nos artigos 360.º e seguintes, com as necessárias adaptações - permitindo-lhe, atenta a aplicabilidade dos formalismos relativos ao despedimento coletivo, afastar procedimentos que não se revestem de qualquer utilidade ou sentido no âmbito do processo de insolvência - por ex. comunicações à comissão de trabalhadores, fase de informações e negociação com a estrutura representativa dos trabalhadores com vista a um acordo sobre a dimensão e efeito das medidas a adoptar, intervenção do ministério responsável pela área laboral, quanto à conciliação dos interesses das partes - cujo incumprimento não acarreta a ilicitude da cessação dos contratos de trabalho;
+
+5.Uma interpretação literal do n.º 3 do artigo 347.º do CT impõe a observância do procedimento previsto nos artigos 360.º e seguintes e não apenas da forma de cálculo prevista no artigo 366.º do CT, já que se houvesse tal intenção por parte do legislador, a norma circunscreveria expressamente a remissão para tal forma de cálculo e para a norma em concreto, ao invés de o fazer em relação ao procedimento em si e a um conjunto de normas que se iniciam no artigo 360.º do CT e se prolongam pelos artigos seguintes.
+
+(Sumário elaborado pelo Relator)
+
+Acórdãos TRC
+Acórdão do Tribunal da Relação de Coimbra
+
+Processo:
+
+721/25.5T8CBR-D.C1
+
+Nº Convencional:
+
+JTRC
+
+Relator:
+
+JOSÉ AVELINO GONÇALVES
+
+Descritores:
+
+DECLARAÇÃO DE INSOLVÊNCIA
+
+CONTRATOS DE TRABALHO
+
+LEI APLICÁVEL
+
+CESSAÇÃO DO CONTRATO DE TRABALHO
+
+PRÉ-AVISO
+
+Data do Acordão:
+
+14-04-2026
+
+Votação:
+
+UNANIMIDADE
+
+Tribunal Recurso:
+
+TRIBUNAL JUDICIAL DA COMARCA DE COIMBRA - MONTEMOR-O-VELHO - JUÍZO DE COMÉRCIO - JUIZ 1
+
+Texto Integral:
+
+S
+
+Meio Processual:
+
+APELAÇÃO
+
+Decisão:
+
+REVOGADA
+
+Legislação Nacional:
+
+ARTIGOS 347.º, N.º 3, 360.º E 366.º DO CÓDIGO DO TRABALHO
+
+ARTIGO 277.º, DO CÓDIGO DA INSOLVÊNCIA E DA RECUPERAÇÃO DE EMPRESAS (CIRE) - DL N.º 53/2004, DE 18 DE MARÇO
+
+Sumário:
+
+
+
+Decisão Texto Integral:
+
+*
+
+Acordam os Juízes da 1.ª secção cível do Tribunal da Relação de Coimbra:
+
+1.Relatório
+
+1.1-A..., S.A. foi declarada insolvente por sentença proferida nos autos principais e já transitada em julgado, que fixou em 30 dias o prazo para a reclamação de créditos.
+
+1.2-Findo o prazo para a reclamação, o administrador da insolvência, apresentou a relação de créditos reconhecidos e não reconhecidos a que alude o art.º 129.º do CIRE, sendo que dessa lista vieram apresentar impugnação- além de outros:
+
+- AA peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 27.212,48€, acrescido de juros vincendos.
+
+- BB peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 10.110,39€, acrescido de juros vincendos.
+
+- CC peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 47.819,96€, acrescido de juros vincendos.
+
+- DD peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 12.828,60€, acrescido de juros vincendo.
+
+- EE peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 6.836,98€, acrescido de juros vincendos.
+
+- FF peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 30.330,20€, acrescido de juros vincendos.
+
+- GG peticionando que deve ser rectificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 6.806,33€, acrescido de juros vincendos.
+
+1.3- O Administrador Judicial veio dizer que os trabalhadores impugnantes vieram reiterar os valores inicialmente reclamados, sobre os quais o Administrador Judicial já tomou posição, a qual mantém.
+
+1.4-No Juízo de Comércio de Coimbra - Juiz 1 foi proferida a seguinte decisão - com interesse para o recurso:
+
+(…)
+
+Também apresentaram impugnação:
+
+- AA peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e,
+
+consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 27.212,48€, acrescido de juros vincendos.
+
+- BB peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 10.110,39€, acrescido de juros vincendos.
+
+- CC peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 47.819,96€, acrescido de juros vincendos.
+
+- DD peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 12.828,60€, acrescido de juros vincendo.
+
+- EE peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 6.836,98€, acrescido de juros vincendos.
+
+- FF peticionando que deve ser retificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 30.330,20€, acrescido de juros vincendos.
+
+- GG peticionando que deve ser rectificada a lista de créditos reconhecida pelo Sr. Administrador de Insolvência, devendo ser reconhecida a ilicitude do despedimento promovido e, consequentemente, ser reconhecido o crédito do aqui Requerente, no valor global de 6.806,33€, acrescido de juros vincendos.
+
+(…)
+
+Assim, o não cumprimento de tais formalismos não acarreta a ilicitude da cessação dos contratos de trabalho por caducidade-encerramento do estabelecimento. Outra situação estaríamos caso o estabelecimento se continuasse em laboração e o Administrador Judicial não mantivesse todos os contratos.
+
+Assim, não se concluindo pela ilicitude da cessação dos contratos de trabalho por preterição do procedimento prévio relativo ao despedimento coletivo, os impugnantes, salvo melhor, terão direito, sim, à compensação calculada nos termos do artigo 366.º do Código de Trabalho.
+
+Assim, julgando-se improcedentes as impugnações em apreço:
+
+- o impugnante AA terá direito ao montante de 9.175,10€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 30,16€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 17.075,46€ (dezassete mil e setenta e cinco euros e quarenta e seis cêntimos), composto pelas seguintes parcelas:
+
+i) 1.471,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 7,42€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.057,77€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 3,48€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 3.418,18€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 11,24€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.894,55€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,23€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 9.175,10€ referente a compensação pela cessação do contrato de trabalho, acrescido de 30,16€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante BB terá direito ao montante de 2.150,45€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 7,07€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 7.171,76€ (sete mil cento e setenta e um euros e setenta e seis cêntimos), composto pelas seguintes parcelas:
+
+i) 1.026,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 5,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 661,11€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 2,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 2.136,36€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 7,02€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.172,33€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 3,85€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 2.150,45€ referente a compensação pela cessação do contrato de trabalho, acrescido de 10,74€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante CC terá direito ao montante de 16.705,30€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 54,92€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 29.802,48€ (vinte e nove mil oitocentos e dois euros e quarenta e oito cêntimos), composto pelas seguintes parcelas:
+
+i) 2.235,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 11,27€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.851,11 € referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 6,09€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 5.981,82 € referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 19,67€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.927,35€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 9,62€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 16.705,30€ referente a compensação pela cessação do contrato de trabalho, acrescido de 54,92€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante DD terá direito ao montante de 3.266,89€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 10,74€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 8.211,41€ (oito mil e duzentos e onze euros e quarenta e um cêntimos), composto pelas seguintes parcelas:
+
+i) 1.026,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 5,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 661,11€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 2,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 2.136,36€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 7,02€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.092,03€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 3,59€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 3.266,89€ referente a compensação pela cessação do contrato de trabalho, acrescido de 10,74€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante EE terá direito ao o montante de 1.204,56€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 3,91€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 5.294,57€ (cinco mil duzentos e noventa e quatro euros e cinquenta e sete cêntimos), composto pelas seguintes parcelas:
+
+i) 920,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,64€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 6,32€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 632,82€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,08€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 1.204,56€ referente a compensação pela cessação do contrato de trabalho, acrescido de 3,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante FF terá direito ao montante de 8.591,69€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 28,25€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 17.998,83€ (dezassete mil novecentos e noventa e oito euros e oitenta e três cêntimos), composto pelas seguintes parcelas:
+
+i) 1.727,67€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 8,71€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.322,23€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 4,35€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 4.272,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 14,05€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.022,50€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,65€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 8.591,69€ referente a compensação pela cessação do contrato de trabalho, acrescido de 28,25€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+- o impugnante GG terá direito ao montante de 1.188,37€ (calculada nos termos do artigo 366.º do CT e considerando a sucessão de leis no tempo) referente a compensação pela cessação do contrato de trabalho, acrescido de 3,91€ relativamente aos respectivos juros vencidos (até 19 de Março de 2025) e vincendos.
+
+Devendo, assim, ser reconhecido o seu crédito no montante global de 5.289,73€ (cinco mil duzentos e oitenta e nove euros e setenta e três cêntimos), composto pelas seguintes parcelas:
+
+i) 940,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,74€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 6,32€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 624,15€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,05€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 1.188,37€ referente a compensação pela cessação do contrato de trabalho, acrescido de 3,91€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+*
+
+AA, EE, FF,
+
+GG,
+
+DD e CC, Credores nos presentes autos e neles melhor identificados, notificados do despacho proferido - o qual julgou improcedente a impugnação da lista de créditos reconhecidos -, e com ele não se conformando, dele interpõem recurso de apelação formulando as seguintes conclusões-parcialmente comuns:
+
+A- AA;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 19.278,90€, em substituição da reintegração, por despedimento ilícito, acrescido de 63,68€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 19.278,90€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 9.175,10€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2,23, 24, 25 e 26 da sentença.
+
+(…)
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 19.278,90€ [(1.600,00€ x 12) + (1.600,00€ / 365 x 18)], que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 63,38€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 27.212,48€ (vinte e sete mil duzentos e doze euros e quarenta e oito cêntimos), composto pelas seguintes parcelas:
+
+i) 1.471,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 7,42€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.057,77€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 3,48€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 3.418,18€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 11,24€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.894,55€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,23€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 19.278,90€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 63,68€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+B- EE;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 2.741,92€, em substituição da  reintegração, por despedimento ilícito, acrescido de 9,01€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 2.741,92€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 1.204,56€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2, 23, 40, 41 e 42 da sentença.
+
+(…)
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 2.741,92€ [(900,00€ x 3) + (900,00€ / 365 x 17)], que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 9,01€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 6.836,98€ (seis mil oitocentos e trinta e seis euros e noventa e oito cêntimos), composto pelas seguintes parcelas:
+
+i) 920,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,64€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 6,32€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 632,82€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,08€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 2.741,92€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 9,01€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+C-
+
+FF;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 20.882,65€, em substituição da reintegração, por despedimento ilícito, acrescido de 68,66€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 20.882,65€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 8.591,69€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2, 23, 44, 45 e 46 da sentença.
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 20.882,65€ [(2.000,00€ x 10) + (2.000,00€ / 12 x 5) + (2.000,00€ / 365 x 9], que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 68,66€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 30.330,20€ (trinta mil trezentos e trinta euros e vinte cêntimos), composto pelas seguintes parcelas:
+
+i) 1.727,67€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 8,71€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.322,23€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 4,35€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 4.272,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 14,05€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.022,50€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,65€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 20.882,65€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 68,66€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+D-
+
+GG;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 2.700,00€, em substituição da reintegração, por despedimento ilícito, acrescido de 8,88€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 2.700,00€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 1.188,37€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2, 23, 48, 49 e 50 da sentença.
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 2.700,00€ (900,00€ x 3), que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 8,88€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 6.806,33€ (seis mil oitocentos e seis euros e trinta e três cêntimos), composto pelas seguintes parcelas:
+
+i) 940,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,74€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 6,32€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 624,15€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,05€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 2.700,00€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 8,88€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+E-
+
+DD;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 7.868,95€, em substituição da reintegração, por despedimento ilícito, acrescido de 25,87€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 7.868,95€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 3.266,89€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2,23, 36, 37 e 38 da sentença.
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 7.868,95€ [(1.000,00€ x 7) + (1.000,00€ / 12 x 10) + (1.000,00€ / 365 x 13], que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 25,87€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 12.828,60€ (doze mil oitocentos e vinte e oito euros e sessenta cêntimos), composto pelas seguintes parcelas:
+
+i) 1.026,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 5,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 661,11€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 2,17€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 2.136,36€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 7,02€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.092,03€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 3,59€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 7.868,95€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 25,87€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+CC;
+
+1. O presente Recurso tem como objecto a matéria de Direito que presidiu à decisão do Tribunal a quo, no que ao indeferimento liminar do procedimento cautelar diz respeito.
+
+2. O Credor recorrente apresentou reclamação de créditos, na qual reclamou, nomeadamente, uma indemnização no valor de 34.663,74€, em substituição da reintegração, por despedimento ilícito, acrescido de 113,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025), montante que não foi reconhecido pelo Sr. Administrador de Insolvência na lista de créditos reconhecidos.
+
+3. Impugnada a lista de créditos reconhecida, peticionando-se a declaração da ilicitude do despedimento e consequente rectificação da lista de créditos reconhecidos (com inclusão da indemnização de 34.663,74€), ao invés da compensação pela cessação do contrato de trabalho (no valor de 16.705,30€), em ambos os casos acrescidos dos respectivos juros vencidos e vincendos, julgou o Tribunal a quo improcedente a impugnação, por entender que a norma contida no n.º 3 do artigo 347.º do CT prevê, tão só, uma remissão para o artigo 366.º do CT, para efeitos do cálculo da compensação devida, e não uma remissão genérica para o procedimento a observar em caso de despedimento colectivo.
+
+4. Para apreciação do presente recurso importa ter em atenção os factos provados n.ºs 1, 2, 23, 32, 33 e 34 da sentença.
+
+5. Atendendo ao número de trabalhadores em funções à data da insolvência - pelo menos onze trabalhadores -, concluímos que a Insolvente não era um microempresa, nos termos do n.º 1 do artigo 100.º do CT.
+
+(…)
+
+24. Relativamente ao cômputo da indemnização, tendo presente a jurisprudência sobre a matéria e o caso concreto, reputamos como justa e adequada uma indemnização correspondente a 30 dias de retribuição base por cada ano completo ou fracção de antiguidade.
+
+25. O que totaliza a quantia ilíquida de 34.663,74€ [(2.800,00€ x 12) + (2.800,00€ / 12 x 4) +(2.800,00€ / 365 x 17], que deve ser reconhecida como devida ao Credor aqui recorrente, a que acrescem juros de mora civis à taxa legal de 4%, vencidos desde 17 de Fevereiro de 2025 - que, até à data do envio da reclamação de créditos (19 de Março de 2025), perfez um montante de 113,96€ -, e ainda os vincendos.
+
+26. Deve, por isso, a sentença sob recurso ser revogado, determinando-se a ilicitude do despedimento, com o consequente arbitramento da indemnização devida, rectificando-se a lista de créditos reconhecidos de modo a reconhecer ao Credor recorrente o montante global de 47.819,96€ (quarenta e sete mil oitocentos e dezanove euros e noventa e seis cêntimos), composto pelas seguintes parcelas:
+
+i) 2.235,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 11,27€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.851,11 € referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 6,09€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 5.981,82 € referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 19,67€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.927,35€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 9,62€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+v) 34.663,74€ referente a indemnização em substituição da reintegração, por despedimento ilícito, acrescido de 113,96€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+Todas acrescidas de juros vincendos.
+
+Nestes termos, e nos melhores de Direito, deve a Sentença sob recurso ser revogada, substituindo-se por outra, nos termos expostos.
+
+Argumentos jurídicos comuns aos Apelantes:
+
+5. Atendendo ao número de trabalhadores em funções à data da insolvência - pelo menos onze trabalhadores -, concluímos que a Insolvente não era um microempresa, nos termos do n.º 1 do artigo 100.º do CT.
+
+6. O Tribunal a quo faz uma interpretação restritiva do n.º 3 do artigo 347.º do CT, na medida em que entende que “não há dúvida que as “necessárias adaptações” a que se refere o artigo 347.º, n.º 3 do CT, relativamente ao procedimento previsto para o despedimento coletivo, tem, necessariamente, que atender às especificidades do processo de insolvência, com a sua motivação específica”, considerando que a remissão para as normas reguladoras do procedimento aplicável ao despedimento colectivo se circunscrevem ao cálculo da compensação, mas já não ao procedimento em si.
+
+7. Avança o Tribunal a quo a sua posição com o fundamento de que “a aplicabilidade ou o cumprimento dos formalismos relativos ao despedimento coletivo - (…) - não se revestem de utilidade ou sentido no âmbito deste processo de insolvência uma vez que, tendo sido judicialmente determinado o encerramento da empresa não existem no caso em apreço medidas alternativas à cessação imediata dos contratos de trabalho e o cumprimento da tramitação referida nos aludidos preceitos legais resultaria, um agravamento para a massa insolvente-prejuízo para os credores incluindo os aqui impugnantes- pois continuariam a vencer-se salários, impostos e contribuições”.
+
+8. O Tribunal a quo alicerça a sua posição, ainda, num argumento literal, defendendo que “o legislador omitiu qualquer referência directa aos efeitos, ou às penalidades, eventualmente decorrentes da violação da obrigação do procedimento relativo ao despedimento coletivo”.
+
+Veja-se que,
+
+9. Não ignoramos que no decurso do processo de insolvência se deve atentar e salvaguardar os interesses dos credores e, bem assim, a massa insolvente.
+
+10. Contudo, tal defesa nunca poderá ocorrer com o sacrifício dos próprios credores, tampouco dos credores que, como no caso concreto, foram a massa de trabalho que permitiram e garantiram a laboração da empresa.
+
+11. Também a literalidade da norma impõe uma interpretação como a defendida pelos Credores: ainda que não haja uma referência directa aos efeitos ou às penalidades eventualmente decorrentes da violação da obrigação do procedimento relativo ao despedimento colectivo, não nos é possível negar que tal referência é feita.
+
+12. Uma interpretação literal do n.º 3 do artigo 347.º do CT impõe a observância do procedimento previsto nos artigos 360.º e seguintes e não apenas da forma de cálculo prevista no artigo 366.º do CT.
+
+13. Se houvesse tal intenção por parte do legislador, a norma circunscreveria expressamente a remissão para tal forma de cálculo e para a norma em concreto, ao invés de o fazer em relação ao procedimento em si e a um conjunto de normas que se iniciam no artigo 360.º do CT e se prolongam pelos artigos seguintes.
+
+14. A norma em questão não é de carácter genérico e abstracto, antes se referindo concretamente quanto à cessação de contratos de trabalho pelo encerramento do estabelecimento, prevendo especificamente a remissão para o procedimento constante das normas já indicadas, com o acréscimo da expressão “necessárias adaptações”, como se impunha, solução a que se recorre várias vezes no CT.
+
+15. Há que atender, reitera-se, à literalidade da norma, que traduz o espírito do legislador, quando faz a remissão para todo um procedimento e um conjunto de normas que se iniciam numa em concreto.
+
+16. Se assim não fosse, não se consagraria uma solução diferente para o caso das microempresas (n.º 4 do artigo 347.º do CT), já que o procedimento seria o mesmo, não fazendo sentido distinguir hipóteses cujas soluções são iguais.
+
+17. Uma solução diferente da defendida conduziria a uma total e injustificada desprotecção dos trabalhadores que, a qualquer momento, se poderiam ver (como viram no caso concreto) privados de rendimentos, permitindo a solução adoptada “que os trabalhadores (…) não sejam confrontados com a cessação imediata, e não prevista do contrato” - Pedro Romano Martinez et al, Ob. Cit., pp. 824. No mesmo sentido, vide Pedro Furtado Martins, Ob. Cit., pp. 105 e 106, e Bernardo da Gama Lobo Xavier et al, Ob. Cit., pp.727, este último a defender que “existe necessariamente um aligeiramento (que decorre das necessárias adaptações), mas afigura-se-nos que esse procedimento não pode ser excluído, conservando algumas virtualidades” -, regime que resulta, igualmente, da Directiva n.º 98/59/CE, do Conselho, de 20 de Julho -  Pedro Romano Martinez et al, Ob. Cit., pp. 822.
+
+18. Em matéria de jurisprudência, no caso retratado no processo 2010/20.2T8GMR-A.G1 -Acórdão do Tribunal da Relação de Guimarães, de 17-12-2020, pelo Relator Sr. Desembargador Dr. António Barroca Penha (disponível em
+www.dgsi.pt
+) - os aí Recorrentes discordavam da circunstância de não ter sido reconhecida a ilicitude do despedimento promovido pelo Sr. Administrador de Insolvência, com fundamento na inobservância dos procedimentos legalmente impostos, peticionando, em conformidade, lhes fosse atribuída indemnização condizente com tal ilicitude.
+
+19. Decidindo, entendeu o Tribunal da Relação de Guimarães que “a empresa em questão, à data do seu encerramento, apenas contava com cinco trabalhadores, entre eles a própria gerente, ou seja, empregava menos de 10 trabalhadores, assim se concluindo que estamos perante uma “microempresa” (art. 100º, n.º 1, al. a), do CT). A ser assim, não é aplicável in casu o procedimento previsto nos arts. 360º e segs. do CT, sendo apenas exigível que o trabalhador seja informado com a antecedência (de 15 a 75 dias consoante a sua antiguidade) prevista nos nºs 1 e 2 do art. 363º, do CT”.
+
+20. Descendo ao caso presente, a contrario sensu, conclui-se que, não se tratando de microempresa, impunha-se a observância dos procedimentos aplicáveis ao despedimento colectivo, previstos nos artigos 360.º e seguintes do CT, com as adaptações que se lhe impunham.
+
+Em suma,
+
+21. Argumentos de ordem literal e teleológica impõem uma interpretação do n.º 3 do artigo 347.º do CT no sentido de se aplicarem os procedimentos previstos nos artigos 360.º e seguintes do CT, sem restrição de qualquer ordem.
+
+22. Solução diversa esvaziaria de utilidade a previsão contida no n.º 4 do artigo 347.º do CT, relativamente à exclusão das microempresas quanto à aplicação de tais procedimentos, prevendo, assim, um procedimento simplificado.
+
+23. O despedimento promovido pelo Sr. Administrador de Insolvência foi, então, ilícito, nos termos do artigo 383.º do CT, com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT.
+
+*
+
+2. Do objecto do recurso
+
+O despedimento promovido pelo Administrador de Insolvência foi ilícito nos termos do artigo 383.º do CT, com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT?
+
+2.1-Da matéria de facto;
+
+A 1.ª instância fixou, assim, a sua matéria de facto:
+
+A) Resulta dos autos-lista de credores, documentos juntos, sentença de declaração de insolvência, auto de apreensão-que:
+
+1. A sociedade A..., S.A. foi declarada insolvente por sentença proferida a 12/02/2025 e transitada em julgado a 10/04/2025.
+
+2. Conforme requerimento do administrador judicial (cfr. requerimento de 17/02/2025) e despacho proferido a 20/02/205 foi autorizado, ao abrigo do disposto no artº 157º, al.b), do CIRE, o encerramento do estabelecimento da devedora reportado a 12/02/2025 com a inerente comunicação à Autoridade Tributária e à Segurança Social.
+
+3. O Administrador Judicial juntou aos autos, no dia 27 de maio de 2025, a relação definitiva de credores junta e que se considera integralmente reproduzida.
+
+(…)
+
+5. A Insolvente dedicava-se à exploração de gabinete de investigação, desenvolvimento, consultoria, excluindo a jurídica, elaboração de projetos em várias áreas de engenharia, nomeadamente: engenharia de construção, mecânica, civil, elétrica e eletrónica, industrial, informática, ambiental, química, hidráulica, bem como áreas de sociologia, acústica, energias renováveis, robótica e arquitetura. Construção civil, nomeadamente o fabrico e comercialização de construções modulares em diversos materiais e manutenção e reparação e reabilitação de edifícios.
+
+(…)
+
+23. Na Petição Inicial de apresentação à Insolvência, a insolvente declara que contava “com um efetivo de 13 (treze) trabalhadores”, identificando-os no documento n.º 2, que denomina como “Mapa pessoal que a Requerente tem ao seu serviço”, e que segue:
+
+24. O impugnante AA foi contratado pela Insolvente, a 21 de Janeiro de 2013, para o exercício das funções correspondentes à categoria profissional de Operador (cfr.doc. n.º 1 junto com a reclamação de créditos e que se considera integralmente reproduzido).
+
+25. Aquando da declaração de Insolvência da aqui Insolvente, o Credor impugnante exercia as funções correspondentes à categoria profissional de Responsável de Compras/Director das indústrias transformadoras, mediante o pagamento de uma retribuição mensal ilíquida de 1.600,00€ - cfr. doc. n.ºs 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+26. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE.
+
+Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” - cfr. doc. n.ºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+27. Não foram pagos, pelo menos:
+
+i) 1.471,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 7,42€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.057,77€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 3,48€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 3.418,18€ referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 11,24€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.894,55€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,23€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+28. O impugnante BB foi contratado pela Insolvente, a 20 de Janeiro de 2020, para o exercício das funções correspondentes à categoria profissional de Montador de estruturas metálicas (cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+29. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à referida categoria profissional, mediante o pagamento de uma retribuição mensal ilíquida de 1.000,00€ (cfr. docs. n.ºs 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+30. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE. Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” - cfr. docs. nºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+31. Não foram pagos, pelo menos:
+
+i) 1.026,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 5,17€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 661,11€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 2,17€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 2.136,36€ referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 7,02€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.172,33€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 3,85€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+32. O impugnante CC foi contratado pela Insolvente, a 1 de Outubro de 2012, para o exercício das funções correspondentes à categoria profissional de Gestor de Comércio Internacional (cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+33. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à categoria profissional de Gestor de Departamento de Projeto/Diretor das Indústrias de Construção e de Engenharia Civil, mediante o pagamento de uma retribuição mensal ilíquida de 2.800,00€ (cfr. docs. 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+34. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE. Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” - cfr. docs. nºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+35. Não foi pago, pelo menos:
+
+i) 2.235,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 11,27€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.851,11 € referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 6,09€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 5.981,82 € referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 19,67€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.927,35€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 9,62€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+36. O impugnante DD, foi contratado pela Insolvente, a 5 de Abril de 2017, para o exercício das funções correspondentes à categoria profissional de Operário de Produção (cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+37. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à categoria profissional de Montador de estruturas metálicas, mediante o pagamento de uma retribuição mensal ilíquida de 1.000,00€ (cfr. docs. n.ºs 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+38. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE. Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” (cfr. docs. n.ºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+39. Não foi pago, pelo menos:
+
+i) 1.026,33€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 5,17€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 661,11€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 2,17€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 2.136,36€ referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 7,02€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 1.092,03€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 3,59€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025).
+
+40. O impugnante EE foi contratado pela Insolvente, a 1 de Fevereiro de 2022, para o exercício das funções correspondentes à categoria profissional de Assistente Administrativo (cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+41. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à referida categoria profissional, mediante o pagamento de uma retribuição mensal ilíquida de 900,00€ (cfr. docs. n.ºs 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+42. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE. Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” (cfr. docs. n.ºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+43. Não foi pago pelo menos:
+
+i) 920,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,64€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 6,32€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 632,82€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,08€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+44. O impugnante FF foi contratado pela Insolvente, a 9 de Setembro de 2014, para o exercício das funções correspondentes à categoria profissional de Operário de Produção (cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+45. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à categoria profissional de Responsável de Montagem em Obra, mediante o pagamento de uma retribuição mensal ilíquida de 2.000,00€ (cfr. docs. n.ºs 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+46. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE.
+
+Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” (cfr. docs. n.ºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+47. Não foi pago pelo menos:
+
+i) 1.727,67€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 8,71€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+ii) 1.322,23€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 4,35€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iii) 4.272,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respectivo subsídio de férias, acrescido de 14,05€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025);
+
+iv) 2.022,50€ referente à formação contínua não ministrada entre 2020 e 2025, acrescido de 6,65€ relativamente aos respectivos juros (vencidos até 19 de Março de 2025).
+
+48. O impugnante GG foi contratado pela Insolvente, a 17 de Fevereiro de 2022, para o exercício das funções correspondentes à categoria profissional de Montador de estruturas metálicas - cfr. doc. n.º 1 junto com reclamação de créditos e que se considera integralmente reproduzido).
+
+49. Aquando da declaração de Insolvência da aqui Insolvente, o Credor aqui Requerente exercia as funções correspondentes à referida categoria profissional, mediante o pagamento de uma retribuição mensal ilíquida de 900,00€ (cfr. doc. n.º 2 e 3 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+50. No dia 19 de Fevereiro de 2025, pelas 10:00h, foi-lhe entregue, em conjunto com outros trabalhadores da Insolvente, uma comunicação, datada de 17 de Fevereiro e assinada pelo Sr. Administrador de Insolvência, na qual, em suma, lhe foi transmitido que “nos termos do artigo 347.º do Código do Trabalho, que o contrato individual de trabalho que vigora entre V.ª Exa. e a sociedade insolvente cessou com o encerramento do estabelecimento, por decisão do Administrador Judicial nos termos do Art. 157.º do CIRE.
+
+Assim, e em face de tudo o que anteriormente foi exposto, deve V.ª Exa. considerar-se contratualmente desvinculado a partir de 18 de fevereiro de 2025” (cfr. docs. n.ºs 4 e 5 juntos com reclamação de créditos e que se consideram integralmente reproduzidos).
+
+51. Não pagou pelo menos:
+
+i) 940,50€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Janeiro de 2025, acrescido de 4,74€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+ii) 595,00€ referente à retribuição e aos duodécimos dos subsídios de férias e de Natal de Fevereiro de 2025, acrescido de 1,96€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iii) 1.922,73€ referente a férias vencidas a 1 de Janeiro de 2025 e respetivo subsídio de férias, acrescido de 6,32€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025);
+
+iv) 624,15€ referente à formação contínua não ministrada entre 2022 e 2025, acrescido de 2,05€ relativamente aos respetivos juros (vencidos até 19 de Março de 2025)
+
+*
+
+2.2 - A norma do artigo 347.º do Código do Trabalho e o CIRE;
+
+A 1.ª instância, fazendo a sua interpretação, concluiu:
+
+(…)
+
+O não cumprimento de tais formalismos não acarreta a ilicitude da cessação dos contratos de trabalho por caducidade-encerramento do estabelecimento. Outra situação estaríamos caso o estabelecimento se continuasse em laboração e o Administrador Judicial não mantivesse todos os contratos.
+
+Assim, não se concluindo pela ilicitude da cessação dos contratos de trabalho por preterição do procedimento prévio relativo ao despedimento coletivo, os impugnantes, salvo melhor, terão direito, sim, à compensação calculada nos termos do artigo 366.º do Código de Trabalho.
+
+Os Apelantes assim o não entendem, alegando:
+
+21. Argumentos de ordem literal e teleológica impõem uma interpretação do n.º 3 do artigo 347.º do CT no sentido de se aplicarem os procedimentos previstos nos artigos 360.º e seguintes do CT, sem restrição de qualquer ordem.
+
+22. Solução diversa esvaziaria de utilidade a previsão contida no n.º 4 do artigo 347.º do CT, relativamente à exclusão das microempresas quanto à aplicação de tais procedimentos, prevendo, assim, um procedimento simplificado.
+
+23. O despedimento promovido pelo Sr. Administrador de Insolvência foi, então, ilícito, nos termos do artigo 383.º do CT, com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT.
+
+Avaliando.
+
+Nos termos do artigo 277.º do CIRE - relações laborais -
+os efeitos da declaração de insolvência relativamente a contratos de trabalho e à relação laboral regem-se exclusivamente pela lei aplicável ao contrato de trabalho,
+ou seja, no caso dos autos, o que estabelece o art.º 347º do Código do Trabalho:
+
+1. A declaração judicial de insolvência do empregador não faz cessar o contrato de trabalho, devendo o administrador da insolvência continuar a satisfazer integralmente as obrigações para com os trabalhadores enquanto o estabelecimento não for definitivamente encerrado.
+
+2. Antes do encerramento definitivo do estabelecimento, o administrador da insolvência pode fazer cessar o contrato de trabalho de trabalhador cuja colaboração não seja indispensável ao funcionamento da empresa.
+
+3. A cessação de contratos de trabalho decorrente do encerramento do estabelecimento ou realizada nos termos do n.º 2 deve ser antecedida de procedimento previsto nos artigos 360.º e seguintes,
+com as necessárias adaptações.
+
+4. O disposto no número anterior não se aplica a microempresas.
+
+5. Na situação referida no n.º 2, o trabalhador tem direito à compensação prevista no artigo 366.º
+
+6. O disposto no n.º 3 aplica-se em caso de processo de insolvência que possa determinar o encerramento do estabelecimento.
+
+(…)
+
+Interessa-nos no caso vertente o que se mostra prescrito nos nºs 1, 2 e 3 desta norma.
+
+Da remissão do nº 3 para o procedimento previsto nos artigos 360º e seguintes, somos levados ao art.º 363º, que, sob a epígrafe “Decisão de despedimento colectivo”, estipula:
+
+1 - Celebrado o acordo ou, na falta deste, após terem decorrido 15 dias sobre a prática do acto referido nos n.ºs 1 ou 4 do artigo 360.º ou, na falta de representantes dos trabalhadores, da comunicação referida no n.º 3 do mesmo artigo, o empregador comunica a cada trabalhador abrangido a decisão de despedimento, com menção expressa do motivo e da data de cessação do contrato e indicação do montante, forma, momento e lugar de pagamento da compensação, dos créditos vencidos e dos exigíveis por efeito da cessação do contrato de trabalho, por escrito e com antecedência mínima, relativamente à data da cessação, de:
+
+a) 15 dias, no caso de trabalhador com antiguidade inferior a um ano;
+
+b) 30 dias, no caso de trabalhador com antiguidade igual ou superior a um ano e inferior a cinco anos;
+
+c) 60 dias, no caso de trabalhador com antiguidade igual ou superior a cinco anos e inferior a 10 anos;
+
+d) 75 dias, no caso de trabalhador com antiguidade igual ou superior a 10 anos.
+
+(…)
+
+4 - Não sendo observado o prazo mínimo de aviso prévio, o contrato cessa decorrido o período de aviso prévio em falta a contar da comunicação de despedimento, devendo o empregador pagar a retribuição correspondente a este período.
+
+5 - O pagamento da compensação, dos créditos vencidos e dos exigíveis por efeito da cessação do contrato de trabalho deve ser efectuado até ao termo do prazo de aviso prévio, salvo em situação prevista no artigo 347.º ou regulada em legislação especial sobre recuperação de empresas e reestruturação de sectores económicos. (…)
+
+Ora - por isso a presente instância recursal - não nos diz a lei que adaptações deverão/poderão ser feitas, nem tão pouco quais as consequências para a sua inobservância. Mais, o legislador do CIRE excluiu expressamente das suas normas genéticas a regulação sobre os efeitos da insolvência do empregador relativamente aos contratos de trabalho em curso à data da insolvência - trata-se de uma conclusão que tem sido salientada na doutrina (assim, e entre uma multiplicidade de outros, Menezes Leitão, Direito da Insolvência, 4ª ed., p. 200 e Maria do Rosário Epifânio, Manual de Direito da Insolvência, 6ª ed., p. 198) - sendo que a citada norma do artigo 347.º  contém lei especial - neste preciso sentido, por ex. o Acórdão do STJ de 30-05-2017, pesquisável em
+www.dgsi.pt
+, ao escrever:  Embora seja conhecida a posição doutrinária de Pedro Romano Martinez (v., por último, Direito do Trabalho, 6ª ed., pp 873 e 874) no sentido de que se haveria por começar por buscar tais efeitos nos art.s 111º e 108º, nº 1 do CIRE, este é um entendimento (aliás isolado, tanto quanto seja do nosso conhecimento) que não é de subscrever. Também, e diferentemente do que já se viu ser referido (assim, Pedro Furtado Martins, Cessação do Contrato de Trabalho, 3ª ed., p. 110 e Maria do Rosário Ramalho, Tratado de Direito do Trabalho, Parte II, 5ª ed., p. 930 e 931), não parecerá adequado falar-se aqui na existência de uma lacuna (pelo menos em sentido jurídico). Na realidade, o ordenamento jurídico não deixa de regular especificamente sobre o tema, apenas sucede que o legislador entendeu (aliás em harmonia com a orientação que traçou na norma de conflitos do art. 277º do CIRE) tratar do assunto no contexto da legislação do trabalho, mais propriamente no Código do Trabalho. Nesta medida, fá-lo agora (Código de 2009) no respetivo art. 347º. Concordamos assim com Soveral Martins (Um Curso de Direito da Insolvência, 2ª ed., p. 210) quando aduz que “O CIRE não terá querido regular toda a matéria relativa aos efeitos da declaração de insolvência sobre os negócios em curso e foi isso que sucedeu relativamente aos efeitos sobre os contratos de trabalho.
+
+E quanto ao pré-aviso, haverá que observá-lo?
+
+Salvo o devido respeito pela posição do julgador da 1.ª instância, entendemos que sim, desde logo porque o pré-aviso tem em vista assegurar interesses muito relevantes para o trabalhador (que o legislador protege de forma especial configurando a sua violação como contraordenação grave), permitindo, desde logo, a tomada de medidas que possam minorar os graves danos que resultam para os trabalhadores da perda do seu emprego, concedendo-lhe um tempo para se reorganizarem do ponto de vista laboral.
+
+Entendemos que  o legislador do CIRE, tentando adequar as especificidades do processo de insolvência - toda a dinâmica e interesses que o processo de insolvência visa proteger - aos princípios subjacentes às leis laborais, colocou à disposição do juiz das insolvências a norma do n.º 3 do artigo 347.º - A cessação de contratos de trabalho decorrente do encerramento do estabelecimento ou realizada nos termos do n.º 2 deve ser antecedida de procedimento previsto nos artigos 360.º e seguintes,
+com as necessárias adaptações
+- permitindo-lhe, atenta a aplicabilidade dos formalismos relativos ao despedimento coletivo, afastar procedimentos que não se revestem de qualquer utilidade ou sentido no âmbito do processo de insolvência - por ex. comunicações à comissão de trabalhadores, fase de informações e negociação com a estrutura representativa dos trabalhadores com vista a um acordo sobre a dimensão e efeito das medidas a adoptar, intervenção do ministério responsável pela área laboral, quanto à conciliação dos interesses das partes - cujo incumprimento não acarreta a ilicitude da cessação dos contratos de trabalho.
+
+Nas palavras do citado
+Acórdão do STJ de 30.05.2017:
+
+(…)
+
+De resto, se tais razões procedessem, então chegaríamos à conclusão que também qualquer um dos diversos procedimentos fixados no art. 360º e seguintes do Código de Trabalho haveria de ser considerado inatendível no domínio da insolvência (com exceção de uma qualquer singela comunicação da cessação do contrato), o que tiraria pura e simplesmente sentido ao comando do nº 3 do art.
+347º (como nos diz Júlio Gomes, Nótula sobre os Efeitos da Insolvência do Empregador nas Relações de Trabalho, I Congresso do Direito de Insolvência, p. 289, “as necessárias adaptações não devem traduzir-se em suprimir o procedimento do despedimento coletivo”).
+
+(…)
+
+Donde, inobservado que foi in casu o pré-aviso devido, ocorreu um ilícito contratual, gerador da obrigação de reparação do dano na forma específica fixada na lei. O que é dizer, haverá lugar na insolvência à consideração dos reclamados créditos correspondentes à retribuição inerente ao período do pré-aviso omitido (75 dias, conforme a alínea d) do nº 1 do art. 363º do Código do Trabalho). (No limite, poder-se-ia porventura defender que deveria haver lugar ao pagamento de apenas parte desse tempo de retribuição. Dir-se-ia: tendo ocorrido o encerramento definitivo do estabelecimento - momento em que sempre caducariam os contratos de trabalho - antes de transcorrido o referido período do aviso prévio, cessaria necessariamente nessa altura o dano que a lei visa ser reparado, de sorte que os trabalhadores apenas teriam direito às retribuições que iriam auferir até à virtual caducidade do contrato. A verdade, porém, é que este possível enquadramento jurídico não faz parte do thema decidendum tal como proposto no presente recurso, pelo que não nos vamos envolver nele).
+
+Por último: embora o panorama jurisprudencial e doutrinário não forneça (tanto quanto seja do nosso conhecimento) qualquer contributo acerca da concreta questão aqui em discussão, aponte-se ao menos o contributo académico de Leonor Pizarro Monteiro (O Trabalhador e a Insolvência da Entidade Empregadora, Almedina, 2017, p. 45, nota 53 [dissertação de mestrado]), que vai precisamente no sentido que defendemos: que na cessação do contrato no contexto do nº 2 do art. 347º do Código do Trabalho deverá ser cumprido o aviso prévio previsto no nº 1 do art. 363º do Código do Trabalho, não podendo o trabalhador ser confrontado com a rotura abrupta da relação laboral. Esta parece constituir, na verdade e dentro do enquadramento acima exposto, a boa interpretação da lei.
+
+Se  a remissão do artigo 347.º para as normas reguladoras do despedimento colectivo servisse,  apenas e só, o propósito de prever que a compensação pela cessação do contrato de trabalho devida ao trabalhador cujo contrato caduca após a declaração de insolvência é calculada nos termos do artigo 366º do CT - isto é, como se de um despedimento colectivo se tivesse tratado -, o legislador assim o diria.
+
+Nas palavras do Acórdão da Relação de Guimarães de 15.3.2016 - acessível em www.dgsi.pt:
+
+(…)
+
+Ora, não fará sentido que o legislador tenha exigido um procedimento formal, antecipadamente á cessação de contratos de trabalho decorrente do encerramento do estabelecimento, em sede de insolvência, sem qualquer consequência para quem tivesse o ónus de cumprir as referidas formalidades com a consequência de um quase esvaziamento da norma em causa.
+
+Em nosso entender, o legislador ao determinar o cumprimento das formalidades, reportando-se aos procedimentos aplicáveis aos casos de despedimento colectivo, teve em conta a razão de ser das formalidades, ou seja, a protecção do trabalhadores em geral e, em especial a protecção dos seus direitos na sequência da cessão do contrato de trabalho que também se aplica ao Despedimento Colectivo.
+
+Daquela norma do art.º 347 n.º 3, do CT, resulta que o legislador quis seguir em grande parte o regime do despedimento colectivo, sempre com as necessárias adaptações, o que significa que, a razão de ser das formalidades do despedimento colectivo, também estão presentes no caso da cessação do contrato de trabalho, por via do encerramento do estabelecimento em sede de insolvência do empregador.
+
+Como referimos, está expressamente posto em causa o procedimento no art.º 363.º n.º5 no sentido de o empregador por á disposição, do trabalhador a compensação, referida no art.º 366.º nem os créditos vencidos ou exigíveis em virtude da cessação do contrato de trabalho.
+
+É certo que, alguns dos procedimentos não se adaptam á natureza da cessação do contrato de trabalho.
+
+Assim sucede no que concerne à comunicação escrita referida no art.º 360.º n.ºs 1e 2 alínea a) não se justifica a referência aos motivos invocados pelo despedimento, mas ainda assim faz sentido a comunicação ainda que baste a indicação da situação de insolvência.
+
+Também não faz sentido o disposto no n.º 2 alíneas b e c), do mesmo art.º relativo aos critérios de selecção dos trabalhadores a despedir uma vez que, o encerramento do estabelecimento afecta todos os trabalhadores.
+
+Já alínea e) deve ser cumprida.
+
+Quanto à alínea f) do mesmo art.º não parece que os administrador da insolvência possa ao abrigo do art.º 360 n.2 atribuir aos trabalhadores qualquer indemnização acima dos critérios legais uma vez que está que lhe está vedado agravar a situação financeira da empresa.
+
+Por outro lado, entende-se que não parece haver lugar às informações e negociações previstas no artº 361º, porque elas pressupõem a continuidade da empresa.
+
+Mas entendemos aplicável no caso concreto, o aviso prévio referido no art.º363.º 1 n.º 2 do CT.
+
+No caso dos autos e ressalvando a conciliação entre o apelante e a Administradora da Insolvência, que se gorou, nenhuma formalidade foi cumprida que coubesse no caso concreto. Ora os procedimentos que cabem neste caso não são despicientes pois que, as formalidades exigidas no caso, na medida em que decorrem para a transparência dos actos e das suas motivações, permitem uma melhor definição e ponderação de interesses permitindo concretamente, a protecção do trabalhador no sentido de ter a informação necessária para aferir dos seus direitos decorrentes da cessão do contrato de trabalho no caso os direitos de créditos, e ainda a possibilidade de organizara a sua vida, antecipadamente, em face da extinção do seu contrato de trabalho.
+
+Como refere o Conselheiro Júlio Gomes, “Parece-nos, que havendo caducidade dos contratos de trabalho por força do encerramento definitivo da empresa haverá que realizar o procedimento previsto para o despedimento colectivo, como inequivocamente resulta do n.º 5 do artigo 347.º, o qual, longe de ser inútil , esclarece que mesmo nesta hipótese há que respeitar o procedimento do despedimento colectivo com as necessárias adaptações não devem traduzir-se em suprimir o referido procedimento das formalidades.” (in Nótula sobre os efeitos da insolvência do empregador nas relações de trabalho).
+
+Não obstante, não constando da letra da norma do art.º 347.º CT qualquer referência à consequência no caso de incumprimento das formalidades, temos para nós que referida norma deve ser objecto de interpretação extensiva no sentido de se considerar a aplicação do regime do despedimento colectivo no que concerne às consequências da omissão dos procedimentos, com as necessárias adaptações, uma vez que, a razão de ser de tais procedimentos também se aplicam ao despedimento colectivo, concluindo-se que a letra do seu texto ficou aquém do espirito da lei, pois que a fórmula verbal adoptada peca por defeito, por dizer menos do que aquilo que pretendia (art.º 9.º do CC). Ou seja, a razão da obrigação das formalidades são indubitavelmente abrangidos no espirito da lei, razão pela qual nem sequer estamos em face de uma qualquer lacuna da lei.
+
+Na alegação dos Apelantes:
+
+9. Não ignoramos que no decurso do processo de insolvência se deve atentar e salvaguardar os interesses dos credores e, bem assim, a massa insolvente.
+
+10. Contudo, tal defesa nunca poderá ocorrer com o sacrifício dos próprios credores, tampouco dos credores que, como no caso concreto, foram a massa de trabalho que permitiram e garantiram a laboração da empresa.
+
+11. Também a literalidade da norma impõe uma interpretação como a defendida pelos Credores: ainda que não haja uma referência directa aos efeitos ou às penalidades eventualmente decorrentes da violação da obrigação do procedimento relativo ao despedimento colectivo, não nos é possível negar que tal referência é feita.
+
+12. Uma interpretação literal do n.º 3 do artigo 347.º do CT impõe a observância do procedimento previsto nos artigos 360.º e seguintes e não apenas da forma de cálculo prevista no artigo 366.º do CT.
+
+13. Se houvesse tal intenção por parte do legislador, a norma circunscreveria expressamente a remissão para tal forma de cálculo e para a norma em concreto, ao invés de o fazer em relação ao procedimento em si e a um conjunto de normas que se iniciam no artigo 360.º do CT e se prolongam pelos artigos seguintes.
+
+14. A norma em questão não é de carácter genérico e abstracto, antes se referindo concretamente quanto à cessação de contratos de trabalho pelo encerramento do estabelecimento, prevendo especificamente a remissão para o procedimento constante das normas já indicadas, com o acréscimo da expressão “necessárias adaptações”, como se impunha, solução a que se recorre várias vezes no CT.
+
+15. Há que atender, reitera-se, à literalidade da norma, que traduz o espírito do legislador, quando faz a remissão para todo um procedimento e um conjunto de normas que se iniciam numa em concreto.
+
+16. Se assim não fosse, não se consagraria uma solução diferente para o caso das microempresas (n.º 4 do artigo 347.º do CT), já que o procedimento seria o mesmo, não fazendo sentido distinguir hipóteses cujas soluções são iguais.
+
+17. Uma solução diferente da defendida conduziria a uma total e injustificada desprotecção dos trabalhadores que, a qualquer momento, se poderiam ver (como viram no caso concreto) privados de rendimentos, permitindo a solução adoptada “que os trabalhadores (…) não sejam confrontados com a cessação imediata, e não prevista do contrato” - Pedro Romano Martinez et al, Ob. Cit., pp. 824. No mesmo sentido, vide Pedro Furtado Martins, Ob. Cit., pp. 105 e 106, e Bernardo da Gama Lobo Xavier et al, Ob. Cit., pp.727, este último a defender que “existe necessariamente um aligeiramento (que decorre das necessárias adaptações), mas afigura-se-nos que esse procedimento não pode ser excluído, conservando algumas virtualidades” -, regime que resulta, igualmente, da Directiva n.º 98/59/CE, do Conselho, de 20 de Julho -  Pedro Romano Martinez et al, Ob. Cit., pp. 822.
+
+18. Em matéria de jurisprudência, no caso retratado no processo 2010/20.2T8GMR-A.G1 -Acórdão do Tribunal da Relação de Guimarães, de 17-12-2020, pelo Relator Sr. Desembargador Dr. António Barroca Penha (disponível em
+www.dgsi.pt
+) - os aí Recorrentes discordavam da circunstância de não ter sido reconhecida a ilicitude do despedimento promovido pelo Sr. Administrador de Insolvência, com fundamento na inobservância dos procedimentos legalmente impostos, peticionando, em conformidade, lhes fosse atribuída indemnização condizente com tal ilicitude.
+
+19. Decidindo, entendeu o Tribunal da Relação de Guimarães que “a empresa em questão, à data do seu encerramento, apenas contava com cinco trabalhadores, entre eles a própria gerente, ou seja, empregava menos de 10 trabalhadores, assim se concluindo que estamos perante uma “microempresa” (art. 100º, n.º 1, al. a), do CT). A ser assim, não é aplicável in casu o procedimento previsto nos arts. 360º e segs. do CT, sendo apenas exigível que o trabalhador seja informado com a antecedência (de 15 a 75 dias consoante a sua antiguidade) prevista nos nºs 1 e 2 do art. 363º, do CT”.
+
+20. Descendo ao caso presente, a contrario sensu, conclui-se que, não se tratando de microempresa, impunha-se a observância dos procedimentos aplicáveis ao despedimento colectivo, previstos nos artigos 360.º e seguintes do CT, com as adaptações que se lhe impunham.
+
+Em suma,
+
+21. Argumentos de ordem literal e teleológica impõem uma interpretação do n.º 3 do artigo 347.º do CT no sentido de se aplicarem os procedimentos previstos nos artigos 360.º e seguintes do CT, sem restrição de qualquer ordem.
+
+22. Solução diversa esvaziaria de utilidade a previsão contida no n.º 4 do artigo 347.º do CT, relativamente à exclusão das microempresas quanto à aplicação de tais procedimentos, prevendo, assim, um procedimento simplificado.
+
+23. O despedimento promovido pelo Sr. Administrador de Insolvência foi, então, ilícito, nos termos do artigo 383.º do CT,
+com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT.
+
+Assim, o não cumprimento de tais formalismos
+acarreta a ilicitude da cessação dos contratos de trabalho dos Apelantes - por preterição do procedimento prévio relativo ao despedimento coletivo -, com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT.
+
+*
+3.Decisão
+
+Assim, na procedência do recurso, revogamos a decisão proferida no Juízo de Juízo de Comércio de Coimbra - Juiz 1 declarando-se a ilicitude da cessação dos contratos de trabalho dos Apelantes - por preterição do procedimento prévio relativo ao despedimento coletivo -, com os efeitos previstos no n.º 1 do artigo 389.º e no n.º 1 do artigo 391.º, ambos do CT.
+
+As custas ficam a cargo da massa insolvente.
+
+Coimbra, 14 de Abril de 2026
+
+(José Avelino Gonçalves - Relator)
+
+(Maria Fernanda Fernandes de Almeida - 1.ª adjunta)
+
+(Catarina Gonçalves - 2.ª adjunta)

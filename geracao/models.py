@@ -8,18 +8,19 @@ from django.db import models
 
 class Template(models.Model):
     """Template de peça processual com marcadores."""
-    nome        = models.CharField(max_length=100, unique=True)
-    descricao   = models.TextField(blank=True)
-    ficheiro_js = models.CharField(max_length=200)  # ex: "gerar_carta_cessacao.js"
-    ativo       = models.BooleanField(default=True)
-    criado_em   = models.DateTimeField(auto_now_add=True)
+    identificador       = models.SlugField(max_length=50, unique=True, help_text="ID interno (ex: contestacao)")
+    nome_exibicao       = models.CharField(max_length=100, help_text="Nome que aparece na lista")
+    nome_ficheiro_docx  = models.CharField(max_length=200, help_text="Nome do ficheiro .docx em pipeline/legal_docs/")
+    descricao           = models.TextField(blank=True)
+    ativo               = models.BooleanField(default=True)
+    criado_em           = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        ordering     = ["nome"]
+        ordering     = ["nome_exibicao"]
         verbose_name = "Template"
 
     def __str__(self):
-        return self.nome
+        return f"{self.nome_exibicao} ({self.identificador})"
 
 
 class PecaGerada(models.Model):

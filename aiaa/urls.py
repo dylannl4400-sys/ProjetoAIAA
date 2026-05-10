@@ -30,10 +30,12 @@ Including another URLconf
 """
 aiaa/urls.py  —  rotas raiz do projecto
 """
-from django.urls import path, include
- 
+from django.contrib import admin
+from django.urls    import path, include
+
 urlpatterns = [
-    path("",          include("recuperacao.urls")),   # / → pesquisa jurídica
+    path("admin/",    admin.site.urls),
+    path("",          include("recuperacao.urls")),
     path("ingestao/", include("ingestao.urls")),
     path("geracao/",  include("geracao.urls")),
 ]

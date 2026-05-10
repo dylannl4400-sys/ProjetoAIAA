@@ -17,7 +17,7 @@ from django.views.decorators.http import require_POST
 
 from document_registry import registar_e_indexar_itij
 from llm_chunker import LLMChunker
-from ingestao.models import AcordaoIndexado
+from ingestao.models import AcordaoIndexado, AcordaoChunk
 
 # Importar singletons do projecto (inicializados uma vez)
 from aiaa_init import get_cfg, get_store, get_itij, ITIJ_TRIBUNAIS
@@ -147,7 +147,7 @@ def itij_indexar(request):
             if resultado["status"] == "indexado":
                 from html_cleaner import limpar_acordao
                 res_limpeza = limpar_acordao(html_content)
-                AcordaoIndexado.objects.get_or_create(
+                ac_obj, created = AcordaoIndexado.objects.get_or_create(
                     hash_documento=resultado["hash"],
                     defaults={
                         "processo":      ameta.get("processo", ""),
@@ -162,6 +162,16 @@ def itij_indexar(request):
                         "sumario":       res_limpeza.get("sumario", "")[:1000],
                     }
                 )
+                
+                # Guardar chunks no Django se o acórdão foi acabado de criar
+                if created and "chunks" in resultado:
+                    for i, c in enumerate(resultado["chunks"]):
+                        AcordaoChunk.objects.create(
+                            acordao=ac_obj,
+                            indice=i,
+                            texto=c["text"],
+                            seccao=c.get("section", "outro")
+                        )
 
             resultado["url"] = url
             resultados.append(resultado)

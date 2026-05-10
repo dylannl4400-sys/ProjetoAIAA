@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -14,15 +13,29 @@
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.6;min-height:100vh;display:flex;flex-direction:column}
-  header{background:var(--accent);color:#fff;padding:18px 40px;display:flex;align-items:baseline;gap:20px;border-bottom:3px solid #0f2540}
-  header h1{font-family:var(--serif);font-size:22px;font-weight:700;letter-spacing:.02em}
-  header .sub{font-size:12px;opacity:.65;font-weight:300;letter-spacing:.06em;text-transform:uppercase}
-  .badges{margin-left:auto;display:flex;gap:8px;align-items:center}
-  .badge{font-size:10px;padding:3px 10px;border-radius:20px;border:1px solid rgba(255,255,255,.25);color:rgba(255,255,255,.75);font-family:monospace;letter-spacing:.04em}
-  .tabs{background:var(--accent);display:flex;padding:0 40px}
-  .tab{padding:10px 24px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.04em;color:rgba(255,255,255,.55);border:none;background:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .15s}
+
+  /* ── Header com tabs na mesma linha ── */
+  header{background:var(--accent);color:#fff;padding:0 32px;display:flex;align-items:stretch;gap:0;border-bottom:3px solid #0f2540;min-height:56px}
+  .header-brand{display:flex;align-items:center;gap:14px;padding:10px 0;margin-right:24px;border-right:1px solid rgba(255,255,255,.15);padding-right:24px;white-space:nowrap}
+  header h1{font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:.02em}
+  header .sub{font-size:11px;opacity:.55;font-weight:300;letter-spacing:.05em;text-transform:uppercase}
+  .tabs{display:flex;align-items:stretch;flex:1}
+  .tab{padding:0 20px;font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.5);border:none;background:none;cursor:pointer;border-bottom:3px solid transparent;transition:all .15s;white-space:nowrap;display:flex;align-items:center}
   .tab.active{color:#fff;border-bottom-color:#fff}
   .tab:hover:not(.active){color:rgba(255,255,255,.8)}
+  .header-right{display:flex;align-items:center;gap:8px;margin-left:auto;padding-left:16px}
+  .btn-config{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);width:32px;height:32px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .15s;position:relative}
+  .btn-config:hover{background:rgba(255,255,255,.2);color:#fff}
+  .config-panel{display:none;position:absolute;top:calc(100% + 12px);right:0;background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:16px;min-width:280px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:100}
+  .config-panel.open{display:block}
+  .config-title{font-family:var(--serif);font-size:13px;font-weight:700;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
+  .config-row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:6px 0;border-bottom:1px solid var(--border)}
+  .config-row:last-child{border-bottom:none}
+  .config-key{color:var(--ink-muted)}
+  .config-val{font-family:monospace;font-size:11px;color:var(--accent)}
+  .config-input{width:60px;border:1px solid var(--border);border-radius:2px;padding:3px 6px;font-size:12px;font-family:monospace;text-align:right}
+
+  /* ── Painéis ── */
   .panel{display:none}
   .panel.active{display:block}
   .main{max-width:1200px;width:100%;margin:0 auto;padding:28px 24px;gap:24px}
@@ -30,7 +43,26 @@
   .main.form-layout{display:block;max-width:900px}
   .card{background:var(--surface);border:1px solid var(--border);border-radius:2px;padding:18px}
   .card-title{font-family:var(--serif);font-size:14px;font-weight:700;color:var(--accent);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--border)}
-  /* chat */
+
+  /* ── Layout com sidebar de conversas ── */
+  .app-layout{display:flex;height:calc(100vh - 59px);overflow:hidden}
+  .conv-sidebar{width:220px;min-width:180px;background:var(--accent);display:flex;flex-direction:column;border-right:1px solid #0f2540;overflow:hidden}
+  .conv-sidebar-header{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center}
+  .conv-sidebar-header span{color:rgba(255,255,255,.6);font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+  .btn-nova{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:3px 10px;font-size:11px;border-radius:2px;cursor:pointer;font-weight:600;transition:background .15s}
+  .btn-nova:hover{background:rgba(255,255,255,.22)}
+  .conv-lista{flex:1;overflow-y:auto;padding:4px 0}
+  .conv-item{padding:8px 14px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;display:flex;justify-content:space-between;align-items:flex-start;gap:6px}
+  .conv-item:hover{background:rgba(255,255,255,.08)}
+  .conv-item.active{background:rgba(255,255,255,.15);border-left-color:#fff}
+  .conv-item-titulo{font-size:11px;color:rgba(255,255,255,.8);line-height:1.4;flex:1;word-break:break-word}
+  .conv-item-data{font-size:9px;color:rgba(255,255,255,.35);white-space:nowrap;margin-top:2px}
+  .conv-item-del{opacity:0;background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;font-size:14px;padding:0 2px;line-height:1}
+  .conv-item:hover .conv-item-del{opacity:1}
+  .conv-item-del:hover{color:#fff}
+  .content-area{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+
+  /* ── Chat ── */
   .chat-panel{display:flex;flex-direction:column;gap:16px}
   #historico{display:flex;flex-direction:column;gap:20px;min-height:200px}
   .msg{display:flex;flex-direction:column;gap:6px;animation:fadeUp .3s ease both}
@@ -45,14 +77,22 @@
   textarea{width:100%;border:none;outline:none;resize:none;font-family:var(--sans);font-size:14px;line-height:1.6;color:var(--ink);background:transparent;min-height:72px}
   .input-actions{display:flex;align-items:center;justify-content:space-between}
   .hint{font-size:11px;color:var(--ink-muted)}
-  /* buttons */
+
+  /* ── Botões ── */
   .btn-primary{background:var(--accent);color:#fff;border:none;padding:9px 24px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;border-radius:2px;transition:background .15s}
   .btn-primary:hover{background:#0f2540}
   .btn-primary:disabled{background:#8a9db5;cursor:not-allowed}
   .btn-success{background:var(--green);color:#fff;border:none;padding:10px 28px;font-family:var(--sans);font-size:13px;font-weight:600;letter-spacing:.04em;cursor:pointer;border-radius:2px;transition:background .15s}
   .btn-success:hover{background:#144029}
   .btn-success:disabled{background:#8ab5a0;cursor:not-allowed}
-  /* sidebar */
+  .btn-template{background:var(--accent-lt);color:var(--accent);border:1px solid #c5d4e6;padding:8px 18px;font-size:13px;font-weight:600;cursor:pointer;border-radius:2px;transition:all .15s}
+  .btn-template.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+  .btn-template:hover:not(.active){background:#dce8f5}
+  .btn-sm{background:var(--accent-lt);color:var(--accent);border:1px solid #c5d4e6;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer;border-radius:2px;transition:all .15s}
+  .btn-sm:hover{background:var(--accent);color:#fff}
+  .btn-sm:disabled{opacity:.4;cursor:not-allowed}
+
+  /* ── Sidebar de fontes ── */
   .sidebar{display:flex;flex-direction:column;gap:16px}
   #fontes-lista{display:flex;flex-direction:column;gap:8px}
   .fonte-item{padding:10px 12px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:12px}
@@ -62,11 +102,8 @@
   .fonte-score.low{background:#fce8e8;color:#8a0000}
   .fonte-nome{font-weight:600;color:var(--ink);margin-bottom:2px}
   .fonte-meta{color:var(--ink-muted)}
-  .info-row{display:flex;justify-content:space-between;font-size:12px;padding:4px 0;border-bottom:1px solid var(--border)}
-  .info-row:last-child{border-bottom:none}
-  .info-key{color:var(--ink-muted)}
-  .info-value{font-family:monospace;font-size:11px;color:var(--accent)}
-  /* loading */
+
+  /* ── Loading ── */
   .loading{display:none;align-items:center;gap:10px;padding:14px 18px;background:var(--surface);border:1px solid var(--border);font-size:13px;color:var(--ink-muted);font-style:italic}
   .loading.active{display:flex}
   .loading-inline{display:none;align-items:center;gap:10px;font-size:13px;color:var(--ink-muted);font-style:italic}
@@ -74,7 +111,8 @@
   .dots span{display:inline-block;width:5px;height:5px;background:var(--accent);border-radius:50%;margin:0 2px;animation:bounce .9s infinite}
   .dots span:nth-child(2){animation-delay:.15s}
   .dots span:nth-child(3){animation-delay:.30s}
-  /* form */
+
+  /* ── Formulários ── */
   .form-section{margin-bottom:28px}
   .form-section-title{font-family:var(--serif);font-size:15px;font-weight:700;color:var(--accent);margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid var(--accent-lt)}
   .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
@@ -89,67 +127,198 @@
   .form-status.success{color:var(--green);font-style:normal;font-weight:600}
   .form-status.error{color:#8a0000;font-style:normal}
   .empty-state{text-align:center;padding:40px 20px;color:var(--ink-muted);font-style:italic;font-size:14px;border:1px dashed var(--border)}
-  /* conversas sidebar */
-  .app-layout{display:flex;height:calc(100vh - 115px);overflow:hidden}
-  .conv-sidebar{width:240px;min-width:200px;background:var(--accent);display:flex;flex-direction:column;border-right:1px solid #0f2540;overflow:hidden}
-  .conv-sidebar-header{padding:12px 16px;border-bottom:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center}
-  .conv-sidebar-header span{color:rgba(255,255,255,.7);font-size:11px;letter-spacing:.08em;text-transform:uppercase;font-weight:600}
-  .btn-nova-conversa{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);color:#fff;padding:4px 10px;font-size:11px;border-radius:2px;cursor:pointer;font-family:var(--sans);font-weight:600;transition:background .15s}
-  .btn-nova-conversa:hover{background:rgba(255,255,255,.22)}
-  .conv-lista{flex:1;overflow-y:auto;padding:8px 0}
-  .conv-item{padding:9px 16px;cursor:pointer;border-left:3px solid transparent;transition:all .15s;display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-  .conv-item:hover{background:rgba(255,255,255,.08)}
-  .conv-item.active{background:rgba(255,255,255,.15);border-left-color:#fff}
-  .conv-item-titulo{font-size:12px;color:rgba(255,255,255,.85);line-height:1.4;flex:1;word-break:break-word}
-  .conv-item-data{font-size:10px;color:rgba(255,255,255,.4);white-space:nowrap;margin-top:2px}
-  .conv-item-apagar{opacity:0;background:none;border:none;color:rgba(255,255,255,.4);cursor:pointer;font-size:14px;padding:0 2px;transition:opacity .15s}
-  .conv-item:hover .conv-item-apagar{opacity:1}
-  .conv-item-apagar:hover{color:#fff}
-  .content-area{flex:1;overflow-y:auto;display:flex;flex-direction:column}
+
+  /* ── Modal de login ── */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:200;align-items:center;justify-content:center}
+  .modal-overlay.open{display:flex}
+  .modal{background:var(--surface);border:1px solid var(--border);border-radius:4px;padding:32px;width:360px;box-shadow:0 16px 48px rgba(0,0,0,.2)}
+  .modal-title{font-family:var(--serif);font-size:20px;font-weight:700;color:var(--accent);margin-bottom:4px}
+  .modal-sub{font-size:12px;color:var(--ink-muted);margin-bottom:24px}
+  .modal .form-group{margin-bottom:14px}
+  .modal-actions{display:flex;flex-direction:column;gap:8px;margin-top:20px}
+  .modal-actions .btn-primary{width:100%;padding:10px}
+  .modal-link{font-size:12px;color:var(--accent);cursor:pointer;text-align:center;text-decoration:underline}
+  .modal-erro{font-size:12px;color:#8a0000;margin-top:8px;display:none}
+  .modal-erro.show{display:block}
+  .user-badge{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.7);font-size:12px;cursor:pointer}
+  .user-badge:hover{color:#fff}
+  .user-avatar{width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#fff}
+
   @keyframes bounce{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ── Painel Lateral de Fontes ── */
+  .chat-container { display: flex; flex: 1; overflow: hidden; position: relative; }
+  .sources-panel {
+    width: 0;
+    background: var(--surface);
+    border-left: 0 solid var(--border);
+    transition: width 0.3s ease, border-width 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .sources-panel.open {
+    width: 380px;
+    border-left-width: 1px;
+  }
+  .sources-header {
+    padding: 16px;
+    background: var(--accent-lt);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .sources-header h3 { font-family: var(--serif); font-size: 14px; color: var(--accent); }
+  .sources-scroll { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+  
+  .fonte-card {
+    padding: 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.2s;
+  }
+  .fonte-card.removed { opacity: 0.3; filter: grayscale(1); }
+  .fonte-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+  .btn-icon {
+    background: none;
+    border: 1px solid var(--border);
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--ink-muted);
+    transition: all 0.15s;
+  }
+  .btn-icon:hover { background: var(--surface); color: var(--ink); border-color: var(--ink-muted); }
+  .btn-icon.active-up { background: var(--green-lt); color: var(--green); border-color: var(--green); }
+  .btn-icon.active-down { background: #fce8e8; color: #8a0000; border-color: #8a0000; }
+  .btn-icon.btn-del:hover { background: #8a0000; color: #fff; border-color: #8a0000; }
+
+  .msg-fontes-link {
+    margin-top: 8px;
+    font-size: 11px;
+    color: var(--accent);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: underline;
+  }
+  .msg-fontes-link:hover { color: var(--green); }
 </style>
 </head>
 <body>
 
+<!-- Header com tabs na mesma linha -->
 <header>
-  <div>
-    <h1>AIAA</h1>
-    <span class="sub">Assistente Inteligente de Apoio à Advocacia</span>
+  <div class="header-brand">
+    
+      <h1>AIAA</h1>
+      <span class="sub">Assistente Inteligente de Apoio à Advocacia</span>
+    
   </div>
-  <div class="badges">
-    <span class="badge">{{ modelo }}</span>
-    <span class="badge">{{ n_docs }} chunks</span>
+
+  <div class="tabs">
+    <button class="tab active" onclick="switchTab('chat',this)">Interrogar</button>
+    <button class="tab" onclick="switchTab('pecas',this)">Gerar</button>
+    <button class="tab" onclick="switchTab('itij',this)">Pesquisar</button>
+  </div>
+
+  <div class="header-right" style="position:relative">
+    <!-- Utilizador -->
+    <div class="user-badge" onclick="toggleUserMenu()" id="user-badge" style="display:none">
+      <div class="user-avatar" id="user-avatar">?</div>
+      <span id="user-nome-badge">—</span>
+    </div>
+    <button class="btn-primary" id="btn-login-header" onclick="abrirLogin()" style="font-size:11px;padding:5px 14px">Entrar</button>
+
+    <!-- Roda dentada de configuração -->
+    <button class="btn-config" onclick="toggleConfig()" title="Configuração" id="btn-cfg">⚙</button>
+    <div class="config-panel" id="config-panel">
+      <div class="config-title">Configuração do Sistema</div>
+      <div class="config-row">
+        <span class="config-key">Modelo LLM</span>
+        <span class="config-val">{{ modelo }}</span>
+      </div>
+      <div class="config-row">
+        <span class="config-key">Embedder</span>
+        <span class="config-val">{{ embedder }}</span>
+      </div>
+      <div class="config-row">
+        <span class="config-key">Blocos indexados</span>
+        <span class="config-val" id="cfg-n-docs">{{ n_docs }}</span>
+      </div>
+      <div class="config-row">
+        <span class="config-key">Blocos recuperados (N) 
+          <span class="help-icon" title="Um bloco é uma porção de um acórdão (por exemplo, da fundamentação ou da decisão), usada como unidade para indexação e pesquisa; os blocos reconstituem o acórdão original.">?</span>
+        </span>
+        <input class="config-input" type="number" id="cfg-n-results" value="10" min="1" max="20" onchange="salvarConfig()">
+      </div>
+      <div class="config-row">
+        <span class="config-key">Tamanho sumário (chars)</span>
+        <input class="config-input" type="number" id="cfg-sumario-max" value="300" min="100" max="800" step="50" onchange="salvarConfig()">
+      </div>
+    </div>
   </div>
 </header>
 
-<div class="tabs">
-  <button class="tab active" onclick="switchTab('chat',this)">Pesquisa Jurídica</button>
-  <button class="tab" onclick="switchTab('pecas',this)">Gerar Peça Processual</button>
-  <button class="tab" onclick="switchTab('itij',this)">Pesquisar ITIJ</button>
-  <button class="tab" onclick="switchTab('upload',this)">Carregar Documento</button>
+<!-- Modal de login / registo -->
+<div class="modal-overlay" id="modal-auth">
+  <div class="modal">
+    <div id="modal-login-view">
+      <div class="modal-title">Entrar</div>
+      <div class="modal-sub">Acede às tuas conversas guardadas</div>
+      <div class="form-group"><label>Email</label><input type="email" id="auth-email" placeholder="advogado@escritorio.pt"></div>
+      <div class="form-group"><label>Senha</label><input type="password" id="auth-senha" placeholder="••••••••"></div>
+      <div class="modal-erro" id="auth-erro"></div>
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="fazerLogin()">Entrar</button>
+        <span class="modal-link" onclick="switchAuthView('registo')">Criar conta nova</span>
+        <span class="modal-link" onclick="fecharModal()">Continuar sem conta</span>
+      </div>
+    </div>
+    <div id="modal-registo-view" style="display:none">
+      <div class="modal-title">Criar conta</div>
+      <div class="modal-sub">As tuas conversas ficam guardadas</div>
+      <div class="form-group"><label>Nome</label><input type="text" id="reg-nome" placeholder="Maria Silva"></div>
+      <div class="form-group"><label>Email</label><input type="email" id="reg-email" placeholder="advogado@escritorio.pt"></div>
+      <div class="form-group"><label>Senha</label><input type="password" id="reg-senha" placeholder="mínimo 6 caracteres"></div>
+      <div class="modal-erro" id="reg-erro"></div>
+      <div class="modal-actions">
+        <button class="btn-primary" onclick="fazerRegisto()">Criar conta</button>
+        <span class="modal-link" onclick="switchAuthView('login')">Já tenho conta</span>
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- TAB 1: CHAT -->
+<!-- TAB 1: INTERROGAR -->
 <div id="tab-chat" class="panel active">
 <div class="app-layout">
 
-  <!-- Sidebar de conversas -->
   <div class="conv-sidebar">
     <div class="conv-sidebar-header">
       <span>Conversas</span>
-      <button class="btn-nova-conversa" onclick="novaConversa()">+ Nova</button>
+      <button class="btn-nova" onclick="novaConversa()">+ Nova</button>
     </div>
     <div class="conv-lista" id="conv-lista">
-      <div style="padding:16px;font-size:11px;color:rgba(255,255,255,.4);font-style:italic">A carregar…</div>
+      <div style="padding:14px;font-size:11px;color:rgba(255,255,255,.35);font-style:italic">A carregar…</div>
     </div>
   </div>
 
-  <!-- Área principal -->
   <div class="content-area">
-    <div class="main chat-layout" style="flex:1;overflow-y:auto">
-
-      <div class="chat-panel">
+    <div class="chat-container">
+      <div class="main chat-panel" style="flex:1; max-width: none;">
         <div id="historico">
           <div class="empty-state">Selecciona uma conversa ou cria uma nova.</div>
         </div>
@@ -158,7 +327,7 @@
           A consultar documentos e a gerar resposta…
         </div>
         <div class="input-area">
-          <label for="input-pergunta">Questão jurídica</label>
+          <label>Questão jurídica</label>
           <textarea id="input-pergunta" placeholder="Ex: Quais os pressupostos da responsabilidade civil extracontratual?" rows="3"></textarea>
           <div class="input-actions">
             <span class="hint">Enter para enviar · Shift+Enter para nova linha</span>
@@ -167,116 +336,188 @@
         </div>
       </div>
 
-      <div class="sidebar">
-        <div class="card">
-          <div class="card-title">Fontes recuperadas</div>
-          <div id="fontes-lista"><div style="font-size:12px;color:var(--ink-muted);font-style:italic">As fontes da última resposta aparecem aqui.</div></div>
+      <div class="sources-panel" id="sources-panel">
+        <div class="sources-header">
+          <h3>Jurisprudência Relevante</h3>
+          <button class="btn-sm" onclick="toggleFontesPanel(false)">Fechar ×</button>
         </div>
-        <div class="card">
-          <div class="card-title">Configuração</div>
-          <div class="info-row"><span class="info-key">Modelo LLM</span><span class="info-value">{{ modelo }}</span></div>
-          <div class="info-row"><span class="info-key">Embedder</span><span class="info-value">{{ embedder }}</span></div>
-          <div class="info-row"><span class="info-key">Chunks indexados</span><span class="info-value">{{ n_docs }}</span></div>
+        <div class="sources-scroll" id="sources-scroll">
+          <div class="empty-state" style="border:none">Clica em "Ver Fontes" numa resposta para analisar os acórdãos.</div>
         </div>
       </div>
-
     </div>
   </div>
 
 </div>
 </div>
 
-<!-- TAB 2: GERAR PEÇA -->
+<!-- TAB 2: GERAR -->
 <div id="tab-pecas" class="panel">
 <div class="main form-layout">
-
   <div style="margin-bottom:20px">
-    <div style="font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent);margin-bottom:6px">Carta de Cessação de Contrato de Trabalho</div>
-    <p style="font-size:13px;color:var(--ink-muted)">Preenche os campos abaixo. A fundamentação jurídica é gerada automaticamente pelo LLM com base nos factos indicados e nos documentos indexados. Campos marcados com * são obrigatórios.</p>
+    <div style="font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent);margin-bottom:6px">Gerar Peça Processual</div>
+    <p style="font-size:13px;color:var(--ink-muted)">Escolhe o template, preenche os dados e o LLM gera a fundamentação jurídica com base nos acórdãos indexados.</p>
   </div>
 
-  <!-- I. Empregador -->
-  <div class="form-section">
-    <div class="form-section-title">I. Entidade Empregadora</div>
-    <div class="form-grid">
-      <div class="form-group"><label>Denominação *</label><input type="text" id="f-nome_empregador" placeholder="Tecniworks, S.A."></div>
-      <div class="form-group"><label>NIF</label><input type="text" id="f-nif_empregador" placeholder="500 123 456"></div>
-      <div class="form-group full"><label>Sede Social</label><input type="text" id="f-morada_empregador" placeholder="Av. da Liberdade, 110, 1250-146 Lisboa"></div>
-      <div class="form-group"><label>Representante Legal</label><input type="text" id="f-representante_empregador" placeholder="Dr. João Manuel Silva"></div>
-      <div class="form-group"><label>Cargo</label><input type="text" id="f-cargo_representante" placeholder="Administrador Delegado"></div>
-      <div class="form-group"><label>Nome do Escritório</label><input type="text" id="f-nome_escritorio" placeholder="Silva &amp; Associados"></div>
-      <div class="form-group"><label>Referência do Processo</label><input type="text" id="f-referencia_processo" placeholder="2024/DIS/0042"></div>
+  <!-- Selector de template -->
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">Tipo de Peça</div>
+    <div class="form-group" style="margin:0">
+      <select id="peca-template-select" class="form-input" style="width:100%; max-width:400px;" onchange="mudarTemplate(this.value)">
+        <option value="" disabled selected>A carregar templates...</option>
+      </select>
     </div>
+    <input type="hidden" id="f-template" value="contestacao">
   </div>
 
-  <!-- II. Trabalhador -->
-  <div class="form-section">
-    <div class="form-section-title">II. Trabalhador</div>
-    <div class="form-grid">
-      <div class="form-group"><label>Nome Completo *</label><input type="text" id="f-nome_trabalhador" placeholder="Maria Filomena Rodrigues Costa"></div>
-      <div class="form-group"><label>NIF</label><input type="text" id="f-nif_trabalhador" placeholder="234 567 890"></div>
-      <div class="form-group full"><label>Morada</label><input type="text" id="f-morada_trabalhador" placeholder="Rua das Flores, 45, 2.º Dto, 1900-200 Lisboa"></div>
-      <div class="form-group"><label>Categoria Profissional</label><input type="text" id="f-categoria_profissional" placeholder="Técnica de Contabilidade, Nível III"></div>
-      <div class="form-group"><label>Data de Admissão</label><input type="text" id="f-data_admissao" placeholder="15 de março de 2018"></div>
-      <div class="form-group"><label>N.º de Contrato</label><input type="text" id="f-numero_contrato" placeholder="CT-2018/0034"></div>
-    </div>
-  </div>
-
-  <!-- III. Cessação -->
-  <div class="form-section">
-    <div class="form-section-title">III. Cessação</div>
-    <div class="form-grid">
-      <div class="form-group">
-        <label>Motivo</label>
-        <select id="f-motivo_cessacao">
-          <option value="Justa Causa Disciplinar">Justa Causa Disciplinar</option>
-          <option value="Extinção do Posto de Trabalho">Extinção do Posto de Trabalho</option>
-          <option value="Inadaptação">Inadaptação</option>
-          <option value="Despedimento Colectivo">Despedimento Colectivo</option>
-          <option value="Acordo (Revogação Mútua)">Acordo (Revogação Mútua)</option>
-        </select>
+  <!-- CONTESTAÇÃO -->
+  <div id="form-contestacao" class="form-template">
+    <div class="form-section">
+      <div class="form-section-title">Tribunal e Processo</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Comarca / Tribunal *</label><input type="text" id="ct-tribunal" placeholder="Tribunal Judicial da Comarca de Lisboa"></div>
+        <div class="form-group"><label>Juízo</label><input type="text" id="ct-juizo" placeholder="Juízo Local Cível de Lisboa"></div>
+        <div class="form-group"><label>Juíz</label><input type="text" id="ct-juiz" placeholder="Juíz Carlos Santos"></div>
+        <div class="form-group"><label>N.º do Processo *</label><input type="text" id="ct-processo" placeholder="1234/24.1T8LSB"></div>
+        <div class="form-group"><label>Valor da Causa</label><input type="text" id="ct-valor" placeholder="5.000,00 €"></div>
       </div>
-      <div class="form-group"><label>Artigos Aplicáveis</label><input type="text" id="f-artigo_cessacao" value="351.º e 357.º" placeholder="351.º e 357.º do CT"></div>
-      <div class="form-group"><label>Data de Efeitos *</label><input type="text" id="f-data_efeitos" placeholder="31 de outubro de 2024"></div>
-      <div class="form-group"><label>Local e Data da Carta</label><input type="text" id="f-local_data" placeholder="Lisboa, 15 de outubro de 2024"></div>
-      <div class="form-group full">
-        <label>Descrição dos Factos *</label>
-        <textarea class="form-ta" id="f-descricao_factos" rows="4" placeholder="Descreve os factos apurados no procedimento disciplinar. O LLM vai usar estes factos e os documentos indexados para completar a fundamentação jurídica."></textarea>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Partes</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Nome do Réu (contestante) *</label><input type="text" id="ct-nome_parte_a" placeholder="João Silva"></div>
+        <div class="form-group"><label>Nome do Autor</label><input type="text" id="ct-nome_parte_b" placeholder="Maria Costa"></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Fundamentação</div>
+      <div class="form-grid">
+        <div class="form-group full"><label>Factos a contestar *</label><textarea class="form-ta" id="ct-descricao_factos" rows="5" placeholder="Descreve os factos. O texto será inserido diretamente (Gerar Direto) ou expandido pela IA usando jurisprudência (Gerar com RAG)."></textarea></div>
+        <div class="form-group full"><label>Pedido (o que pede ao tribunal)</label><textarea class="form-ta" id="ct-pedido" rows="3" placeholder="Ex: Julgar a acção totalmente improcedente e absolver o réu de todos os pedidos."></textarea></div>
+        <div class="form-group"><label>Documentos juntos</label><input type="text" id="ct-junta" placeholder="3 documentos"></div>
+        <div class="form-group"><label>Nome do Escritório / Advogado</label><input type="text" id="ct-advogado" placeholder="Silva & Associados"></div>
       </div>
     </div>
   </div>
 
-  <div class="form-actions">
-    <button class="btn-success" id="btn-gerar">⬇ Gerar Documento .docx</button>
+  <!-- PETIÇÃO INICIAL -->
+  <div id="form-peticao" class="form-template" style="display:none">
+    <div class="form-section">
+      <div class="form-section-title">Tribunal</div>
+      <div class="form-grid">
+        <div class="form-group full"><label>Círculo / Tribunal *</label><input type="text" id="pt-tribunal" placeholder="Círculo de Lisboa" value="CÍRCULO DE LISBOA"></div>
+        <div class="form-group"><label>N.º de Referência AIMA</label><input type="text" id="pt-processo" placeholder="2024/IM/00123"></div>
+        <div class="form-group"><label>Valor</label><input type="text" id="pt-valor" placeholder="30.000,01 €"></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Partes</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Nome do Autor/Requerente *</label><input type="text" id="pt-nome_parte_a" placeholder="João Silva"></div>
+        <div class="form-group"><label>Entidade Requerida *</label><input type="text" id="pt-nome_parte_b" placeholder="AIMA – Agência para a Integração, Migrações e Asilo, I.P."></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Fundamentação</div>
+      <div class="form-grid">
+        <div class="form-group full"><label>Factos e fundamentos *</label><textarea class="form-ta" id="pt-descricao_factos" rows="5" placeholder="Descreve os factos e fundamentos. O texto será inserido diretamente (Gerar Direto) ou expandido pela IA usando jurisprudência (Gerar com RAG)."></textarea></div>
+        
+        <div class="form-group"><label>Documentos juntos</label><input type="text" id="pt-junta" placeholder="procuração + 2 documentos"></div>
+        <div class="form-group"><label>Nome do Escritório / Advogado</label><input type="text" id="pt-advogado" placeholder="Silva & Associados"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- REQUERIMENTO -->
+  <div id="form-requerimento" class="form-template" style="display:none">
+    <div class="form-section">
+      <div class="form-section-title">Tribunal e Processo</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Comarca / Tribunal *</label><input type="text" id="rq-tribunal" placeholder="Tribunal Judicial da Comarca de Lisboa"></div>
+        <div class="form-group"><label>N.º do Processo</label><input type="text" id="rq-processo" placeholder="1234/24.1T8LSB"></div>
+        <div class="form-group"><label>Valor da Causa</label><input type="text" id="rq-valor" placeholder="5.000,00 €"></div>
+        <div class="form-group"><label>Base Legal</label><input type="text" id="rq-base_legal" placeholder="artigo 109.º, n.º 1, do CPTA"></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Partes</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Nome do Requerente *</label><input type="text" id="rq-nome_parte_a" placeholder="João Silva"></div>
+        <div class="form-group"><label>Nome do Requerido</label><input type="text" id="rq-nome_parte_b" placeholder="Empresa, S.A."></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Fundamentação</div>
+      <div class="form-grid">
+        <div class="form-group full"><label>Factos e fundamentos *</label><textarea class="form-ta" id="rq-descricao_factos" rows="5" placeholder="Descreve os factos e fundamentos. O texto será inserido diretamente (Gerar Direto) ou expandido pela IA usando jurisprudência (Gerar com RAG)."></textarea></div>
+        <div class="form-group full"><label>Pedido *</label><textarea class="form-ta" id="rq-pedido" rows="3" placeholder="O que se requer ao tribunal."></textarea></div>
+        <div class="form-group"><label>Documentos juntos</label><input type="text" id="rq-junta" placeholder="3 documentos"></div>
+        <div class="form-group"><label>Nome do Escritório / Advogado</label><input type="text" id="rq-advogado" placeholder="Silva & Associados"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CESSAÇÃO -->
+  <div id="form-cessacao" class="form-template" style="display:none">
+    <div class="form-section">
+      <div class="form-section-title">Informação das Partes</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Nome Empregador *</label><input type="text" id="cs-nome_parte_a" placeholder="Empresa ABC, Lda."></div>
+        <div class="form-group"><label>NIF Empregador</label><input type="text" id="cs-nif_parte_a" placeholder="500123456"></div>
+        <div class="form-group full"><label>Morada Empregador</label><input type="text" id="cs-morada_parte_a" placeholder="Rua do Comércio, 123, Lisboa"></div>
+        <hr style="grid-column:1/-1; border:0; border-top:1px solid var(--border); margin:10px 0;">
+        <div class="form-group"><label>Nome Trabalhador *</label><input type="text" id="cs-nome_parte_b" placeholder="João Pereira"></div>
+        <div class="form-group"><label>NIF Trabalhador</label><input type="text" id="cs-nif_parte_b" placeholder="200456789"></div>
+        <div class="form-group full"><label>Morada Trabalhador</label><input type="text" id="cs-morada_parte_b" placeholder="Avenida da Liberdade, 45, Porto"></div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-title">Detalhes do Contrato e Cessação</div>
+      <div class="form-grid">
+        <div class="form-group"><label>Referência/Processo</label><input type="text" id="cs-processo" placeholder="Contrato de Trabalho n.º 45/2022"></div>
+        <div class="form-group"><label>Advogado/Escritório</label><input type="text" id="cs-advogado" placeholder="Dr. António Mendes"></div>
+        <div class="form-group"><label>Representante Empregador</label><input type="text" id="cs-representante" placeholder="Gerente Maria João"></div>
+        <div class="form-group"><label>Categoria Profissional</label><input type="text" id="cs-categoria" placeholder="Analista de Dados"></div>
+        <div class="form-group"><label>Data Admissão</label><input type="text" id="cs-data_admissao" placeholder="01/03/2022"></div>
+        <div class="form-group"><label>Motivo Cessação</label>
+          <select id="cs-motivo">
+            <option value="caducidade">Caducidade</option>
+            <option value="despedimento_objetivo">Despedimento por Extinção de Posto de Trabalho</option>
+            <option value="despedimento_disciplinar">Despedimento com Justa Causa</option>
+            <option value="revogacao">Revogação por Mútuo Acordo</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Data Efeitos</label><input type="text" id="cs-data_efeitos" placeholder="31/12/2024"></div>
+        <div class="form-group"><label>Local e Data</label><input type="text" id="cs-local_data" placeholder="Lisboa, 15 de Novembro de 2024"></div>
+        <div class="form-group full"><label>Descrição dos Factos (Fundamentação)</label><textarea class="form-ta" id="cs-descricao_factos" rows="5" placeholder="Descreve os factos que motivam a cessação."></textarea></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-actions" style="margin-top:8px;flex-wrap:wrap;gap:10px">
+    <button class="btn-success" id="btn-gerar" onclick="gerarPeca(false)" title="Substituição direta do texto do formulário no template">⬇ Gerar Direto</button>
+    <button class="btn-success" id="btn-gerar-rag" onclick="gerarPeca(true)" title="Usa IA e acórdãos indexados para expandir a fundamentação jurídica">⬇ Gerar com IA (RAG)</button>
     <div class="loading-inline" id="loading-peca">
       <div class="dots"><span></span><span></span><span></span></div>
-      <span>A gerar documento…</span>
+      <span id="loading-peca-txt">A gerar documento…</span>
     </div>
     <span class="form-status" id="form-status"></span>
   </div>
-
 </div>
 </div>
 
-
-
-
-<!-- TAB 3: ITIJ -->
+<!-- TAB 3: PESQUISAR -->
 <div id="tab-itij" class="panel">
 <div class="main form-layout">
-
   <div style="margin-bottom:20px">
     <div style="font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent);margin-bottom:6px">Pesquisar Acórdãos no ITIJ</div>
-    <p style="font-size:13px;color:var(--ink-muted)">Pesquisa jurisprudência directamente no portal dgsi.pt. Selecciona os acórdãos relevantes e indexa-os na base de dados para usar na pesquisa jurídica.</p>
+    <p style="font-size:13px;color:var(--ink-muted)">Pesquisa jurisprudência directamente no portal dgsi.pt. Selecciona os acórdãos e indexa-os para usar na interrogação.</p>
   </div>
 
   <div class="card" style="margin-bottom:16px">
     <div class="card-title">Pesquisa</div>
     <div class="form-grid">
-      <div class="form-group full">
-        <label>Termos de Pesquisa *</label>
-        <input type="text" id="itij-query" placeholder="Ex: despedimento ilícito justa causa">
-      </div>
+      <div class="form-group full"><label>Termos de Pesquisa *</label><input type="text" id="itij-query" placeholder="Ex: despedimento ilícito justa causa"></div>
       <div class="form-group">
         <label>Tribunal</label>
         <select id="itij-tribunal">
@@ -305,27 +546,18 @@
         <select id="itij-campo">
           <option value="DESCRITORES">Descritores</option>
           <option value="RELATOR">Relator</option>
-          <option value="SUMARIO">Sumário</option>
-          <option value="TEXTOINT">Texto Integral</option>
           <option value="PROCESSO">Processo</option>
           <option value="DATAAC">Data do Acórdão</option>
         </select>
       </div>
       <div class="form-group">
         <label>Máx. Resultados</label>
-        <select id="itij-max">
-          <option value="10">10</option>
-          <option value="20" selected>20</option>
-          <option value="50">50</option>
-        </select>
+        <select id="itij-max"><option value="10">10</option><option value="20" selected>20</option><option value="50">50</option></select>
       </div>
     </div>
     <div class="form-actions" style="margin-top:12px">
       <button class="btn-primary" id="btn-itij-pesquisar">Pesquisar</button>
-      <div class="loading-inline" id="loading-itij">
-        <div class="dots"><span></span><span></span><span></span></div>
-        <span>A pesquisar no ITIJ…</span>
-      </div>
+      <div class="loading-inline" id="loading-itij"><div class="dots"><span></span><span></span><span></span></div><span>A pesquisar…</span></div>
       <span class="form-status" id="itij-status"></span>
     </div>
   </div>
@@ -334,16 +566,16 @@
     <div class="card">
       <div class="card-title" style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px">
         <span id="itij-resultados-titulo">Resultados</span>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-          <button class="btn-primary" style="padding:6px 14px;font-size:12px" onclick="itijSelectAll(true)">Seleccionar todos</button>
+        <div style="display:flex;gap:8px">
+          <button class="btn-sm" onclick="itijSelectAll(true)">Seleccionar todos</button>
           <button class="btn-primary" style="padding:6px 14px;font-size:12px;background:var(--green)" id="btn-itij-indexar" onclick="itijIndexar()">⬆ Indexar seleccionados</button>
         </div>
       </div>
       <div id="itij-lista" style="margin-top:12px;display:flex;flex-direction:column;gap:8px"></div>
       <div id="itij-paginacao" style="display:none;justify-content:center;align-items:center;gap:12px;margin-top:16px;font-size:13px">
-        <button id="itij-pag-ant"  onclick="itijMudarPagina(-1)" class="btn-sm">← Anterior</button>
-        <span   id="itij-pag-info" style="color:var(--ink-muted)"></span>
-        <button id="itij-pag-prox" onclick="itijMudarPagina(1)"  class="btn-sm">Seguinte →</button>
+        <button id="itij-pag-ant" onclick="itijMudarPagina(-1)" class="btn-sm">← Anterior</button>
+        <span id="itij-pag-info" style="color:var(--ink-muted)"></span>
+        <button id="itij-pag-prox" onclick="itijMudarPagina(1)" class="btn-sm">Seguinte →</button>
       </div>
     </div>
   </div>
@@ -354,448 +586,545 @@
       <div id="itij-indexar-body" style="font-size:13px;line-height:1.8"></div>
     </div>
   </div>
-
-</div>
-</div>
-
-
-<!-- TAB 4: UPLOAD -->
-<div id="tab-upload" class="panel">
-<div class="main form-layout">
-
-  <div style="margin-bottom:20px">
-    <div style="font-family:var(--serif);font-size:18px;font-weight:700;color:var(--accent);margin-bottom:6px">Carregar Documento para a Base de Dados</div>
-    <p style="font-size:13px;color:var(--ink-muted)">Carrega um ficheiro PDF para ser indexado. O sistema verifica automaticamente se o documento já existe (por hash SHA-256) antes de indexar.</p>
-  </div>
-
-  <div class="card" style="margin-bottom:20px">
-    <div class="card-title">Documento PDF</div>
-    <div class="form-grid">
-      <div class="form-group full">
-        <label>Ficheiro PDF *</label>
-        <input type="file" id="u-ficheiro" accept=".pdf" style="border:1px solid var(--border);padding:8px;border-radius:2px;font-family:var(--sans);font-size:14px;width:100%">
-      </div>
-      <div class="form-group">
-        <label>Tipo de Documento</label>
-        <select id="u-type">
-          <option value="ruling">Acórdão / Decisão</option>
-          <option value="legislation">Legislação</option>
-          <option value="document">Outro Documento</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label>Ano</label>
-        <input type="text" id="u-year" placeholder="2024">
-      </div>
-      <div class="form-group full">
-        <label>Tribunal / Fonte</label>
-        <input type="text" id="u-court" placeholder="Tribunal da Relação de Lisboa">
-      </div>
-    </div>
-  </div>
-
-  <div class="form-actions">
-    <button class="btn-primary" id="btn-upload">⬆ Indexar Documento</button>
-    <div class="loading-inline" id="loading-upload">
-      <div class="dots"><span></span><span></span><span></span></div>
-      <span>A indexar documento…</span>
-    </div>
-    <span class="form-status" id="upload-status"></span>
-  </div>
-
-  <div id="upload-resultado" style="margin-top:20px;display:none">
-    <div class="card">
-      <div class="card-title">Resultado</div>
-      <div id="upload-resultado-body" style="font-size:13px;line-height:1.8"></div>
-    </div>
-  </div>
-
 </div>
 </div>
 
 <script>
-function switchTab(name, el) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-  document.getElementById('tab-' + name).classList.add('active');
+// ── Utilitários ──────────────────────────────────────────────────────────
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function escHtml(t){return String(t).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;')}
+
+// ── Tabs ─────────────────────────────────────────────────────────────────
+function switchTab(name,el){
+  document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
   el.classList.add('active');
 }
+
+// ── Configuração (roda dentada) ──────────────────────────────────────────
+let cfgNResults  = parseInt(localStorage.getItem('cfg_n_results')  || '10');
+let cfgSumarioMax = parseInt(localStorage.getItem('cfg_sumario_max') || '300');
+
+function toggleConfig(){
+  document.getElementById('config-panel').classList.toggle('open');
+}
+document.addEventListener('click', e=>{
+  const panel = document.getElementById('config-panel');
+  if(!document.getElementById('btn-cfg').contains(e.target) && !panel.contains(e.target))
+    panel.classList.remove('open');
+});
+function salvarConfig(){
+  cfgNResults   = parseInt(document.getElementById('cfg-n-results').value)  || 10;
+  cfgSumarioMax = parseInt(document.getElementById('cfg-sumario-max').value) || 300;
+  localStorage.setItem('cfg_n_results',   cfgNResults);
+  localStorage.setItem('cfg_sumario_max', cfgSumarioMax);
+}
+// Restaurar valores guardados
+document.addEventListener('DOMContentLoaded',()=>{
+  document.getElementById('cfg-n-results').value   = cfgNResults;
+  document.getElementById('cfg-sumario-max').value = cfgSumarioMax;
+  carregarTemplates();
+});
+
+// ── Autenticação ─────────────────────────────────────────────────────────
+let utilizadorActual = null;
+
+function abrirLogin(){document.getElementById('modal-auth').classList.add('open')}
+function fecharModal(){document.getElementById('modal-auth').classList.remove('open')}
+function switchAuthView(v){
+  document.getElementById('modal-login-view').style.display  = v==='login'   ? '' : 'none';
+  document.getElementById('modal-registo-view').style.display = v==='registo' ? '' : 'none';
+}
+function toggleUserMenu(){
+  // simples — clique no badge faz logout
+  if(confirm('Terminar sessão?')) fazerLogout();
+}
+
+async function fazerLogin(){
+  const email = document.getElementById('auth-email').value.trim();
+  const senha = document.getElementById('auth-senha').value;
+  const erro  = document.getElementById('auth-erro');
+  erro.classList.remove('show');
+  try{
+    const res  = await fetch('/api/auth/login/', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({email,senha})});
+    const data = await res.json();
+    if(data.erro){erro.textContent=data.erro;erro.classList.add('show');return;}
+    utilizadorActual = data;
+    actualizarUIUtilizador();
+    fecharModal();
+    carregarConversas();
+  }catch(e){erro.textContent='Erro de ligação';erro.classList.add('show');}
+}
+
+async function fazerRegisto(){
+  const nome  = document.getElementById('reg-nome').value.trim();
+  const email = document.getElementById('reg-email').value.trim();
+  const senha = document.getElementById('reg-senha').value;
+  const erro  = document.getElementById('reg-erro');
+  erro.classList.remove('show');
+  if(!nome||!email||!senha){erro.textContent='Preenche todos os campos';erro.classList.add('show');return;}
+  try{
+    const res  = await fetch('/api/auth/registar/', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({nome,email,senha})});
+    const data = await res.json();
+    if(data.erro){erro.textContent=data.erro;erro.classList.add('show');return;}
+    utilizadorActual = data;
+    actualizarUIUtilizador();
+    fecharModal();
+    carregarConversas();
+  }catch(e){erro.textContent='Erro de ligação';erro.classList.add('show');}
+}
+
+function fazerLogout(){
+  utilizadorActual = null;
+  sessionStorage.removeItem('utilizador');
+  actualizarUIUtilizador();
+  novaConversa();
+  carregarConversas();
+}
+
+function actualizarUIUtilizador(){
+  const badge     = document.getElementById('user-badge');
+  const btnLogin  = document.getElementById('btn-login-header');
+  const avatar    = document.getElementById('user-avatar');
+  const nomeEl    = document.getElementById('user-nome-badge');
+  if(utilizadorActual){
+    badge.style.display    = 'flex';
+    btnLogin.style.display = 'none';
+    avatar.textContent     = utilizadorActual.nome[0].toUpperCase();
+    nomeEl.textContent     = utilizadorActual.nome.split(' ')[0];
+    sessionStorage.setItem('utilizador', JSON.stringify(utilizadorActual));
+  } else {
+    badge.style.display    = 'none';
+    btnLogin.style.display = '';
+  }
+}
+
+// Restaurar sessão
+document.addEventListener('DOMContentLoaded',()=>{
+  const saved = sessionStorage.getItem('utilizador');
+  if(saved){utilizadorActual=JSON.parse(saved);actualizarUIUtilizador();}
+  carregarConversas();
+  novaConversa();
+});
 
 // ── Conversas ────────────────────────────────────────────────────────────
 let conversaActualId = null;
 
-// Carregar lista de conversas ao iniciar
-document.addEventListener('DOMContentLoaded', () => {
-  carregarConversas();
-  novaConversa();  // começa com conversa nova
-});
-
-async function carregarConversas() {
-  try {
-    const res  = await fetch('/api/conversas/');
+async function carregarConversas(){
+  try{
+    const uid = utilizadorActual ? utilizadorActual.id : null;
+    const url = uid ? `/api/conversas/?utilizador_id=${uid}` : '/api/conversas/';
+    const res  = await fetch(url);
     const data = await res.json();
     renderConvLista(data.conversas);
-  } catch(e) { console.error('Erro ao carregar conversas:', e); }
+  }catch(e){console.error(e);}
 }
 
-function renderConvLista(conversas) {
+function renderConvLista(conversas){
   const lista = document.getElementById('conv-lista');
-  if (!conversas.length) {
-    lista.innerHTML = '<div style="padding:16px;font-size:11px;color:rgba(255,255,255,.4);font-style:italic">Sem conversas anteriores.</div>';
+  if(!conversas||!conversas.length){
+    lista.innerHTML='<div style="padding:14px;font-size:11px;color:rgba(255,255,255,.35);font-style:italic">Sem conversas.</div>';
     return;
   }
-  lista.innerHTML = conversas.map(c => `
-    <div class="conv-item ${c.id === conversaActualId ? 'active' : ''}" onclick="carregarConversa(${c.id})" id="conv-item-${c.id}">
+  lista.innerHTML=conversas.map(c=>`
+    <div class="conv-item ${c.id===conversaActualId?'active':''}" onclick="carregarConversa(${c.id})" id="conv-item-${c.id}">
       <div>
         <div class="conv-item-titulo">${escHtml(c.titulo)}</div>
         <div class="conv-item-data">${c.alterada_em}</div>
       </div>
-      <button class="conv-item-apagar" onclick="event.stopPropagation();apagarConversa(${c.id})" title="Apagar">×</button>
+      <button class="conv-item-del" onclick="event.stopPropagation();apagarConversa(${c.id})">×</button>
     </div>`).join('');
 }
 
-async function novaConversa() {
-  conversaActualId = null;
-  document.getElementById('historico').innerHTML =
-    '<div class="empty-state">Coloca uma questão jurídica para começar.</div>';
-  document.getElementById('fontes-lista').innerHTML =
-    '<div style="font-size:12px;color:var(--ink-muted);font-style:italic">As fontes da última resposta aparecem aqui.</div>';
-  // Desactivar item activo
-  document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
+async function novaConversa(){
+  conversaActualId=null;
+  document.getElementById('historico').innerHTML='<div class="empty-state">Coloca uma questão jurídica para começar.</div>';
+  document.getElementById('fontes-lista').innerHTML='<div style="font-size:12px;color:var(--ink-muted);font-style:italic">As fontes aparecem aqui.</div>';
+  document.querySelectorAll('.conv-item').forEach(el=>el.classList.remove('active'));
   document.getElementById('input-pergunta').focus();
 }
 
-async function carregarConversa(id) {
-  try {
-    const res  = await fetch(`/api/conversas/${id}/`);
-    const data = await res.json();
-    conversaActualId = id;
-
-    // Marcar activo na sidebar
-    document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
-    const item = document.getElementById(`conv-item-${id}`);
-    if (item) item.classList.add('active');
-
-    // Renderizar mensagens
-    const hist = document.getElementById('historico');
-    hist.innerHTML = '';
-    if (!data.mensagens.length) {
-      hist.innerHTML = '<div class="empty-state">Conversa vazia.</div>';
-      return;
-    }
+async function carregarConversa(id){
+  try{
+    const res=await fetch(`/api/conversas/${id}/`);
+    const data=await res.json();
+    conversaActualId=id;
+    document.querySelectorAll('.conv-item').forEach(el=>el.classList.remove('active'));
+    const item=document.getElementById(`conv-item-${id}`);
+    if(item)item.classList.add('active');
+    const hist=document.getElementById('historico');
+    hist.innerHTML='';
+    if(!data.mensagens.length){hist.innerHTML='<div class="empty-state">Conversa vazia.</div>';return;}
+    
     data.mensagens.forEach(m => {
-      addBubble(m.papel === 'user' ? 'pergunta' : 'resposta', m.texto);
+      addBubble(m.papel === 'user' ? 'pergunta' : 'resposta', m.texto, m.id, m.fontes, m.feedbacks);
     });
-    // Mostrar fontes da última resposta
-    const ultResposta = data.mensagens.filter(m => m.papel === 'assistant').pop();
-    if (ultResposta && ultResposta.fontes) renderFontes(ultResposta.fontes);
 
-    hist.lastElementChild?.scrollIntoView({behavior:'smooth', block:'end'});
-  } catch(e) { console.error('Erro ao carregar conversa:', e); }
+    toggleFontesPanel(false);
+    hist.lastElementChild?.scrollIntoView({behavior:'smooth',block:'end'});
+  }catch(e){console.error(e);}
 }
 
-async function apagarConversa(id) {
-  if (!confirm('Apagar esta conversa?')) return;
-  try {
-    await fetch(`/api/conversas/${id}/apagar/`, {method:'DELETE'});
-    if (conversaActualId === id) novaConversa();
+async function apagarConversa(id){
+  if(!confirm('Apagar esta conversa?'))return;
+  try{
+    await fetch(`/api/conversas/${id}/apagar/`,{method:'DELETE'});
+    if(conversaActualId===id)novaConversa();
     carregarConversas();
-  } catch(e) { console.error('Erro ao apagar:', e); }
+  }catch(e){console.error(e);}
 }
 
-// ── Chat ──────────────────────────────────────────────────────────────────
-const inputEl   = document.getElementById('input-pergunta');
-const btnEnviar = document.getElementById('btn-enviar');
+// ── Chat ─────────────────────────────────────────────────────────────────
+const inputEl=document.getElementById('input-pergunta');
+const btnEnviar=document.getElementById('btn-enviar');
+inputEl.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();enviarPergunta();}});
+btnEnviar.addEventListener('click',enviarPergunta);
 
-inputEl.addEventListener('keydown', e => {
-  if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); enviarPergunta(); }
-});
-btnEnviar.addEventListener('click', enviarPergunta);
-
-async function enviarPergunta() {
-  const pergunta = inputEl.value.trim();
-  if (!pergunta) return;
-  const hist  = document.getElementById('historico');
-  const empty = hist.querySelector('.empty-state');
-  if (empty) empty.remove();
-  addBubble('pergunta', pergunta);
-  inputEl.value = '';
-  btnEnviar.disabled = true;
+async function enviarPergunta(){
+  const pergunta=inputEl.value.trim();
+  if(!pergunta)return;
+  const hist=document.getElementById('historico');
+  const empty=hist.querySelector('.empty-state');
+  if(empty)empty.remove();
+  addBubble('pergunta',pergunta);
+  inputEl.value='';
+  btnEnviar.disabled=true;
   document.getElementById('loading-chat').classList.add('active');
-  document.getElementById('fontes-lista').innerHTML = '';
-  try {
-    const res  = await fetch('/api/pergunta/', {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body: JSON.stringify({pergunta, conversa_id: conversaActualId})
-    });
-    const data = await res.json();
-    if (data.erro) {
-      addBubble('resposta', '⚠ ' + data.erro);
-    } else {
-      addBubble('resposta', data.resposta);
-      renderFontes(data.fontes);
-      // Actualizar ID e lista de conversas
-      conversaActualId = data.conversa_id;
+  try{
+    const body={pergunta, conversa_id:conversaActualId, n_results:cfgNResults};
+    if(utilizadorActual)body.utilizador_id=utilizadorActual.id;
+    const res=await fetch('/api/pergunta/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const data=await res.json();
+    if(data.erro)addBubble('resposta','⚠ '+data.erro);
+    else{
+      addBubble('resposta', data.resposta, data.mensagem_id, data.fontes, {});
+      conversaActualId=data.conversa_id;
       carregarConversas();
-      // Marcar activo
-      setTimeout(() => {
-        document.querySelectorAll('.conv-item').forEach(el => el.classList.remove('active'));
-        const item = document.getElementById(`conv-item-${data.conversa_id}`);
-        if (item) item.classList.add('active');
-      }, 300);
+      setTimeout(()=>{
+        document.querySelectorAll('.conv-item').forEach(el=>el.classList.remove('active'));
+        const item=document.getElementById(`conv-item-${data.conversa_id}`);
+        if(item)item.classList.add('active');
+      },300);
     }
-  } catch(e) { addBubble('resposta', 'Erro de ligação ao servidor.'); }
-  finally {
+  }catch(e){addBubble('resposta','Erro de ligação ao servidor.');}
+  finally{
     document.getElementById('loading-chat').classList.remove('active');
-    btnEnviar.disabled = false;
+    btnEnviar.disabled=false;
     inputEl.focus();
   }
 }
 
-function addBubble(tipo, texto) {
-  const msg = document.createElement('div');
+function addBubble(tipo, texto, msgId=null, fontes=null, feedbacks=null){
+  const hist = document.getElementById('historico');
+  const msg  = document.createElement('div');
   msg.className = `msg msg-${tipo}`;
-  msg.innerHTML = `<span class="msg-label">${tipo === 'pergunta' ? 'Questão' : 'Resposta'}</span>
-    <div class="msg-bubble">${esc(texto).replace(/\n/g,'<br>')}</div>`;
-  document.getElementById('historico').appendChild(msg);
-  msg.scrollIntoView({ behavior:'smooth', block:'end' });
-}
-
-function renderFontes(fontes) {
-  const el = document.getElementById('fontes-lista');
-  if (!fontes || !fontes.length) { el.innerHTML = '<div style="font-size:12px;color:var(--ink-muted)">Nenhuma fonte recuperada.</div>'; return; }
-  el.innerHTML = fontes.map((f,i) => {
-    const cls  = f.score >= 0.75 ? 'high' : f.score >= 0.55 ? 'mid' : 'low';
-    const meta = [f.tipo, f.ano, f.seccao ? '§ '+f.seccao : ''].filter(Boolean).join(' · ');
-    const processo = f.processo ? `<div style="font-size:11px;color:var(--ink-muted);margin-top:2px">Proc. ${escHtml(f.processo)}${f.relator ? ' · '+escHtml(f.relator) : ''}</div>` : '';
-    const sumario  = f.sumario  ? `<div style="font-size:11px;color:var(--ink-muted);margin-top:4px;font-style:italic;border-top:1px solid var(--border);padding-top:4px">${escHtml(f.sumario.substring(0,300))}${f.sumario.length>300?'…':''}</div>` : '';
-    const link     = f.url      ? `<a href="${escHtml(f.url)}" target="_blank" style="font-size:11px;color:var(--ink-muted)">Ver no ITIJ ↗</a>` : '';
-    return `<div class="fonte-item">
-      <span class="fonte-score ${cls}">[${i+1}] ${f.score.toFixed(2)}</span>
-      <div class="fonte-nome">${escHtml(f.ficheiro)}</div>
-      <div class="fonte-meta">${meta}</div>
-      ${processo}${sumario}
-      <div style="margin-top:4px">${link}</div>
-    </div>`;
-  }).join('');
-}
-
-// ── Gerar Peça ─────────────────────────────────────────────────────────────
-document.getElementById('btn-gerar').addEventListener('click', gerarPeca);
-
-async function gerarPeca() {
-  const obrigatorios = ['nome_empregador','nome_trabalhador','data_efeitos','descricao_factos'];
-  for (const c of obrigatorios) {
-    const el = document.getElementById('f-' + c);
-    if (!el.value.trim()) {
-      el.style.borderColor = '#c0392b';
-      el.focus();
-      setStatus('Campo obrigatório em falta: ' + el.previousElementSibling.textContent.replace(' *',''), 'error');
-      return;
-    }
-    el.style.borderColor = '';
+  
+  let html = `<span class="msg-label">${tipo==='pergunta'?'Questão':'Resposta'}</span>
+              <div class="msg-bubble">${esc(texto).replace(/\n/g,'<br>')}</div>`;
+  
+  if (tipo === 'resposta' && fontes && fontes.length > 0) {
+    // Escapar fontes para o atributo HTML
+    const fontesJson = JSON.stringify(fontes).replace(/"/g, '&quot;');
+    const feedsJson  = JSON.stringify(feedbacks || {}).replace(/"/g, '&quot;');
+    html += `<div class="msg-fontes-link" onclick="mostrarFontesNoPainel(${msgId}, '${fontesJson}', '${feedsJson}')">
+               🔍 Ver fontes desta resposta (${fontes.length})
+             </div>`;
   }
 
-  const campos = ['nome_empregador','nif_empregador','morada_empregador','representante_empregador',
-    'cargo_representante','nome_escritorio','referencia_processo','nome_trabalhador','nif_trabalhador',
-    'morada_trabalhador','categoria_profissional','data_admissao','numero_contrato','motivo_cessacao',
-    'artigo_cessacao','data_efeitos','local_data','descricao_factos'];
+  msg.innerHTML = html;
+  hist.appendChild(msg);
+  msg.scrollIntoView({behavior:'smooth',block:'end'});
+}
 
-  const dados = {};
-  campos.forEach(c => { dados[c] = document.getElementById('f-' + c).value.trim(); });
+function toggleFontesPanel(abrir) {
+  const panel = document.getElementById('sources-panel');
+  if (abrir) panel.classList.add('open');
+  else panel.classList.remove('open');
+}
 
-  document.getElementById('btn-gerar').disabled = true;
+function mostrarFontesNoPainel(msgId, fontesJson, feedbacksJson) {
+  const fontes    = JSON.parse(fontesJson.replace(/&quot;/g, '"'));
+  const feedbacks = JSON.parse(feedbacksJson.replace(/&quot;/g, '"'));
+  const scroll    = document.getElementById('sources-scroll');
+  
+  toggleFontesPanel(true);
+  scroll.innerHTML = '';
+
+  if (!fontes.length) {
+    scroll.innerHTML = '<div class="empty-state">Sem fontes.</div>';
+    return;
+  }
+
+  fontes.forEach((f, i) => {
+    const fid = f.processo || f.ficheiro;
+    const fb  = feedbacks[fid] || {relevancia: 0, removida: false};
+    
+    if (fb.removida) return; // Ocultar se já marcada como removida
+
+    const card = document.createElement('div');
+    card.className = `fonte-card ${fb.removida ? 'removed' : ''}`;
+    card.id = `card-${msgId}-${i}`;
+
+    const scoreCls = f.score >= 0.75 ? 'high' : f.score >= 0.55 ? 'mid' : 'low';
+    const meta     = [f.tipo, f.ano, f.seccao ? '§ '+f.seccao : ''].filter(Boolean).join(' · ');
+    
+    card.innerHTML = `
+      <span class="fonte-score ${scoreCls}">[${i+1}] ${f.score.toFixed(2)}</span>
+      <div class="fonte-nome">${escHtml(f.ficheiro)}</div>
+      <div class="fonte-meta" style="font-size:11px">${meta}</div>
+      ${f.processo ? `<div class="fonte-meta" style="font-size:11px">Proc. ${escHtml(f.processo)}</div>` : ''}
+      ${f.sumario ? `<div style="font-size:11px; margin-top:8px; font-style:italic; border-top:1px solid var(--border); padding-top:4px">${escHtml(f.sumario.substring(0, 300))}...</div>` : ''}
+      <div class="fonte-actions">
+        <button class="btn-icon ${fb.relevancia === 1 ? 'active-up' : ''}" onclick="votarFonte(${msgId}, '${fid}', 1, this)">👍</button>
+        <button class="btn-icon ${fb.relevancia === -1 ? 'active-down' : ''}" onclick="votarFonte(${msgId}, '${fid}', -1, this)">👎</button>
+        <button class="btn-icon btn-del" onclick="removerFonte(${msgId}, '${fid}', this)">🗑️</button>
+        ${f.url ? `<a href="${f.url}" target="_blank" class="btn-icon" style="text-decoration:none">↗</a>` : ''}
+      </div>
+    `;
+    scroll.appendChild(card);
+  });
+}
+
+async function votarFonte(msgId, fonteId, relevancia, btn) {
+  // Toggle: se clicar no que já está ativo, volta a zero
+  const isSelected = (relevancia === 1 && btn.classList.contains('active-up')) || 
+                     (relevancia === -1 && btn.classList.contains('active-down'));
+  const valorFinal = isSelected ? 0 : relevancia;
+
+  try {
+    const res = await fetch('/api/feedback/fonte/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        mensagem_id: msgId,
+        fonte_id:    fonteId,
+        relevancia:  valorFinal
+      })
+    });
+    if (res.ok) {
+      const parent = btn.parentElement;
+      parent.querySelectorAll('.btn-icon').forEach(b => {
+        b.classList.remove('active-up', 'active-down');
+      });
+      if (valorFinal === 1) btn.classList.add('active-up');
+      if (valorFinal === -1) btn.classList.add('active-down');
+    }
+  } catch(e) { console.error(e); }
+}
+
+async function removerFonte(msgId, fonteId, btn) {
+  if (!confirm('Remover esta fonte da lista de análise?')) return;
+  try {
+    const res = await fetch('/api/feedback/fonte/', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        mensagem_id: msgId,
+        fonte_id:    fonteId,
+        removida:    true
+      })
+    });
+    if (res.ok) {
+      const card = btn.closest('.fonte-card');
+      card.style.opacity = '0';
+      setTimeout(() => card.remove(), 300);
+    }
+  } catch(e) { console.error(e); }
+}
+
+// ── Gerar Peça ───────────────────────────────────────────────────────────
+document.getElementById('btn-gerar').addEventListener('click', () => gerarPeca(false));
+
+function mudarTemplate(tipo) {
+  document.getElementById('f-template').value = tipo;
+  document.querySelectorAll('.form-template').forEach(f => f.style.display = 'none');
+  const targetForm = document.getElementById('form-' + tipo);
+  if (targetForm) {
+    targetForm.style.display = '';
+  } else {
+    document.getElementById('form-requerimento').style.display = '';
+  }
+}
+
+async function carregarTemplates() {
+  try {
+    const res = await fetch('/geracao/templates/');
+    const data = await res.json();
+    const select = document.getElementById('peca-template-select');
+    if (data.templates && data.templates.length > 0) {
+      select.innerHTML = data.templates.map(t => 
+        `<option value="${t.id}" title="${t.descricao || ''}">${t.nome}</option>`
+      ).join('');
+      const atual = document.getElementById('f-template').value;
+      if (atual && data.templates.some(t => t.id === atual)) {
+        select.value = atual;
+        mudarTemplate(atual);
+      } else {
+        const firstId = data.templates[0].id;
+        select.value = firstId;
+        mudarTemplate(firstId);
+      }
+    }
+  } catch (e) { console.error(e); }
+}
+
+function lerCamposTemplate() {
+  const tipo = document.getElementById('f-template').value;
+  const prefixos = {contestacao:'ct', peticao:'pt', requerimento:'rq', cessacao:'cs'};
+  const p = prefixos[tipo] || 'ct';
+  const g = id => { const el = document.getElementById(p+'-'+id); return el ? el.value.trim() : ''; };
+  const gs = id => { const el = document.getElementById(p+'-'+id); return el ? el.value : ''; };
+
+  if (tipo === 'cessacao') {
+    return {
+      template:              tipo,
+      nome_parte_a:          g('nome_parte_a'),
+      nif_parte_a:           g('nif_parte_a'),
+      morada_parte_a:        g('morada_parte_a'),
+      nome_parte_b:          g('nome_parte_b'),
+      nif_parte_b:           g('nif_parte_b'),
+      morada_parte_b:        g('morada_parte_b'),
+      referencia_processo:   g('processo'),
+      nome_escritorio:       g('advogado'),
+      representante_empregador: g('representante'),
+      categoria_profissional: g('categoria'),
+      data_admissao:         g('data_admissao'),
+      motivo_cessacao:       gs('motivo'),
+      data_efeitos:          g('data_efeitos'),
+      local_data:            g('local_data'),
+      descricao_factos:      g('descricao_factos'),
+    };
+  }
+  return {
+    template:            tipo,
+    tribunal:            g('tribunal'),
+    juiz:                g('juiz'),
+    juizo:               g('juizo') || '',
+    referencia_processo: g('processo'),
+    nome_parte_a:        g('nome_parte_a'),
+    nome_parte_b:        g('nome_parte_b'),
+    descricao_factos:    g('descricao_factos'),
+    pedido:              g('pedido'),
+    valor:               g('valor'),
+    junta:               g('junta'),
+    nome_escritorio:     g('advogado'),
+    base_legal:          g('base_legal') || '',
+  };
+}
+
+async function gerarPeca(usarRag=false) {
+  const dados = lerCamposTemplate();
+  if (!dados.nome_parte_a)     { setStatus('Nome da parte A é obrigatório.', 'error'); return; }
+  if (!dados.descricao_factos) { setStatus('Os factos são obrigatórios.', 'error'); return; }
+
+  const rota = usarRag ? '/geracao/gerar-rag/' : '/geracao/gerar/';
+  document.getElementById('btn-gerar').disabled     = true;
+  document.getElementById('btn-gerar-rag').disabled = true;
+  document.getElementById('loading-peca-txt').textContent = usarRag
+    ? 'A pesquisar jurisprudência e gerar documento…'
+    : 'A gerar documento…';
   document.getElementById('loading-peca').classList.add('active');
   setStatus('', '');
 
   try {
-    const res = await fetch('/geracao/gerar/', {
-      method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(dados)
+    const res = await fetch(rota, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify(dados),
     });
     if (!res.ok) {
       const err = await res.json();
       setStatus('Erro: ' + (err.erro || res.statusText), 'error');
       return;
     }
+    const acordaosRag = res.headers.get('X-Acordaos-RAG') || '0';
     const blob = await res.blob();
     const url  = URL.createObjectURL(blob);
     const a    = document.createElement('a');
     a.href     = url;
-    a.download = `carta_cessacao_${dados.nome_trabalhador.replace(/\s+/g,'_')}.docx`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
+    a.download = `${dados.template}_${(dados.nome_parte_a||'documento').replace(/\s+/g,'_')}.docx`;
+    document.body.appendChild(a); a.click(); document.body.removeChild(a);
     URL.revokeObjectURL(url);
-    setStatus('✓ Documento gerado e descarregado com sucesso.', 'success');
+    const extra = usarRag && parseInt(acordaosRag) > 0
+      ? ` (${acordaosRag} acórdão(s) usados)`
+      : '';
+    setStatus('✓ Documento gerado e descarregado.' + extra, 'success');
   } catch(e) {
-    setStatus('Erro de ligação: ' + e.message, 'error');
+    setStatus('Erro: ' + e.message, 'error');
   } finally {
-    document.getElementById('btn-gerar').disabled = false;
+    document.getElementById('btn-gerar').disabled     = false;
+    document.getElementById('btn-gerar-rag').disabled = false;
     document.getElementById('loading-peca').classList.remove('active');
   }
 }
+function setStatus(msg,type){const el=document.getElementById('form-status');el.textContent=msg;el.className='form-status'+(type?' '+type:'');}
 
-function setStatus(msg, type) {
-  const el = document.getElementById('form-status');
-  el.textContent = msg;
-  el.className   = 'form-status' + (type ? ' '+type : '');
-}
-
-
-// ── Upload ─────────────────────────────────────────────────────────────────
-document.getElementById('btn-upload').addEventListener('click', uploadDocumento);
-
-async function uploadDocumento() {
-  const ficheiro = document.getElementById('u-ficheiro').files[0];
-  if (!ficheiro) {
-    setUploadStatus('Selecciona um ficheiro PDF primeiro.', 'error');
-    return;
-  }
-
-  const formData = new FormData();
-  formData.append('ficheiro', ficheiro);
-  formData.append('type',  document.getElementById('u-type').value);
-  formData.append('year',  document.getElementById('u-year').value.trim());
-  formData.append('court', document.getElementById('u-court').value.trim());
-
-  document.getElementById('btn-upload').disabled = true;
-  document.getElementById('loading-upload').classList.add('active');
-  document.getElementById('upload-resultado').style.display = 'none';
-  setUploadStatus('', '');
-
-  try {
-    const res  = await fetch('/api/upload/', { method: 'POST', body: formData });
-    const data = await res.json();
-
-    const corpo = document.getElementById('upload-resultado-body');
-    if (data.status === 'indexado') {
-      setUploadStatus('✓ Documento indexado com sucesso.', 'success');
-      corpo.innerHTML = `
-        <b>Estado:</b> Indexado<br>
-        <b>Ficheiro guardado como:</b> ${data.nome_final}<br>
-        <b>Hash SHA-256:</b> <span style="font-family:monospace;font-size:12px">${data.hash}</span><br>
-        <b>Chunks adicionados:</b> ${data.n_chunks}
-      `;
-    } else if (data.status === 'duplicado') {
-      setUploadStatus('⚠ Documento já indexado.', 'error');
-      corpo.innerHTML = `<b>Estado:</b> Duplicado<br>${data.mensagem}`;
-    } else {
-      setUploadStatus('Erro: ' + data.mensagem, 'error');
-      corpo.innerHTML = `<b>Erro:</b> ${data.mensagem}`;
-    }
-    document.getElementById('upload-resultado').style.display = 'block';
-  } catch(e) {
-    setUploadStatus('Erro de ligação: ' + e.message, 'error');
-  } finally {
-    document.getElementById('btn-upload').disabled = false;
-    document.getElementById('loading-upload').classList.remove('active');
-  }
-}
-
-function setUploadStatus(msg, type) {
-  const el = document.getElementById('upload-status');
-  el.textContent = msg;
-  el.className   = 'form-status' + (type ? ' '+type : '');
-}
-
-function esc(t) { return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-// ── ITIJ ───────────────────────────────────────────────────────────────────
-function escHtml(t) {
-  return String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
-}
-document.getElementById('itij-tipo').addEventListener('change', function() {
-  document.getElementById('itij-campo-group').style.display =
-    this.value === 'campo' ? 'flex' : 'none';
+// ── ITIJ ─────────────────────────────────────────────────────────────────
+document.getElementById('itij-tipo').addEventListener('change',function(){
+  document.getElementById('itij-campo-group').style.display=this.value==='campo'?'flex':'none';
 });
+document.getElementById('itij-query').addEventListener('keydown',e=>{if(e.key==='Enter')itijPesquisar();});
+document.getElementById('btn-itij-pesquisar').addEventListener('click',itijPesquisar);
 
-document.getElementById('itij-query').addEventListener('keydown', e => {
-  if (e.key === 'Enter') itijPesquisar();
-});
-document.getElementById('btn-itij-pesquisar').addEventListener('click', itijPesquisar);
+let itijResultadosActuais=[];
+let itijPaginaActual=0;
+const ITIJ_POR_PAGINA=20;
 
-let itijResultadosActuais = [];
-let itijPaginaActual = 0;
-const ITIJ_POR_PAGINA = 20;
-
-async function itijPesquisar() {
-  const q        = document.getElementById('itij-query').value.trim();
-  const tribunal = document.getElementById('itij-tribunal').value;
-  const tipo     = document.getElementById('itij-tipo').value;
-  const campo    = document.getElementById('itij-campo').value;
-  const max      = document.getElementById('itij-max').value;
-
-  if (!q) { setItijStatus('Introduz os termos de pesquisa.', 'error'); return; }
-
-  document.getElementById('btn-itij-pesquisar').disabled = true;
+async function itijPesquisar(){
+  const q=document.getElementById('itij-query').value.trim();
+  const tribunal=document.getElementById('itij-tribunal').value;
+  const tipo=document.getElementById('itij-tipo').value;
+  const campo=document.getElementById('itij-campo').value;
+  const max=document.getElementById('itij-max').value;
+  if(!q){setItijStatus('Introduz os termos.','error');return;}
+  document.getElementById('btn-itij-pesquisar').disabled=true;
   document.getElementById('loading-itij').classList.add('active');
-  document.getElementById('itij-resultados').style.display = 'none';
-  document.getElementById('itij-indexar-resultado').style.display = 'none';
-  setItijStatus('', '');
-
-  try {
-    let url = `/ingestao/pesquisar/?q=${encodeURIComponent(q)}&tribunal=${tribunal}&tipo=${tipo}&max=${max}`;
-    if (tipo === 'campo') url += `&campo=${campo}`;
-
-    const res  = await fetch(url);
-    const data = await res.json();
-
-    if (data.erro) { setItijStatus('Erro: ' + data.erro, 'error'); return; }
-
-    itijResultadosActuais = data.resultados;
-    itijPaginaActual = 0;
-    renderItijResultados(data.resultados, tipo);
-    document.getElementById('itij-resultados-titulo').textContent =
-      `${data.total} resultado${data.total !== 1 ? 's' : ''} encontrado${data.total !== 1 ? 's' : ''}`;
-    document.getElementById('itij-resultados').style.display = 'block';
-
-  } catch(e) {
-    setItijStatus('Erro de ligação: ' + e.message, 'error');
-  } finally {
-    document.getElementById('btn-itij-pesquisar').disabled = false;
-    document.getElementById('loading-itij').classList.remove('active');
-  }
+  document.getElementById('itij-resultados').style.display='none';
+  document.getElementById('itij-indexar-resultado').style.display='none';
+  setItijStatus('','');
+  try{
+    let url=`/ingestao/pesquisar/?q=${encodeURIComponent(q)}&tribunal=${tribunal}&tipo=${tipo}&max=${max}`;
+    if(tipo==='campo')url+=`&campo=${campo}`;
+    const res=await fetch(url);
+    const data=await res.json();
+    if(data.erro){setItijStatus('Erro: '+data.erro,'error');return;}
+    itijResultadosActuais=data.resultados;
+    itijPaginaActual=0;
+    renderItijResultados(data.resultados,tipo);
+    document.getElementById('itij-resultados-titulo').textContent=`${data.total} resultado${data.total!==1?'s':''} encontrado${data.total!==1?'s':''}`;
+    document.getElementById('itij-resultados').style.display='block';
+  }catch(e){setItijStatus('Erro de ligação: '+e.message,'error');}
+  finally{document.getElementById('btn-itij-pesquisar').disabled=false;document.getElementById('loading-itij').classList.remove('active');}
 }
 
-function renderItijResultados(resultados, tipo) {
-  const lista = document.getElementById('itij-lista');
-
-  // Descritores (tipo descritor) — formato diferente
-  if (tipo === 'descritor' && resultados.length && resultados[0].descritor_principal) {
-    lista.innerHTML = resultados.map((r, i) => `
+function renderItijResultados(resultados,tipo){
+  const lista=document.getElementById('itij-lista');
+  if(tipo==='descritor'&&resultados.length&&resultados[0].descritor_principal){
+    lista.innerHTML=resultados.map(r=>`
       <div style="padding:10px 12px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:13px">
         <div style="font-weight:600;color:var(--accent)">${r.descritor_principal}</div>
-        ${r.descritores_relacionados.length ? '<div style="color:var(--ink-muted);font-size:11px;margin-top:4px">Relacionados: ' + r.descritores_relacionados.slice(0,4).join(' · ') + '</div>' : ''}
-        <button onclick="itijPesquisarPorDescritor('${escHtml(r.descritor_principal)}')"
-          style="margin-top:6px;font-size:11px;padding:3px 10px;background:var(--accent);color:#fff;border:none;border-radius:2px;cursor:pointer">
-          Ver acórdãos com este descritor
-        </button>
+        ${r.descritores_relacionados.length?'<div style="color:var(--ink-muted);font-size:11px;margin-top:4px">'+r.descritores_relacionados.slice(0,4).map(escHtml).join(' · ')+'</div>':''}
+        <button onclick="itijPesquisarPorDescritor('${escHtml(r.descritor_principal)}')" style="margin-top:6px;font-size:11px;padding:3px 10px;background:var(--accent);color:#fff;border:none;border-radius:2px;cursor:pointer">Ver acórdãos</button>
       </div>`).join('');
     return;
   }
-
-  // Acordaos — paginacao
-  const total   = resultados.length;
-  const inicio  = itijPaginaActual * ITIJ_POR_PAGINA;
-  const fim     = Math.min(inicio + ITIJ_POR_PAGINA, total);
-  const pagina  = resultados.slice(inicio, fim);
-  const numPags = Math.ceil(total / ITIJ_POR_PAGINA);
-
-  const pelDiv = document.getElementById('itij-paginacao');
-  const pelInf = document.getElementById('itij-pag-info');
-  if (total > ITIJ_POR_PAGINA) {
-    pelDiv.style.display = 'flex';
-    pelInf.textContent   = 'Página ' + (itijPaginaActual+1) + ' de ' + numPags + ' (' + total + ' resultados)';
-    document.getElementById('itij-pag-ant').disabled  = itijPaginaActual === 0;
-    document.getElementById('itij-pag-prox').disabled = itijPaginaActual >= numPags - 1;
-  } else {
-    pelDiv.style.display = 'none';
-  }
-
-  lista.innerHTML = pagina.map((r, j) => {
-    const i = inicio + j;
-    return `
-    <div id="itij-card-${i}" style="padding:10px 12px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:13px;display:flex;gap:10px;align-items:flex-start">
+  const total=resultados.length;
+  const inicio=itijPaginaActual*ITIJ_POR_PAGINA;
+  const fim=Math.min(inicio+ITIJ_POR_PAGINA,total);
+  const pagina=resultados.slice(inicio,fim);
+  const numPags=Math.ceil(total/ITIJ_POR_PAGINA);
+  const pelDiv=document.getElementById('itij-paginacao');
+  const pelInf=document.getElementById('itij-pag-info');
+  if(total>ITIJ_POR_PAGINA){
+    pelDiv.style.display='flex';
+    pelInf.textContent='Página '+(itijPaginaActual+1)+' de '+numPags+' ('+total+' resultados)';
+    document.getElementById('itij-pag-ant').disabled=itijPaginaActual===0;
+    document.getElementById('itij-pag-prox').disabled=itijPaginaActual>=numPags-1;
+  }else{pelDiv.style.display='none';}
+  lista.innerHTML=pagina.map((r,j)=>{
+    const i=inicio+j;
+    return `<div id="itij-card-${i}" style="padding:10px 12px;background:var(--bg);border:1px solid var(--border);border-radius:2px;font-size:13px;display:flex;gap:10px;align-items:flex-start">
       <input type="checkbox" class="itij-check" data-idx="${i}" style="margin-top:3px;cursor:pointer">
       <div style="flex:1">
         <div style="display:flex;gap:12px;margin-bottom:4px;flex-wrap:wrap">
@@ -804,121 +1133,82 @@ function renderItijResultados(resultados, tipo) {
           <span style="color:var(--ink-muted)">${escHtml(r.relator)}</span>
         </div>
         <div style="font-size:11px;color:var(--ink-muted);margin-bottom:4px">${r.descritores.slice(0,5).map(escHtml).join(' · ')}</div>
-        <div id="itij-sumario-${i}" style="font-size:11px;color:var(--ink-muted);font-style:italic;margin:4px 0;min-height:14px">
-          <span style="opacity:0.4">A carregar sumário…</span>
-        </div>
+        <div id="itij-sumario-${i}" style="font-size:11px;color:var(--ink-muted);font-style:italic;margin:4px 0;min-height:14px"><span style="opacity:0.4">A carregar sumário…</span></div>
         <a href="${r.url}" target="_blank" style="font-size:11px;color:var(--accent)">Ver acórdão ↗</a>
       </div>
     </div>`;
   }).join('');
-
-  // Carregar sumários da página actual
-  carregarSumariosBackground(pagina, inicio);
+  carregarSumariosBackground(pagina,inicio);
 }
 
-async function carregarSumariosBackground(resultados, offset=0) {
-  const BATCH = 5;
-  for (let i = 0; i < resultados.length; i += BATCH) {
-    const lote = resultados.slice(i, i + BATCH);
-    await Promise.all(lote.map(async (r, j) => {
-      const idx = offset + i + j;
-      const el  = document.getElementById('itij-sumario-' + idx);
-      if (!el) return;
-      try {
-        const resp = await fetch('/ingestao/sumario/?url=' + encodeURIComponent(r.url));
-        const data = await resp.json();
-        if (data.sumario && data.sumario.trim()) {
-          const txt = data.sumario.length > 300 ? data.sumario.substring(0,300) + '…' : data.sumario;
-          el.innerHTML = escHtml(txt);
-          itijResultadosActuais[idx].sumario = data.sumario;
-          if (data.decisao) itijResultadosActuais[idx].decisao = data.decisao;
-        } else {
-          el.innerHTML = '';
-        }
-      } catch(e) { el.innerHTML = ''; }
+async function carregarSumariosBackground(resultados,offset=0){
+  const BATCH=5;
+  for(let i=0;i<resultados.length;i+=BATCH){
+    const lote=resultados.slice(i,i+BATCH);
+    await Promise.all(lote.map(async(r,j)=>{
+      const idx=offset+i+j;
+      const el=document.getElementById('itij-sumario-'+idx);
+      if(!el)return;
+      try{
+        const resp=await fetch('/ingestao/sumario/?url='+encodeURIComponent(r.url));
+        const data=await resp.json();
+        if(data.sumario&&data.sumario.trim()){
+          const txt=data.sumario.length>cfgSumarioMax?data.sumario.substring(0,cfgSumarioMax)+'…':data.sumario;
+          el.innerHTML=escHtml(txt);
+          itijResultadosActuais[idx].sumario=data.sumario;
+          if(data.decisao)itijResultadosActuais[idx].decisao=data.decisao;
+        }else{el.innerHTML='';}
+      }catch(e){el.innerHTML='';}
     }));
   }
 }
 
-function itijMudarPagina(delta) {
-  const numPags = Math.ceil(itijResultadosActuais.length / ITIJ_POR_PAGINA);
-  itijPaginaActual = Math.max(0, Math.min(itijPaginaActual + delta, numPags - 1));
-  const tipo = document.getElementById('itij-tipo').value;
-  renderItijResultados(itijResultadosActuais, tipo);
+function itijMudarPagina(delta){
+  const numPags=Math.ceil(itijResultadosActuais.length/ITIJ_POR_PAGINA);
+  itijPaginaActual=Math.max(0,Math.min(itijPaginaActual+delta,numPags-1));
+  renderItijResultados(itijResultadosActuais,document.getElementById('itij-tipo').value);
   document.getElementById('itij-resultados').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
-function itijSelectAll(val) {
-  document.querySelectorAll('.itij-check').forEach(cb => cb.checked = val);
-}
+function itijSelectAll(val){document.querySelectorAll('.itij-check').forEach(cb=>cb.checked=val);}
 
-async function itijIndexar() {
-  const checks    = [...document.querySelectorAll('.itij-check:checked')];
-  const urls      = checks.map(cb => itijResultadosActuais[parseInt(cb.dataset.idx)].url);
-  const tribunal  = document.getElementById('itij-tribunal').value;
-
-  if (!urls.length) { setItijStatus('Selecciona pelo menos um acórdão.', 'error'); return; }
-
-  document.getElementById('btn-itij-indexar').disabled = true;
-  setItijStatus(`A indexar ${urls.length} acórdão(s)…`, '');
-
-  try {
-    // Incluir metadados dos acordaos seleccionados
-    const acordaos_meta = checks.map(cb => {
-      const r = itijResultadosActuais[parseInt(cb.dataset.idx)];
-      return {
-        url:       r.url,
-        processo:  r.processo,
-        data:      r.data,
-        relator:   r.relator,
-        descritores: r.descritores,
-      };
+async function itijIndexar(){
+  const checks=[...document.querySelectorAll('.itij-check:checked')];
+  const urls=checks.map(cb=>itijResultadosActuais[parseInt(cb.dataset.idx)].url);
+  const tribunal=document.getElementById('itij-tribunal').value;
+  if(!urls.length){setItijStatus('Selecciona pelo menos um acórdão.','error');return;}
+  document.getElementById('btn-itij-indexar').disabled=true;
+  setItijStatus(`A indexar ${urls.length} acórdão(s)…`,'');
+  try{
+    const acordaos_meta=checks.map(cb=>{
+      const r=itijResultadosActuais[parseInt(cb.dataset.idx)];
+      return{url:r.url,processo:r.processo,data:r.data,relator:r.relator,descritores:r.descritores};
     });
-
-    const res  = await fetch('/ingestao/indexar/', {
-      method:  'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body:    JSON.stringify({ urls, acordaos_meta, tribunal, type: 'ruling' }),
-    });
-    const data = await res.json();
-
-    const r = data.resumo;
-    const detalhes = data.resultados.map(res => {
-      const cor = res.status === 'indexado' ? 'var(--green)' : res.status === 'duplicado' ? '#8a5c00' : '#8a0000';
-      return `<div style="font-size:12px;margin-top:4px;color:${cor}">${res.url.split('/').pop().substring(0,20)}... → ${res.status}${res.mensagem ? ': ' + res.mensagem : ''}</div>`;
+    const res=await fetch('/ingestao/indexar/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({urls,acordaos_meta,tribunal,type:'ruling'})});
+    const data=await res.json();
+    const r=data.resumo;
+    const detalhes=data.resultados.map(res=>{
+      const cor=res.status==='indexado'?'var(--green)':res.status==='duplicado'?'#8a5c00':'#8a0000';
+      return `<div style="font-size:12px;margin-top:4px;color:${cor}">${res.url.split('/').pop().substring(0,20)}… → ${res.status}${res.mensagem?': '+res.mensagem:''}</div>`;
     }).join('');
-    document.getElementById('itij-indexar-body').innerHTML = `
-      <b>Total processado:</b> ${r.total}<br>
-      <b>Indexados:</b> <span style="color:var(--green)">${r.indexados}</span><br>
-      <b>Duplicados:</b> ${r.duplicados}<br>
-      <b>Erros:</b> <span style="color:#8a0000">${r.erros}</span>
-      ${detalhes}
-    `;
-    document.getElementById('itij-indexar-resultado').style.display = 'block';
-    const statusType = r.erros > 0 && r.indexados === 0 ? 'error' : 'success';
-    setItijStatus(`${r.indexados > 0 ? '✓' : '⚠'} Concluído — ${r.indexados} indexado(s), ${r.erros} erro(s)`, statusType);
-  } catch(e) {
-    setItijStatus('Erro: ' + e.message, 'error');
-  } finally {
-    document.getElementById('btn-itij-indexar').disabled = false;
-  }
+    document.getElementById('itij-indexar-body').innerHTML=`<b>Total:</b> ${r.total}<br><b>Indexados:</b> <span style="color:var(--green)">${r.indexados}</span><br><b>Duplicados:</b> ${r.duplicados}<br><b>Erros:</b> <span style="color:#8a0000">${r.erros}</span>${detalhes}`;
+    document.getElementById('itij-indexar-resultado').style.display='block';
+    // Actualizar contador de chunks na config
+    const res2=await fetch('/');
+    document.getElementById('cfg-n-docs').textContent='—';
+    setItijStatus(`${r.indexados>0?'✓':'⚠'} Concluído — ${r.indexados} indexado(s), ${r.erros} erro(s)`,r.erros>0&&r.indexados===0?'error':'success');
+  }catch(e){setItijStatus('Erro: '+e.message,'error');}
+  finally{document.getElementById('btn-itij-indexar').disabled=false;}
 }
 
-function itijPesquisarPorDescritor(descritor) {
-  document.getElementById('itij-query').value  = descritor;
-  document.getElementById('itij-tipo').value   = 'campo';
-  document.getElementById('itij-campo').value  = 'DESCRITORES';
-  document.getElementById('itij-campo-group').style.display = 'flex';
+function itijPesquisarPorDescritor(d){
+  document.getElementById('itij-query').value=d;
+  document.getElementById('itij-tipo').value='campo';
+  document.getElementById('itij-campo').value='DESCRITORES';
+  document.getElementById('itij-campo-group').style.display='flex';
   itijPesquisar();
 }
-
-function setItijStatus(msg, type) {
-  const el = document.getElementById('itij-status');
-  el.textContent = msg;
-  el.className   = 'form-status' + (type ? ' ' + type : '');
-}
-
-
+function setItijStatus(msg,type){const el=document.getElementById('itij-status');el.textContent=msg;el.className='form-status'+(type?' '+type:'');}
 </script>
 </body>
 </html>

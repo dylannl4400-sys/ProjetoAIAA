@@ -30,3 +30,23 @@ class AcordaoIndexado(models.Model):
 
     def __str__(self):
         return f"{self.processo} ({self.tribunal_id}) — {self.n_chunks} chunks"
+
+
+class AcordaoChunk(models.Model):
+    """Fragmentos individuais de texto de um acórdão."""
+    acordao = models.ForeignKey(
+        AcordaoIndexado, 
+        on_delete=models.CASCADE, 
+        related_name="chunks_texto"
+    )
+    indice  = models.IntegerField(help_text="Ordem do fragmento no documento original")
+    texto   = models.TextField()
+    seccao  = models.CharField(max_length=100, blank=True, db_index=True)
+    
+    class Meta:
+        ordering = ["acordao", "indice"]
+        verbose_name = "Fragmento de Acórdão"
+        verbose_name_plural = "Fragmentos de Acórdão"
+
+    def __str__(self):
+        return f"{self.acordao.processo} [# {self.indice}] ({self.seccao})"

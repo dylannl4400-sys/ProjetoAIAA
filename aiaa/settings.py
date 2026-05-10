@@ -214,8 +214,6 @@ from pathlib import Path
 import sys
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-# Pipeline modules
 sys.path.insert(0, str(BASE_DIR / "pipeline"))
 
 SECRET_KEY = "django-insecure-change-this-in-production"
@@ -223,7 +221,11 @@ DEBUG      = True
 ALLOWED_HOSTS = ["*"]
 
 INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
     "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
     "django.contrib.staticfiles",
     # Apps AIAA
     "ingestao",
@@ -233,7 +235,10 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
 ]
 
 ROOT_URLCONF = "aiaa.urls"
@@ -244,12 +249,13 @@ TEMPLATES = [{
     "APP_DIRS": True,
     "OPTIONS": {"context_processors": [
         "django.template.context_processors.request",
+        "django.contrib.auth.context_processors.auth",
+        "django.contrib.messages.context_processors.messages",
     ]},
 }]
 
 WSGI_APPLICATION = "aiaa.wsgi.application"
 
-# Base de dados SQLite (migrar para PostgreSQL na Fase 2)
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",

@@ -176,6 +176,7 @@ def registar_e_indexar_itij(
             "hash":       hash_doc,
             "nome_final": nome_html,
             "n_chunks":   len(chunks),
+            "chunks":     chunks,  # Adicionado para permitir guardar no Django
         }
 
     except Exception as e:

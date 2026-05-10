@@ -208,7 +208,7 @@ class Retriever:
     # Public API
     # ------------------------------------------------------------------
 
-    def ask(self, question: str) -> RetrievalResult:
+    def ask(self, question: str, n_results: int | None = None) -> RetrievalResult:
         """
         Answer a question using the RAG pipeline.
 
@@ -221,7 +221,8 @@ class Retriever:
         5. Return a RetrievalResult with answer, sources and prompt.
 
         Args:
-            question: The user's question in natural language.
+            question:  The user's question in natural language.
+            n_results: Optional override for the number of chunks to retrieve.
 
         Returns:
             RetrievalResult with answer, sources used, and full prompt.
@@ -231,7 +232,7 @@ class Retriever:
         chunks = self._store.search(
             query=question,
             filters=self._filters,
-            n=self._n_results,
+            n=n_results or self._n_results,
         )
 
         # Step 3 — build prompt
