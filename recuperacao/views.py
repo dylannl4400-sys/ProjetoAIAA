@@ -250,14 +250,63 @@ def pergunta(request):
 
     Mensagem.objects.create(conversa=conversa, papel="user", texto=q)
 
-    # RAG
+    # RAG - Recuperação inicial
     result = get_retriever().ask(q, n_results=n_results)
+    
+    # --- Passo 2: Otimização por Feedback (Human-in-the-loop) ---
+    from recuperacao.models import FonteFeedback
+    from django.db.models import Count, Sum
+
+    # Obter os IDs das fontes recuperadas pelo vector store
+    ids_recuperados = []
+    for s in result.sources:
+        fid = s["metadata"].get("processo") or s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename")
+        if fid: ids_recuperados.append(fid)
+
+    # Consultar reputação destas fontes na BD (soma de relevância)
+    reputacao = {
+        fb['fonte_id']: fb['total_rel'] 
+        for fb in FonteFeedback.objects.filter(fonte_id__in=ids_recuperados)
+                                       .values('fonte_id')
+                                       .annotate(total_rel=Sum('relevancia'))
+    }
+
+    # Aplicar o "Boost" no score vetorial baseado na reputação
+    # Fontes com Thumbs-up (total_rel > 0) sobem no ranking
+    fontes_enriquecidas = []
+    for s in result.sources:
+        fid = s["metadata"].get("processo") or s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename")
+        boost = reputacao.get(fid, 0) * 0.05 # Cada thumb-up dá +5% de relevância
+        
+        # Não deixar o score passar de 1.0 ou ficar abaixo de 0
+        novo_score = min(1.0, max(0.0, s["score"] + boost))
+        
+        fontes_enriquecidas.append({
+            "score":    round(novo_score, 2),
+            "original_score": s["score"],
+            "feedback_boost": boost,
+            "ficheiro": s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename", "desconhecido"),
+            "tipo":     s["metadata"].get("type", ""),
+            "ano":      s["metadata"].get("year", ""),
+            "data":     s["metadata"].get("data", ""),
+            "seccao":   s["metadata"].get("section", ""),
+            "processo": s["metadata"].get("processo", ""),
+            "relator":  s["metadata"].get("relator", ""),
+            "tribunal": s["metadata"].get("court", ""),
+            "sumario":  s["metadata"].get("sumario", ""), # Será preenchido abaixo se vazio
+            "texto":    s.get("text", ""),
+            "hash":     s["metadata"].get("hash_documento", ""),
+            "url":      s["metadata"].get("url", ""),
+        })
+
+    # Ordenar novamente por score (agora com o feedback aplicado)
+    fontes_enriquecidas.sort(key=lambda x: x["score"], reverse=True)
 
     # Enriquecer fontes com sumário (de chunks já indexados)
     sumarios_cache = {}
-    for s in result.sources:
-        h = s["metadata"].get("hash_documento", "")
-        if h and not s["metadata"].get("sumario", ""):
+    for f in fontes_enriquecidas:
+        h = f["hash"]
+        if h and not f["sumario"]:
             if h not in sumarios_cache:
                 try:
                     from ingestao.models import AcordaoIndexado
@@ -265,22 +314,9 @@ def pergunta(request):
                     sumarios_cache[h] = registo.sumario[:500] if registo else ""
                 except Exception:
                     sumarios_cache[h] = ""
+            f["sumario"] = sumarios_cache.get(h, "")
 
-    fontes = [
-        {
-            "score":    round(s["score"], 2),
-            "ficheiro": s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename", "desconhecido"),
-            "tipo":     s["metadata"].get("type", ""),
-            "ano":      s["metadata"].get("year", ""),
-            "seccao":   s["metadata"].get("section", ""),
-            "processo": s["metadata"].get("processo", ""),
-            "relator":  s["metadata"].get("relator", ""),
-            "tribunal": s["metadata"].get("court", ""),
-            "sumario":  s["metadata"].get("sumario", "") or sumarios_cache.get(s["metadata"].get("hash_documento", ""), ""),
-            "url":      s["metadata"].get("url", ""),
-        }
-        for s in result.sources
-    ]
+    fontes = fontes_enriquecidas
 
     m_asst = Mensagem.objects.create(
         conversa=conversa, papel="assistant", texto=result.answer, fontes=fontes

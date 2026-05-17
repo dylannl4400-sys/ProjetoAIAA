@@ -522,12 +522,14 @@ def pergunta(request):
                 "ficheiro": s["metadata"].get("nome_ficheiro") or s["metadata"].get("filename", "desconhecido"),
                 "tipo":     s["metadata"].get("type", ""),
                 "ano":      s["metadata"].get("year", ""),
+                "data":     s["metadata"].get("data", ""),
                 "pagina":   s["metadata"].get("page_start", ""),
                 "seccao":   s["metadata"].get("section", ""),
                 "processo": s["metadata"].get("processo", ""),
                 "relator":  s["metadata"].get("relator", ""),
                 "tribunal": s["metadata"].get("court", ""),
                 "sumario":  s["metadata"].get("sumario", "") or sumarios_cache.get(s["metadata"].get("hash_documento", ""), ""),
+                "texto":    s.get("text", ""),
                 "url":      s["metadata"].get("url", ""),
             }
             for s in result.sources

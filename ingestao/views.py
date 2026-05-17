@@ -36,25 +36,36 @@ def itij_pesquisar(request):
     tipo     = request.GET.get("tipo", "livre").strip()
     campo    = request.GET.get("campo", "DESCRITORES")
     operador = request.GET.get("operador", "=")
-    max_r    = int(request.GET.get("max", 9999))
+    try:
+        max_r = int(request.GET.get("max", 100))
+    except (ValueError, TypeError):
+        max_r = 100
+
+    try:
+        start = int(request.GET.get("start", 1))
+    except (ValueError, TypeError):
+        start = 1
 
     if not q:
         return JsonResponse({"erro": "Parâmetro 'q' obrigatório."}, status=400)
 
     try:
         if tipo == "livre":
-            resultados = get_itij().pesquisar_livre(q, tribunal, max_r)
+            data = get_itij().pesquisar_livre(q, tribunal, max_r, start)
         elif tipo == "termos":
             termos = [t.strip() for t in q.split(",") if t.strip()]
-            resultados = get_itij().pesquisar_termos(termos, tribunal=tribunal, max_resultados=max_r)
+            data = get_itij().pesquisar_termos(termos, tribunal=tribunal, max_resultados=max_r, start=start)
         elif tipo == "campo":
-            resultados = get_itij().pesquisar_campo(campo, operador, q, tribunal, max_r)
+            data = get_itij().pesquisar_campo(campo, operador, q, tribunal, max_r, start)
         elif tipo == "descritor":
-            resultados = get_itij().pesquisar_descritor(q, tribunal, max_r)
+            # Pesquisa de descritores pode não suportar start da mesma forma, 
+            # mas vamos manter a consistência se possível.
+            data = get_itij().pesquisar_descritor(q, tribunal, max_r, start)
         else:
             return JsonResponse({"erro": f"Tipo '{tipo}' inválido."}, status=400)
 
-        return JsonResponse({"resultados": resultados, "total": len(resultados)})
+        # data é um dict {"resultados": [...], "total": N}
+        return JsonResponse(data)
 
     except Exception as e:
         return JsonResponse({"erro": str(e)}, status=500)
@@ -126,6 +137,7 @@ def itij_indexar(request):
             metadata = {
                 "type":        body.get("type", "ruling"),
                 "year":        year,
+                "data":        ameta.get("data", ""),
                 "court":       nome_tribunal,
                 "source":      "ITIJ",
                 "url":         url,

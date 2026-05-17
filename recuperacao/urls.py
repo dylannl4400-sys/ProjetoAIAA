@@ -23,4 +23,5 @@ urlpatterns = [
     path("api/conversas/nova/",           views.conversa_nova,    name="conversa_nova"),
     path("api/conversas/<int:conversa_id>/",        views.conversa_detalhe, name="conversa_detalhe"),
     path("api/conversas/<int:conversa_id>/apagar/", views.conversa_apagar,  name="conversa_apagar"),
+    path("api/feedback/fonte/",           views.api_feedback_fonte, name="api_feedback_fonte"),
 ]

@@ -12,6 +12,7 @@ class Template(models.Model):
     nome_exibicao       = models.CharField(max_length=100, help_text="Nome que aparece na lista")
     nome_ficheiro_docx  = models.CharField(max_length=200, help_text="Nome do ficheiro .docx em pipeline/legal_docs/")
     descricao           = models.TextField(blank=True)
+    campos              = models.JSONField(default=list, blank=True, help_text="Marcadores {{...}} detectados no documento")
     ativo               = models.BooleanField(default=True)
     criado_em           = models.DateTimeField(auto_now_add=True)
 

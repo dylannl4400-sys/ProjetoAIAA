@@ -2070,7 +2070,8 @@ class ITIJScraper:
         query: str,
         tribunal: str = "tre",
         max_resultados: int = 20,
-    ) -> list[dict]:
+        start: int = 1,
+    ) -> dict:
         """
         Pesquisa em linguagem natural com operadores AND/OR/NOT/NEAR/SENTENCE/PARAGRAPH/*.
 
@@ -2084,7 +2085,7 @@ class ITIJScraper:
         """
         hash_key = "hash_livre"
         dados    = {"Query": query}
-        return self._pesquisar(tribunal, hash_key, dados, max_resultados)
+        return self._pesquisar(tribunal, hash_key, dados, max_resultados, start)
 
     # ------------------------------------------------------------------
     # Pesquisa por Termos
@@ -2096,7 +2097,8 @@ class ITIJScraper:
         operadores: list[str] | None = None,
         tribunal: str = "tre",
         max_resultados: int = 20,
-    ) -> list[dict]:
+        start: int = 1,
+    ) -> dict:
         """
         Pesquisa com até 4 termos e operadores entre eles.
 
@@ -2137,7 +2139,7 @@ class ITIJScraper:
         for i in range(len(termos) + 1, 5):
             dados[f"termo{i}"] = ""
 
-        return self._pesquisar(tribunal, "hash_termos", dados, max_resultados)
+        return self._pesquisar(tribunal, "hash_termos", dados, max_resultados, start)
 
     # ------------------------------------------------------------------
     # Pesquisa por Campo
@@ -2150,7 +2152,8 @@ class ITIJScraper:
         valor: str,
         tribunal: str = "tre",
         max_resultados: int = 20,
-    ) -> list[dict]:
+        start: int = 1,
+    ) -> dict:
         """
         Pesquisa num campo específico do acórdão.
 
@@ -2185,7 +2188,7 @@ class ITIJScraper:
             "%%Surrogate_operador": "1",
             "valor":              valor,
         }
-        return self._pesquisar(tribunal, "hash_campo", dados, max_resultados)
+        return self._pesquisar(tribunal, "hash_campo", dados, max_resultados, start)
 
     # ------------------------------------------------------------------
     # Pesquisa por Descritor
@@ -2196,7 +2199,8 @@ class ITIJScraper:
         query: str,
         tribunal: str = "tre",
         max_resultados: int = 20,
-    ) -> list[dict]:
+        start: int = 1,
+    ) -> dict:
         """
         Pesquisa na lista de descritores jurídicos do ITIJ.
 
@@ -2405,7 +2409,8 @@ class ITIJScraper:
         hash_key: str,
         dados: dict,
         max_resultados: int,
-    ) -> list[dict]:
+        start: int = 1,
+    ) -> dict:
         """Executa o POST e faz parse dos resultados."""
         if tribunal not in TRIBUNAIS:
             raise ValueError(
@@ -2424,6 +2429,8 @@ class ITIJScraper:
             )
 
         post_url = f"{BASE_URL}/{cfg['prefixo']}.nsf/{hash_val}?CreateDocument"
+        if start > 1:
+            post_url += f"&Start={start}"
 
         try:
             time.sleep(self._delay)
@@ -2442,18 +2449,16 @@ class ITIJScraper:
 
         return self._parse_lista(resp.text, tribunal, max_resultados)
 
-    def _parse_descritores(self, html: str, max_resultados: int) -> list[dict]:
+    def _parse_descritores(self, html: str, max_resultados: int) -> dict:
         """Extrai lista de descritores do HTML de resultados da pesquisa por descritor."""
         soup    = BeautifulSoup(html, "html.parser")
         results = []
 
         for tr in soup.find_all("tr", valign="top"):
             tds = tr.find_all("td")
-            # Estrutura: icone | descritor principal | descritores relacionados
             if len(tds) < 3:
                 continue
 
-            # Col 1 — descritor principal (tem link)
             link = tds[1].find("a")
             if not link:
                 continue
@@ -2461,7 +2466,6 @@ class ITIJScraper:
             if not desc_principal:
                 continue
 
-            # Col 2 — descritores relacionados
             relacionados_raw = tds[2].get_text(separator="\n", strip=True)
             relacionados = [
                 d.strip()
@@ -2474,25 +2478,37 @@ class ITIJScraper:
                 "descritores_relacionados": relacionados,
             })
 
-        return results
+            if len(results) >= max_resultados:
+                break
+
+        return {"resultados": results, "total": len(results)}
 
     def _parse_lista(
         self,
         html: str,
         tribunal: str,
         max_resultados: int,
-    ) -> list[dict]:
+    ) -> dict:
         """Extrai lista de acordaos do HTML de resultados.
-
-        O ITIJ tem dois formatos:
-        - Lista principal (por ano): 4 cols — data | processo | relator | descritores
-        - Resultados de pesquisa:    5 cols — icone | data | processo | relator | descritores
-        A data pode usar / ou - como separador.
+        ...
         """
         soup    = BeautifulSoup(html, "html.parser")
         nome_t  = TRIBUNAIS[tribunal]["nome"]
         results = []
 
+        # Extrair total de resultados (ex: "Documentos 1 a 20 de 154")
+        total_count = 0
+        text_nodes = soup.find_all(string=re.compile(r"de\s+\d+"))
+        for node in text_nodes:
+            # Padrão: "Documentos 1 a 20 de 154" ou "Document 1 to 20 of 154"
+            match = re.search(r"(?:Documentos|Document)\s+\d+\s+(?:a|to)\s+\d+\s+(?:de|of)\s+([\d.]+)", node)
+            if match:
+                total_count = int(match.group(1).replace(".", ""))
+                break
+        
+        # Fallback: se não encontrar o texto, o total é o número de resultados na página
+        # (Acontece quando há apenas uma página)
+        
         for tr in soup.find_all("tr", valign="top"):
             tds = tr.find_all("td")
             if len(tds) < 4:
@@ -2537,7 +2553,10 @@ class ITIJScraper:
                 "tribunal_id": tribunal,
             })
 
-        return results
+        if total_count == 0:
+            total_count = len(results)
+
+        return {"resultados": results, "total": total_count}
 
     def _parse_acordao(self, html: str) -> str:
         """Extrai texto limpo do HTML de um acórdão individual."""

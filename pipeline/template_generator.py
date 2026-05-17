@@ -567,7 +567,8 @@ class TemplateGenerator:
         # Se contiver .docx, assume que é o nome do ficheiro direto
         if tipo_ou_ficheiro.endswith(".docx"):
             template_file = tipo_ou_ficheiro
-            tipo = tipo_ou_ficheiro.split(".")[0] # fallback para o tipo
+            # Usar o campo 'template' dos dados como tipo (é o identificador do template)
+            tipo = dados.get("template", tipo_ou_ficheiro.replace(".docx", ""))
         else:
             template_file = TEMPLATE_MAP.get(tipo_ou_ficheiro)
             tipo = tipo_ou_ficheiro
@@ -581,9 +582,10 @@ class TemplateGenerator:
 
         if not conteudo:
             conteudo = self._gerar_conteudo(tipo, dados)
-        doc      = Document(str(template_path))
-        subs     = self._substituicoes(tipo, dados, conteudo)
+        doc  = Document(str(template_path))
+        subs = self._substituicoes(tipo, dados, conteudo)
         self._preencher(doc, subs)
+        self._preencher_headers_footers(doc, subs)
 
         if not output_path:
             tmp = tempfile.NamedTemporaryFile(suffix=".docx", delete=False)
@@ -793,13 +795,19 @@ PEDIDO:
         else:
             res = []
 
-        # Adicionar substituições genéricas para qualquer campo do formulário {{campo}}
+        # Substituições genéricas case-insensitive para qualquer campo enviado pelo formulário
+        # Gera pares (marcador, valor) — a correspondência no documento é feita
+        # com re.IGNORECASE em _sub_para, por isso {{CAMPO}}, {{campo}} e {{Campo}}
+        # ficam todos resolvidos com o mesmo valor.
         for k, v in dados.items():
+            if k == "template":
+                continue
             res.append((f"{{{{{k}}}}}", str(v) if v else ""))
-        
-        # Adicionar fundamentos e pedido como {{fundamentos}} e {{pedido}}
+
+        # Fundamentos e pedido explícitos (podem vir do RAG)
         res.append(("{{fundamentos}}", fundamentos))
         res.append(("{{pedido}}", pedido))
+        res.append(("{{descricao_factos}}", dados.get("descricao_factos", "")))
 
         return res
 
@@ -819,39 +827,45 @@ PEDIDO:
     def _sub_para(self, para, substituicoes: list):
         """
         Substitui marcadores preservando os estilos de cada run.
+        Correspondência CASE-INSENSITIVE: {{CAMPO}}, {{campo}}, {{Campo}} são todos equivalentes.
 
         Estratégia:
-        1. Tentar substituir dentro de cada run individualmente
-           (funciona quando o marcador está num único run)
-        2. Se não resultar, reconstruir o texto completo no primeiro run
-           preservando a formatação do run original
+        1. Tentativa run-a-run (preserva formatação quando o marcador está num só run)
+        2. Reconstrução completa do parágrafo (quando o Word fragmenta o marcador em vários runs)
         """
+        import re as _re
+
+        def _aplicar_subs(texto: str) -> str:
+            """Aplica todas as substituições com regex case-insensitive."""
+            for old, new in substituicoes:
+                if old.startswith("{{") and old.endswith("}}"):
+                    texto = _re.sub(_re.escape(old), str(new) if new else "", texto, flags=_re.IGNORECASE)
+                else:
+                    texto = texto.replace(old, str(new) if new else "")
+            return texto
+
         texto_completo = para.text
         if not texto_completo.strip():
             return
-        if not any(old in texto_completo for old, _ in substituicoes):
+
+        # Verificação rápida — há algum marcador {{...}} neste parágrafo?
+        if not _re.search(r'\{\{', texto_completo):
             return
 
         # Tentativa 1: substituir dentro de cada run individualmente
-        # Preserva formatação quando o marcador está num só run
         alterado = False
         for run in para.runs:
-            t = run.text
-            for old, new in substituicoes:
-                if old in t:
-                    t = t.replace(old, str(new) if new else "")
-                    alterado = True
-            run.text = t
+            t_orig = run.text
+            t_novo = _aplicar_subs(t_orig)
+            if t_novo != t_orig:
+                run.text = t_novo
+                alterado = True
 
         if alterado:
             return
 
-        # Tentativa 2: o marcador está fragmentado entre vários runs
-        # Reconstrói o parágrafo preservando o estilo do primeiro run
-        texto_novo = texto_completo
-        for old, new in substituicoes:
-            if old in texto_novo:
-                texto_novo = texto_novo.replace(old, str(new) if new else "")
+        # Tentativa 2: o marcador está fragmentado entre vários runs (muito comum no Word)
+        texto_novo = _aplicar_subs(texto_completo)
 
         if texto_novo == texto_completo:
             return
@@ -859,20 +873,22 @@ PEDIDO:
         # Guardar formatação do primeiro run
         if para.runs:
             primeiro_run = para.runs[0]
-            # Copiar propriedades de formatação
             bold      = primeiro_run.bold
             italic    = primeiro_run.italic
             underline = primeiro_run.underline
             font_name = primeiro_run.font.name
             font_size = primeiro_run.font.size
-            color     = primeiro_run.font.color.rgb if primeiro_run.font.color and primeiro_run.font.color.type else None
+            try:
+                color = primeiro_run.font.color.rgb if primeiro_run.font.color and primeiro_run.font.color.type else None
+            except Exception:
+                color = None
 
-            # Limpar todos os runs
-            primeiro_run.text = texto_novo
+            # Limpar todos os runs excepto o primeiro
             for run in para.runs[1:]:
                 run.text = ""
 
-            # Restaurar formatação
+            # Colocar todo o texto no primeiro run
+            primeiro_run.text = texto_novo
             primeiro_run.bold      = bold
             primeiro_run.italic    = italic
             primeiro_run.underline = underline
@@ -880,8 +896,32 @@ PEDIDO:
                 primeiro_run.font.name = font_name
             if font_size:
                 primeiro_run.font.size = font_size
+            if color:
+                try:
+                    primeiro_run.font.color.rgb = color
+                except Exception:
+                    pass
         else:
+            # Parágrafo sem runs — usar add_run
+            para.clear()
             para.add_run(texto_novo)
+
+    # ------------------------------------------------------------------
+    # Headers e Footers
+    # ------------------------------------------------------------------
+
+    def _preencher_headers_footers(self, doc, substituicoes: list):
+        """Aplica substituições também nos cabeçalhos e rodapés."""
+        for section in doc.sections:
+            for header in [section.header, section.first_page_header, section.even_page_header]:
+                if header:
+                    for para in header.paragraphs:
+                        self._sub_para(para, substituicoes)
+            for footer in [section.footer, section.first_page_footer, section.even_page_footer]:
+                if footer:
+                    for para in footer.paragraphs:
+                        self._sub_para(para, substituicoes)
+
 
 
 # ------------------------------------------------------------------
